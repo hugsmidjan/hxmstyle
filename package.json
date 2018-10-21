@@ -1,0 +1,34 @@
+{
+  "name": "hxmstyle",
+  "version": "0.1.0",
+  "description": "One annoying style to rule them all...",
+  "main": "index.js",
+  "repository": "git@github.com:hugsmidjan/hxmstyle.git",
+  "author": "Hugsmiðjan ehf (https://www.hugsmidjan.is)",
+  "contributors": [
+    "Már Örlygsson <mar.nospam@anomy.net> (http://mar.anomy.net)"
+  ],
+  "license": "GPL-2.0-or-later",
+  "bin": "bin/installer.js",
+  "peerDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-destructuring": "^2.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.14.3"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "optionals": {
+    "babel": {
+      "babel-eslint": "^10.0.1"
+    },
+    "react": {
+      "eslint-plugin-react": "^7.11.1"
+    },
+    "stylus": {
+      "stylint": "^1.5.9"
+    }
+  }
+}
