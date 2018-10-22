@@ -12,7 +12,6 @@ const basicConfig = {
 };
 
 // TODO:
-
 //   * Import vscode .eslintrc into basicConfig above
 //   * Review eslint-plugin-es and decide if certain es6 featues should be outright banned
 //   * Add reactConfig and fantasyConfig
