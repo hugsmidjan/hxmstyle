@@ -81,10 +81,7 @@ Object.keys(hxmstylePkg.optionals).forEach((option) => {
 // install/upgrade plugins
 const installs = Object.keys(installDeps).map((name) => name + '@' + installDeps[name]);
 if ( !projectDeps.hxmstyle ) {
-    const version = hxmstylePkg.version !== '0.0.0' ? '#semver:^'+hxmstylePkg.version : '';
-    installs.push('github:hugsmidjan/hxmstyle'+version);
-    // FIXME: Add this back in once `hxmstylePkg.version` has risen above 0.0.0
-    // installs.push('github:hugsmidjan/hxmstyle#semver:^'+hxmstylePkg.version);
+    installs.push('github:hugsmidjan/hxmstyle#semver:^'+hxmstylePkg.version);
 }
 if ( installs.length ) {
     console.info('Adding/upgrading dependencies:\n', installs);
