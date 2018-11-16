@@ -1,8 +1,8 @@
 /* globals process */
-
+const path = require('path');
 const getProjectOptions = () => (require(process.cwd()+'/package.json').hxmstyle || {}).options || {};
 
-const rulesetPrefix = './node_modules/hxmstyle/configs/';
+const rulesetPath = path.parse( require.resolve('hxmstyle') ).dir + '/configs/';
 const extendModules = {
     core: '',
     react: '',
@@ -11,14 +11,16 @@ const extendModules = {
 
 
 module.exports = (userCfg) => {
-    const extendsList = [rulesetPrefix + 'core.js'];
+    const extendsList = [
+        rulesetPath + 'core.js',
+    ];
 
     const options = getProjectOptions();
     Object.keys(options).forEach((name) => {
         if ( options[name] && name in extendModules ) {
             extendsList.push(
                 extendModules[name] ||
-                rulesetPrefix + name + '.js'
+                rulesetPath + name + '.js'
             );
         }
     });
