@@ -98,6 +98,11 @@ if ( !fs.existsSync(projectPath+'.eslintrc.js') ) {
     exec('cp ' + hxmstylePath + 'starters/eslintrc.js .eslintrc.js');
     console.info('- Done.');
 }
+if ( !fs.existsSync(projectPath+'.prettierrc.js') ) {
+    console.info('Creating .prettierrc.js');
+    exec('cp ' + hxmstylePath + 'starters/prettierrc.js .prettierrc.js');
+    console.info('- Done.');
+}
 // Update .stylintrc
 if ( args.stylus ) {
     const stylintrcPath = projectPath+'.stylintrc';

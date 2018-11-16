@@ -13,6 +13,7 @@ const extendModules = {
 module.exports = (userCfg) => {
     const extendsList = [
         rulesetPath + 'core.js',
+        rulesetPath + 'prettier.js',
     ];
 
     const options = getProjectOptions();
