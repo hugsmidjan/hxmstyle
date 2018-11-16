@@ -1,4 +1,4 @@
-// This file is maintained as JavaScript module for convenience.
+// This file is maintained as a JavaScript module for convenience.
 // Stylint only consumes JSON however.
 module.exports = {
     __hxmstyle__: [

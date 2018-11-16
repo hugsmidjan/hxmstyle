@@ -1,11 +1,5 @@
 /* globals process */
 
-/*
-  TODO:
-   * Import vscode .eslintrc into basicConfig above
-   * Review https://mysticatea.github.io/eslint-plugin-es
-     and decide if certain es6 featues should be banned outright
-*/
 const getProjectOptions = () => (require(process.cwd()+'/package.json').hxmstyle || {}).options || {};
 
 const rulesetPrefix = './node_modules/hxmstyle/configs/';

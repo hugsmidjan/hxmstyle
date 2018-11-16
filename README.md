@@ -12,11 +12,11 @@ A quick way to maintain unified code-style with minimal faffing, while still all
 npx github:hugsmidjan/hxmstyle [--optionflags]
 ```
 
-this installs the `hxmstyle` linting/formatting ruleset, adds the neccessary basic, no-frills `eslint` and `prettier` dependencies to your project, and creates a starter `.eslintrc` file, if needed.
+this installs the `hxmstyle` linting/formatting ruleset, adds the neccessary basic, no-frills `eslint` and `prettier` dependencies to your project, and creates a starter [`.eslintrc`](starters/eslintrc.js) file, if needed.
 
 It also adds the handy CLI command `hxmstyle` that helps you update your plugins and add/remove optional preset bundles.
 
-If the installer detects that your project is using stylus, it will install `stylint` and a very opinionated `.stylintrc` file. (Just like if you'd run `hxmstyle --stylus`)
+If the installer detects that your project is using stylus, it will install `stylint` and a very opinionated [`.stylintrc`](starters/stylintrc.js) file. (Just like if you'd run `hxmstyle --stylus`)
 
 Similarily if `react` (or `preact` or `inferno`) is detected, a react plugin is installed. (As if you'd run `hxmstyle --react`)
 
@@ -62,8 +62,9 @@ hxmstyle
 
 Changing the default rules should generally be avoided.
 
-If neccessary simply add those plugins using `yarn`/`npm` and make the neccessary changes to `.eslintrc.js`.
+If neccessary simply add those plugins using `yarn`/`npm` and make the neccessary changes to `.eslintrc.js`, `.prettierrc.js` and/or `.stylintrc`.
 
+If one of your `.*rc` files goes missing or gets corrupted, you can find fresh ones [in the "starters" directory](starters/).
 
 
 ## Removing plugins
