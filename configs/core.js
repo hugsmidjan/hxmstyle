@@ -21,7 +21,7 @@ module.exports = {
         'quotes': [ 'error', 'single'/*, { avoidEscape: true, allowTemplateLiterals: false }*/ ],
         'comma-dangle': [ 'warn', 'always-multiline' ],
         'semi': [ 'error', 'never' ],
-        'brace-style': [ 'warn', 'stroustrup', { allowSingleLine: true }],
+        'brace-style': [ 'warn', '1tbs', { allowSingleLine: true }],
         'curly': [ 'error', 'all' ],
         //'no-trailing-spaces': 'warn',
         'space-before-blocks': 'warn',
