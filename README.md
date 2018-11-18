@@ -80,5 +80,15 @@ However, `packgage.json` always contains an updated list of `hxmstyle.dependenci
 
 ## Example npm scripts
 
-...TODO:...
+Consider adding an npm script similar to this one to your project's `package.json`:
+
+```json
+    "scripts": {
+        "format": "eslint --fix  _src/**/*.js",
+    }
+```
+
+(See the documentation on [ESLint's Command Line Interface](https://eslint.org/docs/user-guide/command-line-interface) for more info.)
+
+This script can be run as part of npm [`prepublishOnly` script](https://docs.npmjs.com/misc/scripts), or added as a  [`pre-push` git hook](https://www.atlassian.com/git/tutorials/git-hooks) for your project.
 
