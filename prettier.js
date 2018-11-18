@@ -29,6 +29,6 @@ const baseRules = {
 
 
 module.exports = (userCfg = {}) => {
-	const overrides = baseRules.overrides.concat(userCfg.overrides);
+	const overrides = baseRules.overrides.concat(userCfg.overrides||[]);
     return Object.assign({}, baseRules, userCfg, { overrides });
 };
