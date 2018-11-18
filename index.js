@@ -5,25 +5,29 @@ const getProjectOptions = () => (require(process.cwd()+'/package.json').hxmstyle
 const rulesetPath = path.parse( require.resolve('hxmstyle') ).dir + '/configs/';
 const extendModules = ['core', 'react', 'fantasy'];
 
-
-module.exports = (userCfg) => {
-    const extendsList = [
+const getBaseConfig = () => {
+    const _extends = [
         rulesetPath + 'core.js',
     ];
     const options = getProjectOptions();
     Object.keys(options).forEach((name) => {
         if ( options[name] && extendModules.indexOf(name) > -1 ) {
-            extendsList.push( rulesetPath + name + '.js' );
+            _extends.push( rulesetPath + name + '.js' );
         }
     });
     // Add prettier-specific rules afterwards to ensure prettier rule-overrides
     // come after the basic eslint configs for each module
-    extendsList.forEach((path) => {
+    _extends.forEach((path) => {
         const prettierCfgPath = path.replace(/\.js$/, '-prettier.js');
-        extendsList.push( prettierCfgPath );
+        _extends.push( prettierCfgPath );
     });
+    return { extends: _extends };
+};
 
-    const config = Object.assign({}, userCfg, { extends: extendsList });
+
+
+module.exports = (userCfg) => {
+    const config = Object.assign({}, userCfg, getBaseConfig());
 
     // Merge in the user's "extends"
     if (userCfg.extends) {
