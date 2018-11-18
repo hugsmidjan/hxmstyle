@@ -64,9 +64,5 @@ module.exports = {
         'destructuring/in-params': ['error', { 'max-params' : 1 }],
         'destructuring/in-methods-params': 'error',
         // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
-
-        // TODO: Review https://mysticatea.github.io/eslint-plugin-es
-        // and decide if certain es6 featues should be banned outright
-
     },
 };
