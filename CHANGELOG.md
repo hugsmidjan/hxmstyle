@@ -3,10 +3,14 @@
 
 ## Upcoming...
 <!-- Add new lines here. Version number will be decided later -->
+- ...
+
+
+## 0.2.0
+_2018-11-18_
 - feat: Add prettier with basic experimental config.
 - feat: Tweak core rules - partially to match prettier.
 - docs: Write short chapter about "format" npm scripts and git hooks
-- ...
 
 
 ## 0.1.0
