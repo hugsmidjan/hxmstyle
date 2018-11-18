@@ -56,8 +56,14 @@ module.exports = {
         'no-sequences': 'error',
         // https://eslint.org/docs/rules/indent#options
         'indent': ['error', 4],
-        'no-tabs': ['error', { allowIndentationTabs: true }],
-        'max-len': ['warn', { code: 100, ignoreUrls: true }],
+        'no-tabs': ['error', { allowIndentationTabs: true }],
+        'max-len': ['warn', {
+            code: 120,
+            ignoreUrls: true,
+            ignoreComments: true,
+            // ignoreTrailingComments: true,
+            ignoreTemplateLiterals: true,
+        }],
 
         // eslint-plugin-destructuring:
         'destructuring/no-rename': 'error',

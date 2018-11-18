@@ -1,6 +1,6 @@
 // Prettier options: https://prettier.io/docs/en/options.html
 const baseRules = {
-	printWidth: 100,
+	printWidth: 90,
 	tabWidth: 4,
 	tabs: false,
 	semi: false,
