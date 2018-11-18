@@ -137,3 +137,18 @@ projectPkg.hxmstyle = {
     dependenciesAdded: Object.keys(installDeps).sort(),
 };
 fs.writeFileSync(projectPkgPath, JSON.stringify(projectPkg, null, 4));
+
+
+// Suggest adding a format script to package.json
+if ( projectPkg.scripts && !projectPkg.scripts.format ) {
+    console.info([
+        'Consider adding a "format" npm script to your `package.json`',
+        'Example:',
+        '',
+        '    "scripts": {',
+        '        "format": "eslint --fix  _src/**/*.js"',
+        '    },',
+        '',
+        'More info: https://github.com/hugsmidjan/hxmstyle/blob/master/README.md#example-npm-scripts',
+    ].join('\n'));
+}
