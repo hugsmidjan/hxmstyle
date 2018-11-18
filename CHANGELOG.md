@@ -4,7 +4,8 @@
 ## Upcoming...
 <!-- Add new lines here. Version number will be decided later -->
 - feat: Add prettier with basic experimental config.
-- feat: Tweak core rules.
+- feat: Tweak core rules - partially to match prettier.
+- docs: Write short chapter about "format" npm scripts and git hooks
 - ...
 
 
