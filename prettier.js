@@ -3,7 +3,7 @@ const baseRules = {
 	printWidth: 90,
 	tabWidth: 4,
 	tabs: false,
-	semi: false,
+	semi: true,
 	singleQuote: true,
 	jsxSingleQuote: false,
 	trailingComma: 'es5',

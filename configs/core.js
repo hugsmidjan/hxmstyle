@@ -20,7 +20,7 @@ module.exports = {
         'linebreak-style': [ 'error', 'unix' ],
         'quotes': [ 'error', 'single'/*, { avoidEscape: true, allowTemplateLiterals: false }*/ ],
         'comma-dangle': [ 'warn', 'always-multiline' ],
-        'semi': [ 'error', 'never' ],
+        'semi': [ 'warn', 'always' ],
         'brace-style': [ 'warn', '1tbs', { allowSingleLine: true }],
         'curly': [ 'error', 'all' ],
         //'no-trailing-spaces': 'warn',
