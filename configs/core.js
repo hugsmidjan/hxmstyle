@@ -18,11 +18,11 @@ module.exports = {
     ],
     rules: {
         'linebreak-style': [ 'error', 'unix' ],
-        'quotes': [ 'error', 'single' ],
+        'quotes': [ 'error', 'single'/*, { avoidEscape: true, allowTemplateLiterals: false }*/ ],
         'comma-dangle': [ 'warn', 'always-multiline' ],
         'semi': [ 'error', 'never' ],
         'brace-style': [ 'warn', 'stroustrup', { allowSingleLine: true }],
-        'curly': [ 'warn', 'all' ],
+        'curly': [ 'error', 'all' ],
         //'no-trailing-spaces': 'warn',
         'space-before-blocks': 'warn',
         'keyword-spacing': 'warn',
@@ -32,6 +32,7 @@ module.exports = {
         'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
         'no-eval': 'error',
         'arrow-parens': ['warn', 'always'],
+        'no-confusing-arrow': ['error', { allowParens: false }],
         'eqeqeq': ['error', 'always', {'null': 'ignore'}],
         'block-scoped-var': 'error',
         'class-methods-use-this': 'warn',
@@ -47,10 +48,16 @@ module.exports = {
         'no-console': ['warn', { allow: ['warn', 'error', 'trace', 'info'] }],
         'no-div-regex': 'error',
         'no-label-var': 'error',
+        'no-mixed-operators': 'error',
         'no-use-before-define': ['error', { variables: false, functions: false, classes: false }],
         'no-undef-init': 'error',
         'space-before-function-paren': ['warn', {anonymous: 'always', named: 'never', asyncArrow: 'ignore' }],
         'no-empty': ['error', { allowEmptyCatch: true }],
+        'no-sequences': 'error',
+        // https://eslint.org/docs/rules/indent#options
+        'indent': ['error', 4],
+        'no-tabs': ['error', { allowIndentationTabs: true }],
+        'max-len': ['warn', { code: 100, ignoreUrls: true }],
 
         // eslint-plugin-destructuring:
         'destructuring/no-rename': 'error',
