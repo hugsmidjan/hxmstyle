@@ -26,7 +26,7 @@ const getBaseConfig = () => {
 
 
 
-module.exports = (userCfg) => {
+module.exports = (userCfg = {}) => {
     const config = Object.assign({}, userCfg, getBaseConfig());
 
     // Merge in the user's "extends"
