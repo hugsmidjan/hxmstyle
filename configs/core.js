@@ -1,7 +1,5 @@
 module.exports = {
-    extends: [
-        'eslint:recommended',
-    ],
+    extends: ['eslint:recommended'],
     env: {
         browser: true,
         commonjs: true,
@@ -13,9 +11,8 @@ module.exports = {
             jsx: true,
         },
     },
-    plugins: [
-        'destructuring',
-    ],
+    plugins: ['destructuring'],
+    /* prettier-ignore */
     rules: {
         'linebreak-style': [ 'error', 'unix' ],
         'quotes': [ 'error', 'single'/*, { avoidEscape: true, allowTemplateLiterals: false }*/ ],
@@ -70,5 +67,5 @@ module.exports = {
         'destructuring/in-params': ['error', { 'max-params' : 1 }],
         'destructuring/in-methods-params': 'error',
         // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
-    },
+    }
 };

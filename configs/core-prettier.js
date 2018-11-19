@@ -4,8 +4,9 @@ const coreRules = require('./core').rules;
 // this allows us to discourage certain idioms that
 // prettier tolerates but does not require.
 const reInserts = {};
-[ 'curly' ].forEach((key) => { reInserts[key] = coreRules[key]; });
-
+['curly'].forEach((key) => {
+    reInserts[key] = coreRules[key];
+});
 
 module.exports = {
     extends: [
@@ -13,10 +14,11 @@ module.exports = {
         // https://github.com/prettier/eslint-config-prettier/blob/master/index.js
         'prettier',
     ],
-    plugins: [
-        'prettier',
-    ],
-    rules: Object.assign({
-        'prettier/prettier': 'warn',
-    }, reInserts),
+    plugins: ['prettier'],
+    rules: Object.assign(
+        {
+            'prettier/prettier': 'warn',
+        },
+        reInserts
+    ),
 };

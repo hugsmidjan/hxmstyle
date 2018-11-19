@@ -4,15 +4,18 @@ const fs = require('fs');
 const path = require('path');
 const exec = require('child_process').execSync;
 
-const projectPath = process.cwd()+'/';
+const projectPath = process.cwd() + '/';
 const projectPkgPath = projectPath + 'package.json';
 let projectPkg = require(projectPkgPath);
-const projectDeps = Object.assign( {}, projectPkg.dependencies, projectPkg.devDependencies );
+const projectDeps = Object.assign(
+    {},
+    projectPkg.dependencies,
+    projectPkg.devDependencies
+);
 const lastSettings = projectPkg.hxmstyle || {};
 
-const hxmstylePath = path.parse( require.resolve('hxmstyle') ).dir + '/';
+const hxmstylePath = path.parse(require.resolve('hxmstyle')).dir + '/';
 const hxmstylePkg = require(hxmstylePath + 'package.json');
-
 
 const parseArgs = (argv, supportedArgs) => {
     const args = {};
@@ -22,19 +25,17 @@ const parseArgs = (argv, supportedArgs) => {
         .reduce((arr, arg) => {
             arr.push.apply(arr, arg.split('='));
             return arr;
-        },[])
+        }, [])
         .forEach((arg) => {
             if (/^--/.test(arg)) {
                 name = arg.substr(2);
-                if ( supportedArgs[name] ) {
+                if (supportedArgs[name]) {
                     args[name] = args[name] || [];
                 }
-            }
-            else if ( supportedArgs[name] ) {
-                if ( arg === 'false' ) {
+            } else if (supportedArgs[name]) {
+                if (arg === 'false') {
                     args[name] = false;
-                }
-                else if ( args[name] ) {
+                } else if (args[name]) {
                     args[name].push(arg);
                 }
             }
@@ -46,44 +47,48 @@ const supportedArgs = {
     react: true,
     fantasy: true,
 };
-const args = Object.assign({},
+const args = Object.assign(
+    {},
     lastSettings.options,
     parseArgs(process.argv.slice(2), supportedArgs)
 );
 
-
-
 // Auto-detect if stylus or react are installed in the project
-if ( args.stylus == null && projectDeps.stylus ) {
+if (args.stylus == null && projectDeps.stylus) {
     console.info('Stylus detected.');
     args.stylus = true;
 }
-if ( args.react == null && (projectDeps.react || projectDeps.preact || projectDeps.inferno) ) {
-    const reactLike = projectDeps.react ? 'React' : projectDeps.preact ? 'Preact' : 'Inferno';
+if (
+    args.react == null &&
+    (projectDeps.react || projectDeps.preact || projectDeps.inferno)
+) {
+    const reactLike = projectDeps.react
+        ? 'React'
+        : projectDeps.preact
+        ? 'Preact'
+        : 'Inferno';
     console.info(reactLike + ' detected.');
     args.react = true;
 }
 
-
 const installDeps = hxmstylePkg.peerDependencies;
 Object.keys(hxmstylePkg.optionals).forEach((option) => {
-    if ( args[option] != null ) {
+    if (args[option] != null) {
         const deps = hxmstylePkg.optionals[option];
         Object.keys(deps).forEach((name) => {
-            if ( args[option] ) {
+            if (args[option]) {
                 installDeps[name] = deps[name];
             }
         });
     }
 });
 
-
 // install/upgrade plugins
 const installs = Object.keys(installDeps).map((name) => name + '@' + installDeps[name]);
-if ( !projectDeps.hxmstyle ) {
-    installs.push('github:hugsmidjan/hxmstyle#semver:^'+hxmstylePkg.version);
+if (!projectDeps.hxmstyle) {
+    installs.push('github:hugsmidjan/hxmstyle#semver:^' + hxmstylePkg.version);
 }
-if ( installs.length ) {
+if (installs.length) {
     console.info('Adding/upgrading dependencies:\n', installs);
     const hasYarn = !!exec('which yarn');
     const installCmd = hasYarn ? 'yarn add --dev ' : 'npm install --save-dev ';
@@ -91,34 +96,32 @@ if ( installs.length ) {
     console.info('- Done.');
 }
 
-
 // Create default .eslintrc.js file
-if ( !fs.existsSync(projectPath+'.eslintrc.js') ) {
+if (!fs.existsSync(projectPath + '.eslintrc.js')) {
     console.info('Creating .eslintrc.js');
     exec('cp ' + hxmstylePath + 'starters/eslintrc.js .eslintrc.js');
     console.info('- Done.');
 }
-if ( !fs.existsSync(projectPath+'.prettierrc.js') ) {
+if (!fs.existsSync(projectPath + '.prettierrc.js')) {
     console.info('Creating .prettierrc.js');
     exec('cp ' + hxmstylePath + 'starters/prettierrc.js .prettierrc.js');
     console.info('- Done.');
 }
 // Update .stylintrc
-if ( args.stylus ) {
-    const stylintrcPath = projectPath+'.stylintrc';
-    const stylintRules = require(hxmstylePath+'starters/stylintrc.js');
+if (args.stylus) {
+    const stylintrcPath = projectPath + '.stylintrc';
+    const stylintRules = require(hxmstylePath + 'starters/stylintrc.js');
     const hasStylintrc = fs.existsSync(stylintrcPath);
     if (hasStylintrc) {
         const hxmStyleMarker = '__hxmstyle__';
         const projectSpecificMarker = '__project_specific_rules__';
-        const projectRules = JSON.parse( fs.readFileSync(stylintrcPath) );
+        const projectRules = JSON.parse(fs.readFileSync(stylintrcPath));
         // Maintain anything below the projectSpecificMarker in projectRules
         let searchingForMarker = hxmStyleMarker in projectRules; // If no hxmStyleMarker is found - assume every rule is project-specific
         Object.keys(projectRules).forEach((key) => {
             if (searchingForMarker) {
                 searchingForMarker = key !== projectSpecificMarker;
-            }
-            else if (projectRules[key] !== stylintRules[key])  {
+            } else if (projectRules[key] !== stylintRules[key]) {
                 delete stylintRules[key];
                 stylintRules[key] = projectRules[key];
             }
@@ -129,7 +132,6 @@ if ( args.stylus ) {
     console.info('- Done.');
 }
 
-
 // Write settings to package.json
 projectPkg = JSON.parse(fs.readFileSync(projectPkgPath)); // Re-read package.json since its content may have changed.
 projectPkg.hxmstyle = {
@@ -138,17 +140,18 @@ projectPkg.hxmstyle = {
 };
 fs.writeFileSync(projectPkgPath, JSON.stringify(projectPkg, null, 4));
 
-
 // Suggest adding a format script to package.json
-if ( !projectPkg.scripts && !projectPkg.scripts.format ) {
-    console.info([
-        'Consider adding a "format" npm script to your `package.json`',
-        'Example:',
-        '',
-        '    "scripts": {',
-        '        "format": "eslint --fix  *.js _src/**/*.js"',
-        '    },',
-        '',
-        'More info: https://github.com/hugsmidjan/hxmstyle/blob/master/README.md#example-npm-scripts',
-    ].join('\n'));
+if (!projectPkg.scripts && !projectPkg.scripts.format) {
+    console.info(
+        [
+            'Consider adding a "format" npm script to your `package.json`',
+            'Example:',
+            '',
+            '    "scripts": {',
+            '        "format": "eslint --fix  *.js _src/**/*.js"',
+            '    },',
+            '',
+            'More info: https://github.com/hugsmidjan/hxmstyle/blob/master/README.md#example-npm-scripts',
+        ].join('\n')
+    );
 }

@@ -3,17 +3,17 @@
 module.exports = {
     __hxmstyle__: [
         '--------------------------------------------------------------------------------------------',
-        ' BEWARE: This file is manged by \'hxmstyle\' and will be rewritten on next install/update.  ',
+        " BEWARE: This file is manged by 'hxmstyle' and will be rewritten on next install/update.  ",
         ' Place your project specific rules at the bottom – BELOW the `__project_specific__` marker. ',
         '--------------------------------------------------------------------------------------------',
     ],
 
     exclude: ['node_modules/**/*', 'vendor/**/*'],
     reporterOptions: {
-        'columns': ['lineData', 'severity', 'description', 'rule'],
-        'columnSplitter': '  ',
-        'showHeaders': false,
-        'truncate': true,
+        columns: ['lineData', 'severity', 'description', 'rule'],
+        columnSplitter: '  ',
+        showHeaders: false,
+        truncate: true,
     },
     groupOutputByFile: true,
     maxErrors: false,
@@ -65,5 +65,4 @@ module.exports = {
         ' Anything ABOVE this point will be automatically wiped/rewritten.                           ',
         '--------------------------------------------------------------------------------------------',
     ],
-
 };
