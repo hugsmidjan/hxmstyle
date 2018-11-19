@@ -110,3 +110,32 @@ This script can be run as part of npm
 [`prepublishOnly` script](https://docs.npmjs.com/misc/scripts), or added as a
 [`pre-push` git hook](https://www.atlassian.com/git/tutorials/git-hooks) for
 your project.
+
+## VSCode setup
+
+Add these plugins:
+
+-   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+-   [Stylint](https://marketplace.visualstudio.com/items?itemName=HaaLeo.vscode-stylint)
+    – if you're writing Stylus code
+
+...and these settings:
+
+```json
+    "eslint.autoFixOnSave": true,
+    "stylint.packageManager": "yarn",
+    "eslint.packageManager": "yarn",
+```
+
+...and make sure that the project root (where `.eslintrc.js` and
+`package.json` are) is set up as a "workspace folder", or alternatively add
+its path to your workspace settings:
+
+```json
+"eslint.workingDirectories": [
+    "path/to/project/root"
+],
+"stylint.workingDirectories": [
+    "path/to/project/root"
+],
+```
