@@ -84,7 +84,7 @@ Consider adding an npm script similar to this one to your project's `package.jso
 
 ```json
     "scripts": {
-        "format": "eslint --fix  _src/**/*.js",
+        "format": "eslint --fix  *.js _src/**/*.js",
     }
 ```
 

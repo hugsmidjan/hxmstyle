@@ -146,7 +146,7 @@ if ( !projectPkg.scripts && !projectPkg.scripts.format ) {
         'Example:',
         '',
         '    "scripts": {',
-        '        "format": "eslint --fix  _src/**/*.js"',
+        '        "format": "eslint --fix  *.js _src/**/*.js"',
         '    },',
         '',
         'More info: https://github.com/hugsmidjan/hxmstyle/blob/master/README.md#example-npm-scripts',
