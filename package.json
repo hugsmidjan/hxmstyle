@@ -8,7 +8,7 @@
         "node": ">=6.0.0"
     },
     "scripts": {
-        "format": "eslint --fix  *.js **/*.js"
+        "format": "eslint --fix  *.js **/*.js  &&  prettier --write --loglevel=error  *.md"
     },
     "peerDependencies": {
         "eslint": "^5.7.0",

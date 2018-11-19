@@ -24,6 +24,13 @@ const baseRules = {
                 parser: 'json',
             },
         },
+        {
+            files: '*.md',
+            options: {
+                printWidth: 78,
+                proseWrap: 'always',
+            },
+        },
     ],
 };
 
