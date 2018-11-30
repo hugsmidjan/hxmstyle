@@ -13,8 +13,8 @@ npx github:hugsmidjan/hxmstyle [--optionflags]
 
 this installs the `hxmstyle` linting/formatting ruleset, adds the neccessary
 basic, no-frills `eslint` and `prettier` dependencies to your project, and
-creates a starter [`.eslintrc`](starters/eslintrc.js) and
-[`.prettierrc`](starters/prettierrc.js) files, if needed.
+creates a starter [`.eslintrc`](starters/eslintrc.js),
+[`.prettierrc`](starters/prettierrc.js) and [`.editorconfig`](starters/editorconfig.cfg) files, if needed.
 
 It also adds the handy CLI command `hxmstyle` that helps you update your
 plugins and add/remove optional preset bundles.
@@ -116,6 +116,7 @@ your project.
 Add these plugins:
 
 -   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+-   [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=editorconfig.editorconfig)
 -   [Stylint](https://marketplace.visualstudio.com/items?itemName=HaaLeo.vscode-stylint)
     – if you're writing Stylus code
 
