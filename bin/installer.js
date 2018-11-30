@@ -154,7 +154,7 @@ if (args.stylus) {
         });
     }
     console.info(hasStylintrc ? 'Updating .stylintrc' : 'Adding .stylintrc');
-    fs.writeFileSync(stylintrcPath, JSON.stringify(stylintRules, null, 4));
+    fs.writeFileSync(stylintrcPath, JSON.stringify(stylintRules, null, 4) + '\n');
     console.info('- Done.');
 }
 
@@ -164,7 +164,7 @@ projectPkg.hxmstyle = {
     options: args,
     dependenciesAdded: Object.keys(installDeps).sort(),
 };
-fs.writeFileSync(projectPkgPath, JSON.stringify(projectPkg, null, 4));
+fs.writeFileSync(projectPkgPath, JSON.stringify(projectPkg, null, 4) + '\n');
 
 // Suggest adding a format script to package.json
 if (!projectPkg.scripts && !projectPkg.scripts.format) {
