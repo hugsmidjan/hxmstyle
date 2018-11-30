@@ -107,6 +107,32 @@ if (!fs.existsSync(projectPath + '.prettierrc.js')) {
     exec('cp ' + hxmstylePath + 'starters/prettierrc.js .prettierrc.js');
     console.info('- Done.');
 }
+
+// Update .editorconfig
+{
+    const editorcfgPath = projectPath + '.editorconfig';
+    let configRules = fs.readFileSync(hxmstylePath + 'starters/editorconfig.cfg');
+    const hasEditorconfig = fs.existsSync(editorcfgPath);
+    let manageConfig = true;
+    if (hasEditorconfig) {
+        const projectRules = fs.readFileSync(editorcfgPath).toString();
+        const hxmStyleMarker = /#+\s*__hxmstyle__\s/i;
+        const projectSpecificMarker = /#+\s*__project_specific_rules__.*?\n/i;
+        manageConfig = hxmStyleMarker.test(projectRules);
+        if (manageConfig) {
+            const projectSpecificConfig = projectRules.split(projectSpecificMarker)[1];
+            if (projectSpecificConfig) {
+                configRules = configRules + projectSpecificConfig;
+            }
+        }
+    }
+    if (manageConfig) {
+        console.info(hasEditorconfig ? 'Updating .editorconfig' : 'Adding .editorconfig');
+        fs.writeFileSync(editorcfgPath, configRules);
+        console.info('- Done.');
+    }
+}
+
 // Update .stylintrc
 if (args.stylus) {
     const stylintrcPath = projectPath + '.stylintrc';

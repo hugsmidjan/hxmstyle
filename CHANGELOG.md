@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 -   ...
+-   feat: Add basic `.editorconfig` with support for `__project_specific_rules__`
 
 ## 0.2.1
 
