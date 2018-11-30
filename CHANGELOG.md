@@ -6,7 +6,14 @@
 
 -   ...
 
-## 0.2.2
+## 0.2.3
+
+_2018-11-30_
+
+-   fix: Improve Stylus auto-detection
+-   fix: Append newline when writing JSON to .stylintrc and package.json
+
+## 0.2.3
 
 _2018-11-30_
 
