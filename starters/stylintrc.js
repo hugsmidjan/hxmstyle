@@ -3,8 +3,8 @@
 module.exports = {
     __hxmstyle__: [
         '--------------------------------------------------------------------------------------------',
-        " BEWARE: This file is manged by 'hxmstyle' and will be rewritten on next install/update.  ",
-        ' Place your project specific rules at the bottom – BELOW the `__project_specific__` marker. ',
+        ' BEWARE: This file is manged by "hxmstyle" and will be rewritten on next install/update.    ',
+        ' Place your project specific rules BELOW the `__project_specific_rules__` marker.           ',
         '--------------------------------------------------------------------------------------------',
     ],
 

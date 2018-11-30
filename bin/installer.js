@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* globals process */
+/* globals process require */
 const fs = require('fs');
 const path = require('path');
 const exec = require('child_process').execSync;
@@ -148,8 +148,8 @@ if (args.stylus) {
             if (searchingForMarker) {
                 searchingForMarker = key !== projectSpecificMarker;
             } else if (projectRules[key] !== stylintRules[key]) {
-                delete stylintRules[key];
-                stylintRules[key] = projectRules[key];
+                delete stylintRules[key]; // delete from Object.keys() array
+                stylintRules[key] = projectRules[key]; // Re-insert at end of Object.keys()
             }
         });
     }
