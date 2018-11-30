@@ -54,14 +54,23 @@ const args = Object.assign(
 );
 
 // Auto-detect if stylus or react are installed in the project
-if (args.stylus == null && projectDeps.stylus) {
+const projectHasStylus = () => {
+    return (
+        projectDeps.stylus ||
+        (projectDeps.hxmgulp && fs.existsSync(projectPath + 'node_modules/stylus'))
+    );
+};
+
+if (args.stylus == null && projectHasStylus()) {
     console.info('Stylus detected.');
     args.stylus = true;
 }
-if (
-    args.react == null &&
-    (projectDeps.react || projectDeps.preact || projectDeps.inferno)
-) {
+
+const projectHasReact = () => {
+    return projectDeps.react || projectDeps.preact || projectDeps.inferno;
+};
+
+if (args.react == null && projectHasReact()) {
     const reactLike = projectDeps.react
         ? 'React'
         : projectDeps.preact
