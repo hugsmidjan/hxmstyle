@@ -1,7 +1,7 @@
 // Prettier options: https://prettier.io/docs/en/options.html
 const baseRules = {
     printWidth: 90,
-    tabWidth: 4,
+    tabWidth: 2,
     tabs: false,
     semi: true,
     singleQuote: true,
@@ -29,6 +29,12 @@ const baseRules = {
             options: {
                 printWidth: 78,
                 proseWrap: 'always',
+            },
+        },
+        {
+            files: '*.{css,scss,less,styl}',
+            options: {
+                tabWidth: 4,
             },
         },
     ],
