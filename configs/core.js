@@ -1,19 +1,19 @@
 module.exports = {
-    extends: ['eslint:recommended'],
-    env: {
-        browser: true,
-        commonjs: true,
-        es6: true,
+  extends: ['eslint:recommended'],
+  env: {
+    browser: true,
+    commonjs: true,
+    es6: true,
+  },
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
     },
-    parserOptions: {
-        sourceType: 'module',
-        ecmaFeatures: {
-            jsx: true,
-        },
-    },
-    plugins: ['destructuring'],
-    /* prettier-ignore */
-    rules: {
+  },
+  plugins: ['destructuring'],
+  /* prettier-ignore */
+  rules: {
         'linebreak-style': [ 'error', 'unix' ],
         'quotes': [ 'error', 'single'/*, { avoidEscape: true, allowTemplateLiterals: false }*/ ],
         'comma-dangle': [ 'warn', 'always-multiline' ],

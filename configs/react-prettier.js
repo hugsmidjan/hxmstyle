@@ -1,4 +1,4 @@
 module.exports = {
-    extends: ['prettier/react'],
-    rules: {},
+  extends: ['prettier/react'],
+  rules: {},
 };
