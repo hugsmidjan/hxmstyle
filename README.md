@@ -120,18 +120,21 @@ Add these plugins:
 - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=editorconfig.editorconfig)
 - [Stylint](https://marketplace.visualstudio.com/items?itemName=HaaLeo.vscode-stylint)
   – if you're writing Stylus code
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  – for files other than JavaScript (Markdown, JSON, HTML, etc.)
 
 ...and these settings:
 
-```json
+```js
+    "editor.formatOnSave": true, // <- Best set on a per-workspace basis
     "eslint.autoFixOnSave": true,
-    "stylint.packageManager": "yarn",
-    "eslint.packageManager": "yarn",
+    "stylint.packageManager": "yarn", // or "npm"
+    "eslint.packageManager": "yarn", // or "npm"
 ```
 
 ...and make sure that the project root (where `.eslintrc.js` and
-`package.json` are) is set up as a "workspace folder", or alternatively add
-its path to your workspace settings:
+`package.json` are) is set up as a "workspace folder". Otherwise add its path
+to your workspace settings:
 
 ```json
 "eslint.workingDirectories": [
