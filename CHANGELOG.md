@@ -5,6 +5,11 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+
+## 0.2.5
+
+_2019-01-25_
+
 - feat: Auto-set `react.version` setting value from project's packgae.json
 - feat: Improve example "format" script: Prettify .json and .md
 
