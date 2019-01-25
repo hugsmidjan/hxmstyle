@@ -183,7 +183,7 @@ if (!projectPkg.scripts && !projectPkg.scripts.format) {
       'Example:',
       '',
       '    "scripts": {',
-      '        "format": "eslint --fix  *.js _src/**/*.js"',
+      '        "format": "eslint --fix  \\"*.js\\" \\"_src/**/*.js\\"  &&  prettier --write \\"*.json\\""',
       '    },',
       '',
       'More info: https://github.com/hugsmidjan/hxmstyle/blob/master/README.md#example-npm-scripts',

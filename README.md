@@ -99,7 +99,7 @@ Consider adding an npm script similar to this one to your project's
 
 ```json
     "scripts": {
-        "format": "eslint --fix  *.js _src/**/*.js",
+        "format": "eslint --fix  \"*.js\" \"_src/**/*.js\"  &&  prettier --write \"*.json\"",
     }
 ```
 
