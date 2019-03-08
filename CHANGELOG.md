@@ -5,6 +5,11 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+
+## 0.2.6
+
+_2019-03-08_
+
 - feat: Allow passing custom project `package.json` path to the eslint
   configger.
 - feat: Add option to pass `_guiltily_disable_prettier:false` – to disable
