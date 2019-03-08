@@ -52,7 +52,7 @@ module.exports = {
         'no-empty': ['error', { allowEmptyCatch: true }],
         'no-sequences': 'error',
         // https://eslint.org/docs/rules/indent#options
-        'indent': ['warn', 4],
+        'indent': ['warn', 2],
         'no-tabs': ['error', { allowIndentationTabs: true }],
         'max-len': ['warn', {
             code: 120,

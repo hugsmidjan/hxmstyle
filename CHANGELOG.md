@@ -7,6 +7,7 @@
 - ...
 - feat: Allow passing custom project 'package.json' path to the eslint
   configger
+- fix: Change ESLint's `indent` level to match Prettier's default.
 
 ## 0.2.5
 
