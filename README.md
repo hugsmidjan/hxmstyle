@@ -144,3 +144,11 @@ to your workspace settings:
     "path/to/project/root"
 ],
 ```
+
+## Advanced Options
+
+The `hxmstyle`'s core eslint config module accepts a second `options`
+parameter. The supported options are:
+
+- `pkg`: The project's `package.json` contents. Useful when your editor is
+  having trouble auto-resolving the project root.

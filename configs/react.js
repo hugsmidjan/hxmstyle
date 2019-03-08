@@ -1,4 +1,4 @@
-const projectPkg = require(process.cwd() + '/package.json');
+const projectPkg = require('../').getProjectPkg();
 let reactVersion =
   (projectPkg.dependencies || {}).react || (projectPkg.devDependencies || {}).react;
 if (reactVersion) {

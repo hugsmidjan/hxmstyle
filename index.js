@@ -1,14 +1,15 @@
 /* globals process */
 const path = require('path');
-const getProjectOptions = () =>
-  (require(process.cwd() + '/package.json').hxmstyle || {}).options || {};
+
+let _pkg;
+const getProjectPkg = () => _pkg || require(process.cwd() + '/package.json');
 
 const rulesetPath = path.parse(require.resolve('hxmstyle')).dir + '/configs/';
 const extendModules = ['core', 'react', 'fantasy'];
 
 const getBaseConfig = () => {
   const _extends = [rulesetPath + 'core.js'];
-  const options = getProjectOptions();
+  const options = (getProjectPkg().hxmstyle || {}).options || {};
   Object.keys(options).forEach((name) => {
     if (options[name] && extendModules.indexOf(name) > -1) {
       _extends.push(rulesetPath + name + '.js');
@@ -23,7 +24,8 @@ const getBaseConfig = () => {
   return { extends: _extends };
 };
 
-module.exports = (userCfg = {}) => {
+module.exports = (userCfg = {}, options) => {
+  _pkg = options && options.pkg;
   const config = Object.assign({}, userCfg, getBaseConfig());
 
   // Merge in the user's "extends"
@@ -38,3 +40,5 @@ module.exports = (userCfg = {}) => {
 
   return config;
 };
+
+module.exports.getProjectPkg = getProjectPkg;

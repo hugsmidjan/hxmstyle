@@ -5,6 +5,8 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Allow passing custom project 'package.json' path to the eslint
+  configger
 
 ## 0.2.5
 
