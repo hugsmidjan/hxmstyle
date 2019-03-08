@@ -152,3 +152,6 @@ parameter. The supported options are:
 
 - `pkg`: The project's `package.json` contents. Useful when your editor is
   having trouble auto-resolving the project root.
+- `_guiltily_disable_prettier`: A value of `true` will turn off ESLint's
+  Prettier "auto-fixes". This is sometimes neccessary when working with large
+  existing malformatted code-bases.

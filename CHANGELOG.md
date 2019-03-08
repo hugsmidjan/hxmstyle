@@ -7,6 +7,8 @@
 - ...
 - feat: Allow passing custom project `package.json` path to the eslint
   configger.
+- feat: Add option to pass `_guiltily_disable_prettier:false` – to disable
+  Prettier's auto-fixing.
 - fix: Change ESLint's `indent` level to match Prettier's default.
 
 ## 0.2.5
