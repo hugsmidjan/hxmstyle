@@ -6,6 +6,7 @@
 
 - ...
 - feat: Remove `no-confusing-arrow` rule.
+- fix: Stop trimming trailing whitespace in markdown files.
 - fix: Installer shouldn't error on `pkg.scripts` being undefined.
 
 ## 0.2.6
