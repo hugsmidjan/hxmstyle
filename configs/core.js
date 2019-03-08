@@ -29,7 +29,6 @@ module.exports = {
         'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
         'no-eval': 'error',
         'arrow-parens': ['warn', 'always'],
-        'no-confusing-arrow': ['error', { allowParens: false }],
         'eqeqeq': ['error', 'always', {'null': 'ignore'}],
         'block-scoped-var': 'error',
         'class-methods-use-this': 'warn',
