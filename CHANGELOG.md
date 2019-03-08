@@ -5,16 +5,16 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
-- feat: Allow passing custom project 'package.json' path to the eslint
-  configger
+- feat: Allow passing custom project `package.json` path to the eslint
+  configger.
 - fix: Change ESLint's `indent` level to match Prettier's default.
 
 ## 0.2.5
 
 _2019-01-25_
 
-- feat: Auto-set `react.version` setting value from project's packgae.json
-- feat: Improve example "format" script: Prettify .json and .md
+- feat: Auto-set `react.version` setting value from project's `package.json`.
+- feat: Improve example "format" script: Prettify `.json` and `.md`.
 
 ## 0.2.4
 
