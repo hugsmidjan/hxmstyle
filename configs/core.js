@@ -44,7 +44,6 @@ module.exports = {
         'no-console': ['warn', { allow: ['warn', 'error', 'trace', 'info'] }],
         'no-div-regex': 'error',
         'no-label-var': 'error',
-        'no-mixed-operators': 'error',
         'no-use-before-define': ['error', { variables: false, functions: false, classes: false }],
         'no-undef-init': 'error',
         'space-before-function-paren': ['warn', {anonymous: 'always', named: 'never', asyncArrow: 'ignore' }],

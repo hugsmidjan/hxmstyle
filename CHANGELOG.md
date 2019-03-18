@@ -5,7 +5,8 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
-- feat: Remove `no-confusing-arrow` rule.
+- feat: Remove `no-confusing-arrow` and `no-mixed-operators` rules – as these
+  run counter to the opinions of Prettier
 - fix: Stop trimming trailing whitespace in markdown files.
 - fix: Installer shouldn't error on `pkg.scripts` being undefined.
 
