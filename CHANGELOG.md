@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- fix: Installer shouldn't error on `pkg.scripts` being undefined.
 
 ## 0.2.6
 

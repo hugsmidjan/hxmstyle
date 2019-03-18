@@ -176,7 +176,7 @@ projectPkg.hxmstyle = {
 fs.writeFileSync(projectPkgPath, JSON.stringify(projectPkg, null, 4) + '\n');
 
 // Suggest adding a format script to package.json
-if (!projectPkg.scripts && !projectPkg.scripts.format) {
+if (!projectPkg.scripts || !projectPkg.scripts.format) {
   console.info(
     [
       'Consider adding a "format" npm script to your `package.json`',
