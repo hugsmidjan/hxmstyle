@@ -20,6 +20,9 @@ creates a starter [`.eslintrc`](starters/eslintrc.js),
 It also adds the handy CLI command `hxmstyle` that helps you update your
 plugins and add/remove optional preset bundles.
 
+If the installer detects that your project is using TypeScript, the relevant
+TS plugins are installed. (As if you'd run `hxmstyle --typescript`)
+
 If the installer detects that your project is using stylus, it will install
 `stylint` and a very opinionated [`.stylintrc`](starters/stylintrc.js) file.
 (Just like if you'd run `hxmstyle --stylus`)
@@ -36,7 +39,7 @@ Both the `npx` installer and the local CLI command take one or more optional
 flags.
 
 ```
-hxmstyle --react --fantasy --stylus
+hxmstyle --react --fantasy --stylus --typescript
 ```
 
 is the same as
@@ -45,12 +48,13 @@ is the same as
 hxmstyle --react
 hxmstyle --fantasy
 hxmstyle --stylus
+hxmstyle --typescript
 ```
 
 To turn off one or more options pass `false` as a value, like so:
 
 ```
-hxmstyle --react=false --fantasy=false --stylus=false
+hxmstyle --react=false --fantasy=false --stylus=false --typescript=false
 ```
 
 ...or edit `hxmstyle.options` in your `package.json` and set the corresponding
@@ -99,7 +103,7 @@ Consider adding an npm script similar to this one to your project's
 
 ```json
     "scripts": {
-        "format": "eslint --fix  \"*.js\" \"_src/**/*.js\"  &&  prettier --write \"*.json\"",
+        "format": "eslint --fix  \"*.{js,ts}\" \"_src/**/*.{js,ts}\"  &&  prettier --write \"*.md\" \"*.json\"",
     }
 ```
 
@@ -126,8 +130,17 @@ Add these plugins:
 ...and these settings:
 
 ```js
-    "editor.formatOnSave": true, // <- Best set on a per-workspace basis
+    // Essentials
     "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      { "language": "typescript", "autoFix": true },
+      { "language": "typescriptreact", "autoFix": true }
+    ],
+    "editor.formatOnSave": true, // Might be best set on a per-workspace basis:
+
+    // ....
     "stylint.packageManager": "yarn", // or "npm"
     "eslint.packageManager": "yarn", // or "npm"
 ```

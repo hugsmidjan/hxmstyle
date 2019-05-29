@@ -5,7 +5,7 @@ let _pkg;
 const getProjectPkg = () => _pkg || require(process.cwd() + '/package.json');
 
 const rulesetPath = path.parse(require.resolve('hxmstyle')).dir + '/configs/';
-const extendModules = ['core', 'react', 'fantasy'];
+const extendModules = ['core', 'typescript', 'react', 'fantasy'];
 
 const getBaseConfig = (opts) => {
   const _extends = [rulesetPath + 'core.js'];

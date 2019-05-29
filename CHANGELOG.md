@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Add optional TypeScript support (BYOTS) – (Bring Your Own TypeScript)
 
 ## 0.2.7
 

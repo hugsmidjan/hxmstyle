@@ -43,6 +43,7 @@ const parseArgs = (argv, supportedArgs) => {
   return args;
 };
 const supportedArgs = {
+  typescript: true,
   stylus: true,
   react: true,
   fantasy: true,
@@ -78,6 +79,13 @@ if (args.react == null && projectHasReact()) {
     : 'Inferno';
   console.info(reactLike + ' detected.');
   args.react = true;
+}
+
+const projectHasTypeScript = () => projectDeps.typescript;
+
+if (args.typescript == null && projectHasTypeScript()) {
+  console.info('TypeScript detected.');
+  args.typescript = true;
 }
 
 const installDeps = hxmstylePkg.peerDependencies;
