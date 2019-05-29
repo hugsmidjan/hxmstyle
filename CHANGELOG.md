@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Add `eslint-plugin-react-hooks` as `--react` dependency
 - feat: Update optional/peer dependencies to latest versions
 - feat: Remove `no-confusing-arrow` and `no-mixed-operators` rules – as these
   run counter to the opinions of Prettier

@@ -15,7 +15,7 @@ module.exports = {
       version: reactVersion || undefined, // React version, default to the latest React stable release
     },
   },
-  plugins: ['react'],
+  plugins: ['react', 'react-hooks'],
   rules: {
     // https://www.npmjs.com/package/eslint-plugin-react
     'react/prop-types': ['off'],
@@ -23,5 +23,8 @@ module.exports = {
     'react/no-unescaped-entities': ['warn'],
     'react/no-deprecated': ['warn'],
     'react/display-name': ['off' /*, { ignoreTranspilerName: true }*/],
+    // https://www.npmjs.com/package/eslint-plugin-react-hooks
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
 };

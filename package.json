@@ -19,7 +19,8 @@
   },
   "optionals": {
     "react": {
-      "eslint-plugin-react": "^7.13.0"
+      "eslint-plugin-react": "^7.13.0",
+      "eslint-plugin-react-hooks": "^1.6.0"
     },
     "fantasy": {
       "babel-eslint": "^10.0.1"
