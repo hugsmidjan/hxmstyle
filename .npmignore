@@ -4,3 +4,8 @@ node_modules
 /yarn.lock
 /yarn-error.log
 /npm-debug.log
+
+/.editorconfig
+/.eslintrc.js
+/.prettierrc.js
+/TODO.nd
