@@ -14,7 +14,7 @@ const projectDeps = Object.assign(
 );
 const lastSettings = projectPkg.hxmstyle || {};
 
-const hxmstylePath = path.parse(require.resolve('hxmstyle')).dir + '/';
+const hxmstylePath = path.parse(require.resolve('@hugsmidjan/hxmstyle')).dir + '/';
 const hxmstylePkg = require(hxmstylePath + 'package.json');
 
 const parseArgs = (argv, supportedArgs) => {

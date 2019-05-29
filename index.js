@@ -4,7 +4,7 @@ const path = require('path');
 let _pkg;
 const getProjectPkg = () => _pkg || require(process.cwd() + '/package.json');
 
-const rulesetPath = path.parse(require.resolve('hxmstyle')).dir + '/configs/';
+const rulesetPath = path.parse(require.resolve('@hugsmidjan/hxmstyle')).dir + '/configs/';
 const extendModules = [
   'core',
   'typescript',

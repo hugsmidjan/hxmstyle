@@ -1,4 +1,4 @@
-# HXMStyle
+# HXMstyle
 
 The one annoying style to rule them all...
 
@@ -8,7 +8,7 @@ allowing project-specific additions and tweaks.
 ## Install
 
 ```
-npx github:hugsmidjan/hxmstyle [--optionflags]
+npx @hugsmidjan/hxmstyle [--optionflags]
 ```
 
 this installs the `hxmstyle` linting/formatting ruleset, adds the neccessary
