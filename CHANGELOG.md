@@ -5,6 +5,11 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+
+## 0.2.7
+
+_2019-05-29_
+
 - feat: Add `eslint-plugin-react-hooks` as `--react` dependency
 - feat: Update optional/peer dependencies to latest versions
 - feat: Remove `no-confusing-arrow` and `no-mixed-operators` rules – as these
