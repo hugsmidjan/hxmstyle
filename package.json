@@ -8,6 +8,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
+    "dogfood": "yarn upgrade hxmstyle && hxmstyle && yarn run format",
     "format": "eslint --fix  *.js **/*.js  &&  prettier --write --loglevel=error  *.md *.json"
   },
   "peerDependencies": {
