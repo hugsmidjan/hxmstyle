@@ -10,7 +10,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "dogfood": "yarn upgrade hxmstyle && hxmstyle && yarn run format",
+    "dogfood": "yarn upgrade @hugsmidjan/hxmstyle && hxmstyle && yarn run format",
     "format": "eslint --fix  *.js **/*.js  &&  prettier --write --loglevel=error  *.md *.json"
   },
   "peerDependencies": {
@@ -40,11 +40,11 @@
   ],
   "license": "GPL-2.0-or-later",
   "devDependencies": {
+    "@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#canary",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-destructuring": "^2.1.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "hxmstyle": "github:hugsmidjan/hxmstyle#canary",
     "prettier": "^1.17.1"
   },
   "hxmstyle": {
