@@ -1,18 +1,10 @@
-const projectPkg = require('../').getProjectPkg();
-let reactVersion =
-  (projectPkg.dependencies || {}).react || (projectPkg.devDependencies || {}).react;
-if (reactVersion) {
-  const m = reactVersion.match(/(\d+)/);
-  reactVersion = m && m[1];
-}
-
 module.exports = {
   extends: ['plugin:react/recommended'],
   settings: {
     react: {
       // createClass: 'createClass', // Regex for Component Factory to use, default to 'createClass'
       // pragma: 'React',  // Pragma to use, default to 'React'
-      version: reactVersion || undefined, // React version, default to the latest React stable release
+      version: 'detect', // React version, default to the latest React stable release
     },
   },
   plugins: ['react', 'react-hooks'],

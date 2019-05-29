@@ -6,6 +6,7 @@
 
 - ...
 - feat: Add optional TypeScript support (BYOTS) – (Bring Your Own TypeScript)
+- feat: Use the React plugin's native `version: "detect"` feature
 
 ## 0.2.7
 
