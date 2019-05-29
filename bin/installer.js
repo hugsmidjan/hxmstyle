@@ -107,8 +107,8 @@ if (!projectDeps.hxmstyle) {
 }
 if (installs.length) {
   console.info('Adding/upgrading dependencies:\n', installs);
-  const hasYarn = !!exec('which yarn');
-  const installCmd = hasYarn ? 'yarn add --dev ' : 'npm install --save-dev ';
+  const useYarn = !!exec('which yarn') && fs.existsSync(projectPath + 'yarn.lock');
+  const installCmd = useYarn ? 'yarn add --dev ' : 'npm install --save-dev ';
   exec(installCmd + installs.join(' '));
   console.info('- Done.');
 }
