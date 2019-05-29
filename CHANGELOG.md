@@ -6,6 +6,7 @@
 
 - ...
 - feat: Add optional TypeScript support (BYOTS) – (Bring Your Own TypeScript)
+- feat: Add some `async/await` rules
 - feat: Use the React plugin's native `version: "detect"` feature
 - fix: Only use `yarn` for installing if a `yarn.lock` file is found
 

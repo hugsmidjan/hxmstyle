@@ -59,6 +59,9 @@ module.exports = {
             // ignoreTrailingComments: true,
             ignoreTemplateLiterals: true,
         }],
+        'require-await': 'error',
+        'no-async-promise-executor': 'error',
+        'no-await-in-loop': 'error',
 
         // eslint-plugin-destructuring:
         'destructuring/no-rename': 'error',
