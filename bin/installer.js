@@ -46,7 +46,6 @@ const supportedArgs = {
   typescript: true,
   stylus: true,
   react: true,
-  fantasy: true,
 };
 const args = Object.assign(
   {},

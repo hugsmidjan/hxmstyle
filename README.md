@@ -30,23 +30,19 @@ If the installer detects that your project is using stylus, it will install
 Similarily if `react` (or `preact` or `inferno`) is detected, a react plugin
 is installed. (As if you'd run `hxmstyle --react`)
 
-To get linting and formatting for futuristic ES syntax use the `--fantasy`
-flag.
-
 ### Install options
 
 Both the `npx` installer and the local CLI command take one or more optional
 flags.
 
 ```
-hxmstyle --react --fantasy --stylus --typescript
+hxmstyle --react --stylus --typescript
 ```
 
 is the same as
 
 ```
 hxmstyle --react
-hxmstyle --fantasy
 hxmstyle --stylus
 hxmstyle --typescript
 ```
@@ -54,7 +50,7 @@ hxmstyle --typescript
 To turn off one or more options pass `false` as a value, like so:
 
 ```
-hxmstyle --react=false --fantasy=false --stylus=false --typescript=false
+hxmstyle --react=false --stylus=false --typescript=false
 ```
 
 ...or edit `hxmstyle.options` in your `package.json` and set the corresponding
