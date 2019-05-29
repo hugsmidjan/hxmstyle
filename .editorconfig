@@ -15,5 +15,8 @@ insert_final_newline = true
 [*.{css,styl,less,scss}]
 indent_size = 4
 
+[*.{md,markdown}]
+trim_trailing_whitespace = false
+
 # -------------------------------------------------------------------------------------------
 # __project_specific_rules__  Anything ABOVE this point will be automatically wiped/rewritten.
