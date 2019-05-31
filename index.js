@@ -12,7 +12,7 @@ const extendModules = [
   'fantasy', // deprecated as of v0.3.0
 ];
 
-const getBaseConfig = (opts) => {
+const getBaseExtends = (opts) => {
   const _extends = [rulesetPath + 'core.js'];
   const options = (getProjectPkg().hxmstyle || {}).options || {};
   Object.keys(options).forEach((name) => {
@@ -28,12 +28,14 @@ const getBaseConfig = (opts) => {
       _extends.push(prettierCfgPath);
     });
   }
-  return { extends: _extends };
+  return _extends;
 };
 
 module.exports = (userCfg = {}, options) => {
   _pkg = options && options.pkg;
-  const config = Object.assign({}, userCfg, getBaseConfig(options));
+  const config = Object.assign({}, userCfg, {
+    extends: getBaseExtends(options),
+  });
 
   // Merge in the user's "extends"
   if (userCfg.extends) {
