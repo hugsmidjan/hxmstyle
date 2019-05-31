@@ -53,8 +53,8 @@ To turn off one or more options pass `false` as a value, like so:
 hxmstyle --react=false --stylus=false --typescript=false
 ```
 
-...or edit `hxmstyle.options` in your `package.json` and set the corresponding
-property to `false`.
+...or edit your `package.json`'s `hxmstyle.options` field and set the
+corresponding property to `false`.
 
 ## Upgrading/Updating
 
@@ -134,7 +134,8 @@ Add these plugins:
       { "language": "typescript", "autoFix": true },
       { "language": "typescriptreact", "autoFix": true }
     ],
-    "editor.formatOnSave": true, // Might be best set on a per-workspace basis:
+    // NOTE: This one might be best set on a per-workspace basis:
+    "editor.formatOnSave": true,
 
     // ....
     "stylint.packageManager": "yarn", // or "npm"
