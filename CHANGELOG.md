@@ -5,11 +5,17 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
-- feat: Add `root: true` as a default core setting
-- **BREAKING** feat: Change package name to `@hugsmidjan/hxmstyle`
+
+## 1.0.0
+
+_2019-05-31_
+
+- **BREAKING** feat: Change package name to `@hugsmidjan/hxmstyle` – publish
+  on npmjs.com
 - **BREAKING** feat: Drop support for the `--fantasy` flag – Use
   `parserOptions.ecmaVersion` instead. Added example in the .esintrc.js
   starter.
+- feat: Add `root: true` as a default core setting
 - feat: Add optional TypeScript support (BYOTS) – (Bring Your Own TypeScript)
 - feat: Add some `async/await` rules
 - feat: Use the React plugin's native `version: "detect"` feature
