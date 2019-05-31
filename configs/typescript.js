@@ -4,9 +4,9 @@ module.exports = {
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
-      // ????:
-      ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-      sourceType: 'module', // Allows for the use of imports
+      // // ????:
+      // ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+      // sourceType: 'module', // Allows for the use of imports
     },
   },
   rules: {
@@ -14,7 +14,7 @@ module.exports = {
     '@typescript-eslint/no-extraneous-class': 'warn',
     '@typescript-eslint/no-useless-constructor': 'warn',
     '@typescript-eslint/ban-types': [
-      'error',
+      'warn',
       {
         types: {
           Array: {
@@ -40,5 +40,23 @@ module.exports = {
         },
       },
     ],
+
+    // Part of recommended:
+    // ------------------------------------------------------
+    // "error" just feels too aggressive
+    '@typescript-eslint/no-inferrable-types': 'warn',
+    // Needs discussion. TypeScript is pretty good at inferring return types
+    '@typescript-eslint/explicit-function-return-type': false,
+    // '@typescript-eslint/explicit-function-return-type': [ 'warn', { allowTypedFunctionExpressions: true, allowExpressions: true } ],
+  },
+
+  overrides: {
+    files: ['*.js', '*.jsx'],
+    rules: {
+      // This seems like a sensible default – to avoid typescript being annoying about
+      // node scripts that require require() to function correctly.
+      // However, when writing TypeScript this pattern should never be used.
+      '@typescript-eslint/no-var-requires': false,
+    },
   },
 };
