@@ -33,7 +33,7 @@ const getBaseExtends = (opts) => {
 
 module.exports = (userCfg = {}, options) => {
   _pkg = options && options.pkg;
-  const config = Object.assign({}, userCfg, {
+  const config = Object.assign({ root: true }, userCfg, {
     extends: getBaseExtends(options),
   });
 

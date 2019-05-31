@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Add `root: true` as a default core setting
 - **BREAKING** feat: Change package name to `@hugsmidjan/hxmstyle`
 - **BREAKING** feat: Drop support for the `--fantasy` flag – Use
   `parserOptions.ecmaVersion` instead. Added example in the .esintrc.js
