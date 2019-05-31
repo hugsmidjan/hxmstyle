@@ -20,8 +20,9 @@ creates a starter [`.eslintrc`](starters/eslintrc.js),
 It also adds the handy CLI command `hxmstyle` that helps you update your
 plugins and add/remove optional preset bundles.
 
-If the installer detects that your project is using TypeScript, the relevant
-TS plugins are installed. (As if you'd run `hxmstyle --typescript`)
+If the installer detects that your project is using TypeScript, it installs
+the relevant TS plugins and a minimal `tsconfig.json` file with
+`compilerOptions.strict: true`. (As if you'd run `hxmstyle --typescript`)
 
 If the installer detects that your project is using stylus, it will install
 `stylint` and a very opinionated [`.stylintrc`](starters/stylintrc.js) file.

@@ -118,10 +118,39 @@ if (!fs.existsSync(projectPath + '.eslintrc.js')) {
   exec('cp ' + hxmstylePath + 'starters/eslintrc.js .eslintrc.js');
   console.info('- Done.');
 }
+// Create default .preddierrc.js file
 if (!fs.existsSync(projectPath + '.prettierrc.js')) {
   console.info('Creating .prettierrc.js');
   exec('cp ' + hxmstylePath + 'starters/prettierrc.js .prettierrc.js');
   console.info('- Done.');
+}
+
+if (args.typescript) {
+  // Create default tsconfig.json file
+  if (!fs.existsSync(projectPath + 'tsconfig.json')) {
+    console.info('Creating minimal tsconfig.json');
+    exec('cp ' + hxmstylePath + 'starters/tsconfig.json tsconfig.json');
+    console.info('- Done.');
+  } else {
+    // Or at least strongly suggest turning on `strict` mode, if needed
+    try {
+      const tscfg = require(projectPath + 'tsconfig.json');
+      if (!tscfg.compilerOptions || !tscfg.compilerOptions.strict) {
+        console.warn(
+          [
+            'Consider turning on `strict` mode in your `tsconfig.json`',
+            "...like SERIOUSLY!  Don't be daft. Always be strict.",
+            '{',
+            '  "compilerOptions": {',
+            '    "strict": true',
+            '  }',
+            '}',
+            '',
+          ].join('\n')
+        );
+      }
+    } catch (e) {}
+  }
 }
 
 // Update .editorconfig
