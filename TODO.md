@@ -6,5 +6,3 @@
 # MAYBE
 
 - Consider adding fields to prexisting `tsconfig.json` files
-- Consider adding an `--prettier:false` option flag to allow opting out of
-  prettier. (Easy to do but needs more thought/discussion.)

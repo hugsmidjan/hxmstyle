@@ -119,10 +119,10 @@ Add these plugins:
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=editorconfig.editorconfig)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  – for files other than JavaScript/TypeScript (Markdown, JSON, HTML, etc.)
 - [Stylint](https://marketplace.visualstudio.com/items?itemName=HaaLeo.vscode-stylint)
   – if you're writing Stylus code
-- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-  – for files other than JavaScript (Markdown, JSON, HTML, etc.)
 
 ...and these settings:
 
@@ -166,3 +166,15 @@ parameter. The supported options are:
 - `_guiltily_disable_prettier`: A value of `true` will turn off ESLint's
   Prettier "auto-fixes". This is sometimes neccessary when working with large
   existing malformatted code-bases.
+
+```
+module.exprts = require('@hugsmidjan/hxmgulp)(
+  {
+    // custom eslint config...
+  }
+  {
+    pkg: require('./package.json'),
+    _guiltily_disable_prettier: true,
+  }
+)
+```
