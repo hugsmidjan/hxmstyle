@@ -10,6 +10,9 @@ module.exports = {
     },
   },
   rules: {
+    '@typescript-eslint/explicit-member-accessibility': false,
+    '@typescript-eslint/camelcase': false,
+    '@typescript-eslint/interface-name-prefix': false, // 'never' | 'always // 'never' seems like a weird default
     '@typescript-eslint/array-type': ['warn', 'generic'], // 'array' -> `T[]` ;  'generic' -> `Array<T>`
     '@typescript-eslint/no-extraneous-class': 'warn',
     '@typescript-eslint/no-useless-constructor': 'warn',
@@ -17,10 +20,6 @@ module.exports = {
       'warn',
       {
         types: {
-          Array: {
-            message: 'Use Array<any> instead',
-            fixWith: 'Array<any>',
-          },
           Object: {
             message: 'Use {} instead',
             fixWith: '{}',

@@ -60,13 +60,14 @@ module.exports = {
             // ignoreTrailingComments: true,
             ignoreTemplateLiterals: true,
         }],
-        'require-await': 'error',
+        'prefer-const': 'warn', // Wish there was a way to prevent autofixing this one.
+        'require-await': 'warn',
         'no-async-promise-executor': 'error',
         'no-await-in-loop': 'error',
 
         // eslint-plugin-destructuring:
         'destructuring/no-rename': 'error',
-        'destructuring/in-params': ['error', { 'max-params' : 1 }],
+        'destructuring/in-params': ['error', { 'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i}/* ... */</li>)}
         'destructuring/in-methods-params': 'error',
         // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
     }
