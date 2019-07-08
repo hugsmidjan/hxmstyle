@@ -5,6 +5,11 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+
+## 1.1.0
+
+_2019-07-08_
+
 - feat: Tweak rules for async, destructuring and TypeScript
 
 ## 1.0.0
