@@ -101,8 +101,8 @@ Object.keys(hxmstylePkg.optionals).forEach((option) => {
 
 // install/upgrade plugins
 const installs = Object.keys(installDeps).map((name) => name + '@' + installDeps[name]);
-if (!projectDeps.hxmstyle) {
-  installs.push('github:hugsmidjan/hxmstyle#semver:^' + hxmstylePkg.version);
+if (!projectDeps['@hugsmidjan/hxmstyle']) {
+  installs.push('@hugsmidjan/hxmstyle@^' + hxmstylePkg.version);
 }
 if (installs.length) {
   console.info('Adding/upgrading dependencies:\n', installs);

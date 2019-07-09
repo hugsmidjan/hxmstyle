@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- fix: Make installer check for and install npmjs version of hxmstyle
 
 ## 1.1.0
 
