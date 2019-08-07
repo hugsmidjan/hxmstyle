@@ -10,7 +10,7 @@
 
 _2019-08-07_
 
-- feat: Relax `no-use-before-define` to `warn`
+- feat: Relax `no-use-before-define` to `warn` for all instances
 - feat: Relax `@typescript-eslint/no-explicit-any` to `warn` and
   `ignoreRestArgs`
 - feat: Relax `@typescript-eslint/no-object-literal-type-assertion` to
