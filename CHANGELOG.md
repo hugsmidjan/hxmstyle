@@ -5,6 +5,12 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Relax `no-use-before-define` to `warn`
+- feat: Relax `@typescript-eslint/no-explicit-any` to `warn` and
+  `ignoreRestArgs`
+- feat: Relax `@typescript-eslint/no-object-literal-type-assertion` to
+  `allowAsParameter`
+- fix: Make `@typescript-eslint/indent` the same as core's `indent` value
 
 ## 1.1.1
 

@@ -42,11 +42,21 @@ module.exports = {
 
     // Part of recommended:
     // ------------------------------------------------------
+    '@typescript-eslint/no-use-before-define': 'warn',
+    '@typescript-eslint/no-explicit-any': [
+      'warn',
+      { fixToUnknown: false, ignoreRestArgs: true },
+    ],
+    '@typescript-eslint/indent': ['error', 2],
     // "error" just feels too aggressive
     '@typescript-eslint/no-inferrable-types': 'warn',
     // Needs discussion. TypeScript is pretty good at inferring return types
     '@typescript-eslint/explicit-function-return-type': false,
     // '@typescript-eslint/explicit-function-return-type': [ 'warn', { allowTypedFunctionExpressions: true, allowExpressions: true } ],
+    '@typescript-eslint/no-object-literal-type-assertion': [
+      'error',
+      { allowAsParameter: true },
+    ],
   },
 
   overrides: {
