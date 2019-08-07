@@ -5,6 +5,11 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+
+## 1.2.0
+
+_2019-08-07_
+
 - feat: Relax `no-use-before-define` to `warn`
 - feat: Relax `@typescript-eslint/no-explicit-any` to `warn` and
   `ignoreRestArgs`
