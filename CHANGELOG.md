@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Add `'no-var': 'warn'`
 
 ## 1.2.0
 

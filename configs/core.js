@@ -67,6 +67,7 @@ module.exports = {
       // ignoreTrailingComments: true,
       ignoreTemplateLiterals: true,
     }],
+    'no-var': 'warn',
     'prefer-const': 'warn', // Wish there was a way to prevent autofixing this one.
     'require-await': 'warn',
     'no-async-promise-executor': 'error',
