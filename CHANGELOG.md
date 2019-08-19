@@ -5,7 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
-- feat: Add `'no-var': 'warn'`
+- feat: Add `'no-var': 'warn'` and `no-throw-literal`
 
 ## 1.2.0
 

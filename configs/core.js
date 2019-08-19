@@ -72,6 +72,7 @@ module.exports = {
     'require-await': 'warn',
     'no-async-promise-executor': 'error',
     'no-await-in-loop': 'error',
+    'no-throw-literal': 'error',
 
     // eslint-plugin-destructuring:
     'destructuring/no-rename': 'error',
