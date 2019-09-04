@@ -212,13 +212,18 @@ fs.writeFileSync(projectPkgPath, JSON.stringify(projectPkg, null, '\t') + '\n');
 
 // Suggest adding a format script to package.json
 if (!projectPkg.scripts || !projectPkg.scripts.format) {
+	const jsExts = args.typescript ? 'js,ts,tsx' : 'js';
 	console.info(
 		[
 			'Consider adding a "format" npm script to your `package.json`',
 			'Example:',
 			'',
 			'    "scripts": {',
-			'        "format": "eslint --fix  \\"*.js\\" \\"_src/**/*.js\\"  &&  prettier --write \\"*.json\\""',
+			'        "format": "eslint --fix  \\"*.' +
+				jsExts +
+				'\\" \\"_src/**/*.' +
+				jsExts +
+				'\\"  &&  prettier --write \\"*.json\\""',
 			'    },',
 			'',
 			'More info: https://github.com/hugsmidjan/hxmstyle/blob/master/README.md#example-npm-scripts',
