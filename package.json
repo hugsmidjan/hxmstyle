@@ -1,60 +1,60 @@
 {
-  "name": "@hugsmidjan/hxmstyle",
-  "description": "One annoying style to rule them all...",
-  "version": "1.2.0",
-  "main": "index.js",
-  "bin": {
-    "hxmstyle": "bin/installer.js"
-  },
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "scripts": {
-    "dogfood": "yarn upgrade @hugsmidjan/hxmstyle && hxmstyle && yarn run format",
-    "format": "eslint --fix  *.js **/*.js  &&  prettier --write --loglevel=error  *.md *.json"
-  },
-  "peerDependencies": {
-    "eslint": "^6.3.0",
-    "eslint-config-prettier": "^6.2.0",
-    "eslint-plugin-destructuring": "^2.1.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2"
-  },
-  "optionals": {
-    "typescript": {
-      "@typescript-eslint/parser": "^2.1.0",
-      "@typescript-eslint/eslint-plugin": "^2.1.0"
-    },
-    "react": {
-      "eslint-plugin-react": "^7.14.3",
-      "eslint-plugin-react-hooks": "^2.0.1"
-    },
-    "stylus": {
-      "stylint": "^2.0.0"
-    }
-  },
-  "repository": "git@github.com:hugsmidjan/hxmstyle.git",
-  "author": "Hugsmiðjan ehf (https://www.hugsmidjan.is)",
-  "contributors": [
-    "Már Örlygsson <mar.nospam@anomy.net> (http://mar.anomy.net)"
-  ],
-  "license": "GPL-2.0-or-later",
-  "devDependencies": {
-    "@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#canary",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-destructuring": "^2.1.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.17.1"
-  },
-  "hxmstyle": {
-    "options": {},
-    "dependenciesAdded": [
-      "eslint",
-      "eslint-config-prettier",
-      "eslint-plugin-destructuring",
-      "eslint-plugin-prettier",
-      "prettier"
-    ]
-  }
+	"name": "@hugsmidjan/hxmstyle",
+	"description": "One annoying style to rule them all...",
+	"version": "1.2.0",
+	"main": "index.js",
+	"bin": {
+		"hxmstyle": "bin/installer.js"
+	},
+	"engines": {
+		"node": ">=6.0.0"
+	},
+	"scripts": {
+		"dogfood": "yarn upgrade @hugsmidjan/hxmstyle && hxmstyle && yarn run format",
+		"format": "eslint --fix  *.js **/*.js  &&  prettier --write --loglevel=error  *.md *.json"
+	},
+	"peerDependencies": {
+		"eslint": "^6.3.0",
+		"eslint-config-prettier": "^6.2.0",
+		"eslint-plugin-destructuring": "^2.1.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"prettier": "^1.18.2"
+	},
+	"optionals": {
+		"typescript": {
+			"@typescript-eslint/parser": "^2.1.0",
+			"@typescript-eslint/eslint-plugin": "^2.1.0"
+		},
+		"react": {
+			"eslint-plugin-react": "^7.14.3",
+			"eslint-plugin-react-hooks": "^2.0.1"
+		},
+		"stylus": {
+			"stylint": "^2.0.0"
+		}
+	},
+	"repository": "git@github.com:hugsmidjan/hxmstyle.git",
+	"author": "Hugsmiðjan ehf (https://www.hugsmidjan.is)",
+	"contributors": [
+		"Már Örlygsson <mar.nospam@anomy.net> (http://mar.anomy.net)"
+	],
+	"license": "GPL-2.0-or-later",
+	"devDependencies": {
+		"@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#canary",
+		"eslint": "^6.3.0",
+		"eslint-config-prettier": "^6.2.0",
+		"eslint-plugin-destructuring": "^2.1.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"prettier": "^1.18.2"
+	},
+	"hxmstyle": {
+		"options": {},
+		"dependenciesAdded": [
+			"eslint",
+			"eslint-config-prettier",
+			"eslint-plugin-destructuring",
+			"eslint-plugin-prettier",
+			"prettier"
+		]
+	}
 }

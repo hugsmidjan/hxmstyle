@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['prettier/@typescript-eslint'],
-  rules: {},
+	extends: ['prettier/@typescript-eslint'],
+	rules: {},
 };

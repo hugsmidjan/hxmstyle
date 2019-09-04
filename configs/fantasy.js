@@ -1,5 +1,5 @@
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 9,
-  },
+	parserOptions: {
+		ecmaVersion: 9,
+	},
 };
