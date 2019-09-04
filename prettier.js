@@ -2,7 +2,7 @@
 const baseRules = {
   printWidth: 90,
   tabWidth: 2,
-  tabs: false,
+  tabs: true,
   semi: true,
   singleQuote: true,
   jsxSingleQuote: false,

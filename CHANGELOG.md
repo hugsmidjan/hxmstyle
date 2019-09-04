@@ -8,6 +8,7 @@
 - **BREAKING** feat: Update eslint to version 6 – which does not work in
   Node@6
 - feat: Update optional/peer dependencies to latest versions
+- feat: Prefer tabs over spaces for indentation
 - feat: Add `'no-var': 'warn'` and `no-throw-literal`
 
 ## 1.2.0

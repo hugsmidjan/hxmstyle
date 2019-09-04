@@ -35,7 +35,7 @@ module.exports = {
   efficient: false, // always: prefer `margin: 1em 0 2em` over `margin: 1em 0 2em 0`
   extendPref: '@extend',
   globalDupe: false,
-  indentPref: 4, // number of spaces per indent-level (Affects "depthLimit" above). Use `false` for tabs
+  indentPref: false, // number of spaces per indent-level (Affects "depthLimit" above). Use `false` for tabs
   leadingZero: 'never',
   mixed: true, // Complain about mixed space and tabs. If `indentPref:false` and `mixed:true`then prefer \tmargin\s0 over \s\s\s\smargin\s0
   namingConvention: false, // for .classNames, #id, and $variables. Options: [ false | 'lowercase-dash' | 'lowercase_underscore' | 'camelCase' | 'BEM' ]
