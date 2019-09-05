@@ -5,6 +5,11 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+
+## 2.0.0
+
+_2019-09-05_
+
 - **BREAKING** feat: Update eslint to version 6 – which does not work in
   Node@6
 - feat: Update optional/peer dependencies to latest versions

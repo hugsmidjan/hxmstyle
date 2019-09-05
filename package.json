@@ -1,13 +1,13 @@
 {
 	"name": "@hugsmidjan/hxmstyle",
 	"description": "One annoying style to rule them all...",
-	"version": "1.2.0",
+	"version": "2.0.0",
 	"main": "index.js",
 	"bin": {
 		"hxmstyle": "bin/installer.js"
 	},
 	"engines": {
-		"node": ">=6.0.0"
+		"node": ">=8.0.0"
 	},
 	"scripts": {
 		"dogfood": "yarn upgrade @hugsmidjan/hxmstyle && hxmstyle && yarn run format",
