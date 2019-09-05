@@ -14,23 +14,23 @@
     "format": "eslint --fix  *.js **/*.js  &&  prettier --write --loglevel=error  *.md *.json"
   },
   "peerDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.2.0",
     "eslint-plugin-destructuring": "^2.1.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.17.1"
+    "prettier": "^1.18.2"
   },
   "optionals": {
     "typescript": {
-      "@typescript-eslint/parser": "^1.9.0",
-      "@typescript-eslint/eslint-plugin": "^1.9.0"
+      "@typescript-eslint/parser": "^2.1.0",
+      "@typescript-eslint/eslint-plugin": "^2.1.0"
     },
     "react": {
-      "eslint-plugin-react": "^7.13.0",
-      "eslint-plugin-react-hooks": "^1.6.0"
+      "eslint-plugin-react": "^7.14.3",
+      "eslint-plugin-react-hooks": "^2.0.1"
     },
     "stylus": {
-      "stylint": "^1.5.9"
+      "stylint": "^2.0.0"
     }
   },
   "repository": "git@github.com:hugsmidjan/hxmstyle.git",

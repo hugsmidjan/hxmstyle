@@ -1,6 +1,9 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: ['plugin:@typescript-eslint/recommended'],
+  extends: [
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -39,6 +42,7 @@ module.exports = {
         },
       },
     ],
+    '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
 
     // Part of recommended:
     // ------------------------------------------------------
@@ -53,19 +57,21 @@ module.exports = {
     // Needs discussion. TypeScript is pretty good at inferring return types
     '@typescript-eslint/explicit-function-return-type': false,
     // '@typescript-eslint/explicit-function-return-type': [ 'warn', { allowTypedFunctionExpressions: true, allowExpressions: true } ],
-    '@typescript-eslint/no-object-literal-type-assertion': [
-      'error',
-      { allowAsParameter: true },
-    ],
-  },
-
-  overrides: {
-    files: ['*.js', '*.jsx'],
-    rules: {
-      // This seems like a sensible default – to avoid typescript being annoying about
-      // node scripts that require require() to function correctly.
-      // However, when writing TypeScript this pattern should never be used.
-      '@typescript-eslint/no-var-requires': false,
+    '@typescript-eslint/consistent-type-assertions': {
+      assertionStyle: 'as',
+      objectLiteralTypeAssertions: 'allow-as-parameter',
     },
   },
+
+	overrides: [
+		{
+			files: ['*.js', '*.jsx'],
+			rules: {
+				// This seems like a sensible default – to avoid typescript being annoying about
+				// node scripts that require require() to function correctly.
+				// However, when writing TypeScript this pattern should never be used.
+				'@typescript-eslint/no-var-requires': false,
+			},
+		},
+	],
 };
