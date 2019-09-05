@@ -13,10 +13,10 @@ module.exports = {
 		},
 	},
 	rules: {
-		'@typescript-eslint/explicit-member-accessibility': false,
-		'@typescript-eslint/camelcase': false,
-		'@typescript-eslint/interface-name-prefix': false, // 'never' | 'always // 'never' seems like a weird default
-		'@typescript-eslint/array-type': ['warn', 'generic'], // 'array' -> `T[]` ;  'generic' -> `Array<T>`
+		'@typescript-eslint/explicit-member-accessibility': 'off',
+		'@typescript-eslint/camelcase': 'off',
+		'@typescript-eslint/interface-name-prefix': 'off', // 'never' | 'always // 'never' seems like a weird default
+		'@typescript-eslint/array-type': ['warn', { default: 'generic' }], // 'array' -> `T[]` ;  'generic' -> `Array<T>`
 		'@typescript-eslint/no-extraneous-class': 'warn',
 		'@typescript-eslint/no-useless-constructor': 'warn',
 		'@typescript-eslint/ban-types': [
@@ -55,12 +55,15 @@ module.exports = {
 		// "error" just feels too aggressive
 		'@typescript-eslint/no-inferrable-types': 'warn',
 		// Needs discussion. TypeScript is pretty good at inferring return types
-		'@typescript-eslint/explicit-function-return-type': false,
+		'@typescript-eslint/explicit-function-return-type': 'off',
 		// '@typescript-eslint/explicit-function-return-type': [ 'warn', { allowTypedFunctionExpressions: true, allowExpressions: true } ],
-		'@typescript-eslint/consistent-type-assertions': {
-			assertionStyle: 'as',
-			objectLiteralTypeAssertions: 'allow-as-parameter',
-		},
+		'@typescript-eslint/consistent-type-assertions': [
+			'error',
+			{
+				assertionStyle: 'as',
+				objectLiteralTypeAssertions: 'allow-as-parameter',
+			},
+		],
 	},
 
 	overrides: [
@@ -70,7 +73,7 @@ module.exports = {
 				// This seems like a sensible default – to avoid typescript being annoying about
 				// node scripts that require require() to function correctly.
 				// However, when writing TypeScript this pattern should never be used.
-				'@typescript-eslint/no-var-requires': false,
+				'@typescript-eslint/no-var-requires': 'off',
 			},
 		},
 	],
