@@ -46,6 +46,7 @@ module.exports = {
 
 		// Part of recommended:
 		// ------------------------------------------------------
+		'@typescript-eslint/ban-ts-ignore': 'off',
 		'@typescript-eslint/no-use-before-define': 'warn',
 		'@typescript-eslint/no-explicit-any': [
 			'warn',
