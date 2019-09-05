@@ -5,6 +5,7 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 	],
 	parserOptions: {
+		project: './tsconfig.json',
 		ecmaFeatures: {
 			jsx: true,
 			// // ????:
@@ -72,7 +73,7 @@ module.exports = {
 			files: ['*.js', '*.jsx'],
 			rules: {
 				// This seems like a sensible default – to avoid typescript being annoying about
-				// node scripts that require require() to function correctly.
+				// node scripts that require `require()` to function correctly.
 				// However, when writing TypeScript this pattern should never be used.
 				'@typescript-eslint/no-var-requires': 'off',
 			},
