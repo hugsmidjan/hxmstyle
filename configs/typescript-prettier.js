@@ -1,4 +1,9 @@
 module.exports = {
-	extends: ['prettier/@typescript-eslint'],
-	rules: {},
+	overrides: [
+		{
+			files: ['*.ts', '*.tsx'],
+			extends: ['prettier/@typescript-eslint'],
+			rules: {},
+		},
+	],
 };

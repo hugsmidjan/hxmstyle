@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Scope all TypeScript linting to just `*.{ts,tsx}` files
 
 ## 2.0.0
 
