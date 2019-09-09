@@ -5,6 +5,11 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+
+## 2.1.0
+
+_2019-09-09_
+
 - feat: Scope all TypeScript linting to just `*.{ts,tsx}` files
 - fix: Update `comma-dangle` rule syntax
 
