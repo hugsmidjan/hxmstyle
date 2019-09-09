@@ -11,7 +11,7 @@
 	},
 	"scripts": {
 		"dogfood": "yarn upgrade @hugsmidjan/hxmstyle && hxmstyle && yarn run format",
-		"format": "eslint --fix  *.js **/*.js  &&  prettier --write --loglevel=error  *.md *.json"
+		"format": "eslint --fix  \"*.js\" \"**/*.js\"  &&  prettier --write --loglevel=error  \"*.md\" \"*.json\""
 	},
 	"peerDependencies": {
 		"eslint": "^6.3.0",
