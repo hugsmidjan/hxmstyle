@@ -6,6 +6,7 @@
 
 - ...
 - feat: Scope all TypeScript linting to just `*.{ts,tsx}` files
+- fix: Update `comma-dangle` rule syntax
 
 ## 2.0.0
 

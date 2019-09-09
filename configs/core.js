@@ -15,12 +15,18 @@ module.exports = {
 	plugins: ['destructuring'],
 	/* prettier-ignore */
 	rules: {
-    'linebreak-style': [ 'error', 'unix' ],
-    'quotes': [ 'error', 'single'/*, { avoidEscape: true, allowTemplateLiterals: false }*/ ],
-    'comma-dangle': [ 'warn', 'always-multiline' ],
-    'semi': [ 'warn', 'always' ],
-    'brace-style': [ 'warn', '1tbs', { allowSingleLine: true }],
-    'curly': [ 'error', 'all' ],
+    'linebreak-style': ['error', 'unix'],
+    'quotes': ['error', 'single'/*, { avoidEscape: true, allowTemplateLiterals: false }*/],
+		'comma-dangle': ['warn', {
+			arrays: 'always-multiline',
+			objects: 'always-multiline',
+			imports: 'always-multiline',
+			exports: 'always-multiline',
+			functions: 'ignore',
+		}],
+    'semi': ['warn', 'always'],
+    'brace-style': ['warn', '1tbs', { allowSingleLine: true }],
+    'curly': ['error', 'all'],
     //'no-trailing-spaces': 'warn',
     'space-before-blocks': 'warn',
     'keyword-spacing': 'warn',
@@ -79,5 +85,5 @@ module.exports = {
     'destructuring/in-params': ['error', { 'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i}/* ... */</li>)}
     'destructuring/in-methods-params': 'error',
     // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
-  }
+  },
 };
