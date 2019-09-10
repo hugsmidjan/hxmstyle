@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Use `@typescript-eslint/consistent-type-assertions` defaults
 
 ## 2.1.0
 

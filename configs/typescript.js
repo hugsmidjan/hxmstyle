@@ -62,13 +62,6 @@ module.exports = {
 				// Needs discussion. TypeScript is pretty good at inferring return types
 				'@typescript-eslint/explicit-function-return-type': 'off',
 				// '@typescript-eslint/explicit-function-return-type': [ 'warn', { allowTypedFunctionExpressions: true, allowExpressions: true } ],
-				'@typescript-eslint/consistent-type-assertions': [
-					'error',
-					{
-						assertionStyle: 'as',
-						objectLiteralTypeAssertions: 'allow-as-parameter',
-					},
-				],
 			},
 		},
 	],
