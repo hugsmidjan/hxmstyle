@@ -5,6 +5,11 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+
+## 2.2.0
+
+_2019-09-14_
+
 - feat: Use `@typescript-eslint/consistent-type-assertions` defaults
 - fix: Upgrade eslint to 6.4 for overrides path bugfix – (Affecting our
   TypeScript setup.)
