@@ -6,6 +6,8 @@
 
 - ...
 - feat: Use `@typescript-eslint/consistent-type-assertions` defaults
+- fix: Upgrade eslint to 6.4 for overrides path bugfix – (Affecting our
+  TypeScript setup.)
 
 ## 2.1.0
 
