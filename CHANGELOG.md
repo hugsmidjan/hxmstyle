@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Tighten `quotes` rule and add `template-tag-spacing` rule
 
 ## 2.2.0
 
