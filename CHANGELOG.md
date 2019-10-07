@@ -5,6 +5,11 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+
+## 2.3.0
+
+_2019-10-07_
+
 - feat: Add `react/jsx-no-useless-fragment` rule
 - feat: Add `@typescript-eslint/consistent-type-definitions` – Was
   `prefer-interface` and part of recommended in v1
