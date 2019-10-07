@@ -8,6 +8,7 @@
 - feat: Add `@typescript-eslint/consistent-type-definitions` – Was
   `prefer-interface` and part of recommended in v1
 - feat: Tighten `quotes` rule and add `template-tag-spacing` rule
+- feat: Update optional/peer dependencies to latest versions
 
 ## 2.2.0
 
