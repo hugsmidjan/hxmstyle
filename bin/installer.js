@@ -87,19 +87,18 @@ if (args.typescript == null && projectHasTypeScript()) {
 }
 
 const installDeps = hxmstylePkg.peerDependencies;
-Object.keys(hxmstylePkg.optionals).forEach((option) => {
+Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
 	if (args[option] != null) {
-		const deps = hxmstylePkg.optionals[option];
-		Object.keys(deps).forEach((name) => {
-			if (args[option]) {
-				installDeps[name] = deps[name];
-			}
+		Object.entries(deps).forEach(([name, version]) => {
+			installDeps[name] = version;
 		});
 	}
 });
 
 // install/upgrade plugins
-const installs = Object.keys(installDeps).map((name) => name + '@' + installDeps[name]);
+const installs = Object.entries(installDeps).map(
+	([name, version]) => name + '@' + version
+);
 if (!projectDeps['@hugsmidjan/hxmstyle']) {
 	installs.push('@hugsmidjan/hxmstyle@^' + hxmstylePkg.version);
 }
@@ -188,12 +187,12 @@ if (args.stylus) {
 		const projectRules = JSON.parse(fs.readFileSync(stylintrcPath));
 		// Maintain anything below the projectSpecificMarker in projectRules
 		let searchingForMarker = hxmStyleMarker in projectRules; // If no hxmStyleMarker is found - assume every rule is project-specific
-		Object.keys(projectRules).forEach((key) => {
+		Object.entries(projectRules).forEach(([key, rule]) => {
 			if (searchingForMarker) {
 				searchingForMarker = key !== projectSpecificMarker;
-			} else if (projectRules[key] !== stylintRules[key]) {
+			} else if (rule !== stylintRules[key]) {
 				delete stylintRules[key]; // delete from Object.keys() array
-				stylintRules[key] = projectRules[key]; // Re-insert at end of Object.keys()
+				stylintRules[key] = rule; // Re-insert at end of Object.keys()
 			}
 		});
 	}
