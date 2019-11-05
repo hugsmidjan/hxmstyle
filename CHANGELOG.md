@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Update optional/peer dependencies to latest versions
 - fix: Pretter option `useTabs` was never set
 
 ## 2.3.0
