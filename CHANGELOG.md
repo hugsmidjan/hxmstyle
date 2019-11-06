@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- fix: Add missing braces to "format" script example
 
 ## 2.3.1
 

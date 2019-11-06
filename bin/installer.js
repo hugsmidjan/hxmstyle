@@ -211,7 +211,7 @@ fs.writeFileSync(projectPkgPath, JSON.stringify(projectPkg, null, '\t') + '\n');
 
 // Suggest adding a format script to package.json
 if (!projectPkg.scripts || !projectPkg.scripts.format) {
-	const jsExts = args.typescript ? 'js,ts,tsx' : 'js';
+	const jsExts = args.typescript ? '{js,ts,tsx}' : 'js';
 	console.info(
 		[
 			'Consider adding a "format" npm script to your `package.json`',
