@@ -5,6 +5,7 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+- feat: Add more things to default `tsconfig.json`
 - fix: Add missing braces to "format" script example
 
 ## 2.3.1

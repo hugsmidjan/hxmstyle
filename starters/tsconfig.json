@@ -1,8 +1,11 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
-    "strict": true // Don't be daft. Always be strict.
-  }
+	"compilerOptions": {
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true,
+		"jsx": "preserve",
+		"strict": true // Don't be daft. Always be strict.
+	},
+	"exclude": ["node_modules"],
+	"include": ["**/*.ts", "**/*.tsx"]
 }
