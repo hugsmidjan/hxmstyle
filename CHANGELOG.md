@@ -6,6 +6,7 @@
 
 - ...
 - feat: Add more things to default `tsconfig.json`
+- feat: Update optional/peer dependencies to latest versions
 - fix: Add missing braces to "format" script example
 
 ## 2.3.1
