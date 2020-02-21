@@ -5,6 +5,11 @@
 <!-- Add new lines here. Version number will be decided later -->
 
 - ...
+
+## 2.4.0
+
+_2020-02-21_
+
 - feat: Add more things to default `tsconfig.json`
 - feat: Update optional/peer dependencies to latest versions
 - fix: Add missing braces to "format" script example
