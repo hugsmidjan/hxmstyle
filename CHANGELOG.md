@@ -4,6 +4,9 @@
 
 <!-- Add new lines here. Version number will be decided later -->
 
+- feat: Drop `@typescript-eslint/consistent-type-definitions` – because type
+  and interface aren't really interchangable
+
 - ...
 
 ## 2.4.0
