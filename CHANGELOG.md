@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 2.5.0
+
+_2020-03-15_
+
 - feat: Drop `@typescript-eslint/consistent-type-definitions` – because type
   and interface aren't really interchangable
 
