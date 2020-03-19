@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Allow "irregular whitespace" inside template strings
 
 ## 2.5.0
 

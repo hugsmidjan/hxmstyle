@@ -82,6 +82,10 @@ module.exports = {
 		'no-throw-literal': 'error',
 
 		'template-tag-spacing': ['error', 'never'],
+		'no-irregular-whitespace': ['error', {
+			"skipStrings": true, // Default
+			"skipTemplates": true
+		}],
 
     // eslint-plugin-destructuring:
     'destructuring/no-rename': 'error',
