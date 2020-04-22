@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 2.5.1
+
+_2020-04-22_
+
 - feat: Allow "irregular whitespace" inside template strings
 
 ## 2.5.0
