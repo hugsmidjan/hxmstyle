@@ -16,6 +16,7 @@ module.exports = {
 					// sourceType: 'module', // Allows for the use of imports
 				},
 			},
+			plugins: ['deprecation'],
 			rules: {
 				'@typescript-eslint/explicit-member-accessibility': 'off',
 				'@typescript-eslint/camelcase': 'off',
@@ -47,6 +48,8 @@ module.exports = {
 					},
 				],
 				'@typescript-eslint/no-unnecessary-type-arguments': 'warn',
+
+				'deprecation/deprecation': 'warn',
 
 				// Part of recommended:
 				// ------------------------------------------------------

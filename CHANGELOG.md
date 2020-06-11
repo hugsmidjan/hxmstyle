@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Add `eslint-plugin-deprecation` and warn on `@deprectaed` types
 
 ## 2.5.1
 

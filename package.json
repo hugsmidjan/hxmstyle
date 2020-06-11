@@ -23,7 +23,8 @@
 	"optionals": {
 		"typescript": {
 			"@typescript-eslint/parser": "^2.20.0",
-			"@typescript-eslint/eslint-plugin": "^2.20.0"
+			"@typescript-eslint/eslint-plugin": "^2.20.0",
+			"eslint-plugin-deprecation": "^1.1.0"
 		},
 		"react": {
 			"eslint-plugin-react": "^7.18.3",
