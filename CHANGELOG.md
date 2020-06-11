@@ -8,7 +8,7 @@
 
 _2020-06-11_
 
-- feat: Add `eslint-plugin-deprecation` and warn on `@deprectaed` types
+- feat: Add `eslint-plugin-deprecation` and warn on `@deprecated` types
 
 ## 2.5.1
 
