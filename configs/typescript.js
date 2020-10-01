@@ -54,6 +54,9 @@ module.exports = {
 				// Part of recommended:
 				// ------------------------------------------------------
 				'@typescript-eslint/ban-ts-ignore': 'off',
+				// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md#how-to-use
+				// note you must disable the base rule as it can report incorrect errors
+				"no-use-before-define": "off",
 				'@typescript-eslint/no-use-before-define': 'warn',
 				'@typescript-eslint/no-explicit-any': [
 					'warn',
