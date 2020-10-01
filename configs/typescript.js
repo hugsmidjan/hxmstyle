@@ -68,6 +68,9 @@ module.exports = {
 				// Needs discussion. TypeScript is pretty good at inferring return types
 				'@typescript-eslint/explicit-function-return-type': 'off',
 				'@typescript-eslint/explicit-module-boundary-types': 'off',
+				// // Consider using this setting:
+				// '@typescript-eslint/explicit-module-boundary-types': ['warn', { allowArgumentsExplicitlyTypedAsAny: true }],
+
 				'@typescript-eslint/ban-ts-comment': ['warn', { minimumDescriptionLength: 12 }],
 			},
 		},
