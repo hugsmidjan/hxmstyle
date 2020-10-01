@@ -3,6 +3,10 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Update `pkg.engines.node` version to `^10.12`
+- feat: Update all dependencies to latest versions
+- fix: invalid no-use-before-define behaviour
+- feat: Relax `@typescript-eslint/explicit-module-boundary-types`to `off`
 
 ## 2.6.0
 
