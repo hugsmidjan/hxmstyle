@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 3.0.0
+
+_2020-10-01_
+
 - **BREAKING** feat: Update `pkg.engines.node` version to `^10.12`
 - feat: Update all dependencies to latest versions
 - fix: invalid no-use-before-define behaviour
