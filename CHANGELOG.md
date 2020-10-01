@@ -6,6 +6,7 @@
 - **BREAKING** feat: Update eslint to version 7 and prettier to version 2 – which do not work in Node@8
 - feat: Update optional/peer dependencies to latest versions
 - fix: invalid no-use-before-define behaviour
+- feat: Relax `@typescript-eslint/explicit-module-boundary-types`to `off`
 
 ## 2.6.0
 

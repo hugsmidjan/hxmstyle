@@ -67,6 +67,7 @@ module.exports = {
 				'@typescript-eslint/no-inferrable-types': 'warn',
 				// Needs discussion. TypeScript is pretty good at inferring return types
 				'@typescript-eslint/explicit-function-return-type': 'off',
+				'@typescript-eslint/explicit-module-boundary-types': 'off',
 				// '@typescript-eslint/explicit-function-return-type': [ 'warn', { allowTypedFunctionExpressions: true, allowExpressions: true } ],
 			},
 		},
