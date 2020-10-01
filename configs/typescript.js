@@ -56,7 +56,7 @@ module.exports = {
 				'@typescript-eslint/ban-ts-ignore': 'off',
 				// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md#how-to-use
 				// note you must disable the base rule as it can report incorrect errors
-				"no-use-before-define": "off",
+				'no-use-before-define': 'off',
 				'@typescript-eslint/no-use-before-define': 'warn',
 				'@typescript-eslint/no-explicit-any': [
 					'warn',
@@ -68,7 +68,7 @@ module.exports = {
 				// Needs discussion. TypeScript is pretty good at inferring return types
 				'@typescript-eslint/explicit-function-return-type': 'off',
 				'@typescript-eslint/explicit-module-boundary-types': 'off',
-				// '@typescript-eslint/explicit-function-return-type': [ 'warn', { allowTypedFunctionExpressions: true, allowExpressions: true } ],
+				'@typescript-eslint/ban-ts-comment': ['warn', { minimumDescriptionLength: 12 }],
 			},
 		},
 	],

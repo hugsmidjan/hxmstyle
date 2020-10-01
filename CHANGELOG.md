@@ -3,6 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Relax `@typescript-eslint/ban-ts-comment` to a "warning", require
+  longer comment
 
 ## 3.0.0
 
@@ -10,7 +12,7 @@ _2020-10-01_
 
 - **BREAKING** feat: Update `pkg.engines.node` version to `^10.12`
 - feat: Update all dependencies to latest versions
-- fix: invalid no-use-before-define behaviour
+- fix: Invalid `no-use-before-define` behaviour
 - feat: Relax `@typescript-eslint/explicit-module-boundary-types`to `off`
 
 ## 2.6.0
