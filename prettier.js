@@ -1,8 +1,10 @@
 // Prettier options: https://prettier.io/docs/en/options.html
 const baseRules = {
-	printWidth: 90,
-	tabWidth: 2,
-	useTabs: true,
+	// // The following should be set in .editorconfig
+	// endOfLine: 'lf',
+	// printWidth: 90,
+	// tabWidth: 2,
+	// useTabs: true,
 	semi: true,
 	singleQuote: true,
 	jsxSingleQuote: false,
@@ -14,7 +16,6 @@ const baseRules = {
 	insertPragma: false,
 	proseWrap: 'preserve',
 	htmlWhitespaceSensitivity: 'css',
-	endOfLine: 'lf',
 
 	overrides: [
 		{
@@ -27,14 +28,7 @@ const baseRules = {
 		{
 			files: '*.md',
 			options: {
-				printWidth: 78,
 				proseWrap: 'always',
-			},
-		},
-		{
-			files: '*.{css,scss,less,styl}',
-			options: {
-				tabWidth: 4,
 			},
 		},
 	],
