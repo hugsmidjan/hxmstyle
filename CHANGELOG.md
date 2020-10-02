@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 3.0.2
+
+_2020-10-02_
+
 - feat: Set `max_line_length` in `.editorconfig`
 - fix: Make Prettier follow `.editorconfig`
 
