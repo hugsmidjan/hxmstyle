@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Set `max_line_length` in `.editorconfig`
 
 ## 3.0.0 – 3.0.1
 
