@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 3.1.0
+
+_2020-10-11_
+
 - feat: Move the global `env` setting to allow overwriting by `.eslintrc`
 
 ## 3.0.2
