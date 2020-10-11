@@ -1,13 +1,7 @@
 module.exports = {
 	extends: ['eslint:recommended'],
-	env: {
-		browser: true,
-		commonjs: true,
-		es6: true,
-	},
 	// parser: 'babel-eslint', <-- TODO: figure out if this is something we'd like to do
 	parserOptions: {
-		// ecmaVersion: 6,
 		sourceType: 'module',
 		ecmaFeatures: {
 			jsx: true,

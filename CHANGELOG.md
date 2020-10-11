@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Move the global `env` setting to allow overwriting by `.eslintrc`
 
 ## 3.0.2
 

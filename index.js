@@ -32,9 +32,18 @@ const getBaseExtends = (opts) => {
 
 module.exports = (userCfg = {}, options) => {
 	_pkg = options && options.pkg;
-	const config = Object.assign({ root: true }, userCfg, {
-		extends: getBaseExtends(options),
-	});
+	const config = Object.assign(
+		{
+			root: true,
+			env: {
+				browser: true,
+				node: true,
+				es6: true,
+			},
+		},
+		userCfg,
+		{ extends: getBaseExtends(options) }
+	);
 
 	// Merge in the user's "extends"
 	if (userCfg.extends) {
