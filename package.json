@@ -1,7 +1,7 @@
 {
 	"name": "@hugsmidjan/hxmstyle",
 	"description": "One annoying style to rule them all...",
-	"version": "3.1.0",
+	"version": "3.2.0",
 	"main": "index.js",
 	"bin": {
 		"hxmstyle": "bin/installer.js"

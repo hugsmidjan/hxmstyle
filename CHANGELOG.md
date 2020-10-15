@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 3.2.0
+
+_2020-10-15_
+
 - feat: Relax `react/no-unescaped-entities` to allow quotes in text
 
 ## 3.1.0
