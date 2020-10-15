@@ -15,8 +15,8 @@ _2020-10-11_
 
 _2020-10-02_
 
-- feat: Set `max_line_length` in `.editorconfig`
 - fix: Make Prettier follow `.editorconfig`
+- fix: Set `max_line_length` in `.editorconfig`
 
 ## 3.0.0 – 3.0.1
 
