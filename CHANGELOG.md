@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Drop rule `no-await-in-loop`
 
 ## 3.2.0
 

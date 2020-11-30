@@ -72,7 +72,7 @@ module.exports = {
     'prefer-const': 'warn', // Wish there was a way to prevent autofixing this one.
     'require-await': 'warn',
     'no-async-promise-executor': 'error',
-    'no-await-in-loop': 'error',
+    'no-await-in-loop': 'warn',
 		'no-throw-literal': 'error',
 
 		'template-tag-spacing': ['error', 'never'],
