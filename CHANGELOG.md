@@ -3,7 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
-- feat: Drop rule `no-await-in-loop`
+- feat: Relax rule `no-await-in-loop` to "warning"
+- fix: Allow "irregular whitespace" in comments
 
 ## 3.2.0
 

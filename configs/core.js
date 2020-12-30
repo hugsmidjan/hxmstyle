@@ -78,6 +78,7 @@ module.exports = {
 		'template-tag-spacing': ['error', 'never'],
 		'no-irregular-whitespace': ['error', {
 			"skipStrings": true, // Default
+			"skipComments": true,
 			"skipTemplates": true
 		}],
 
