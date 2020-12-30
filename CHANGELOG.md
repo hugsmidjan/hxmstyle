@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 3.3.0
+
+_2020-12-30_
+
 - feat: Relax rule `no-await-in-loop` to "warning"
 - fix: Allow "irregular whitespace" in comments
 
