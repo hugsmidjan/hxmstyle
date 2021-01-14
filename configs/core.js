@@ -10,6 +10,7 @@ module.exports = {
 	plugins: ['destructuring'],
 	/* prettier-ignore */
 	rules: {
+		'dot-notation': 'warn',
     'linebreak-style': ['error', 'unix'],
     'quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
 		'comma-dangle': ['warn', {

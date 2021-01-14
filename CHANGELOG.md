@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Add rule `dot-notation`
 
 ## 3.3.0
 
