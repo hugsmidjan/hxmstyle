@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 4.0.0
+
+_2021-01-27_
+
 - **BREAKING** feat: Reenable `consistent-type-definitions` to prefer `type`
   notation – because interfaces have so many gotchas that requiring
   eslint-disable-line markers is justifiable
