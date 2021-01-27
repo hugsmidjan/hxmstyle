@@ -3,6 +3,9 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Reenable `consistent-type-definitions` to prefer `type`
+  notation – because interfaces have so many gotchas that requiring
+  eslint-disable-line markers is justifiable
 - feat: Add rule `dot-notation`
 
 ## 3.3.0

@@ -48,6 +48,7 @@ module.exports = {
 					},
 				],
 				'@typescript-eslint/no-unnecessary-type-arguments': 'warn',
+				'@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
 
 				'deprecation/deprecation': 'warn',
 
