@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 4.0.1
+
+_2021-01-28_
+
 - fix: Clean up `pkg.hxmstyle.options` and args parsing
 
 ## 4.0.0
