@@ -25,30 +25,38 @@ const parseArgs = (argv, supportedArgs) => {
 			arr.push.apply(arr, arg.split('='));
 			return arr;
 		}, [])
+		.filter(Boolean)
 		.forEach((arg) => {
 			if (/^--/.test(arg)) {
 				name = arg.substr(2);
 				if (supportedArgs[name]) {
-					args[name] = args[name] || [];
+					args[name] = true;
 				}
 			} else if (supportedArgs[name]) {
 				if (arg === 'false') {
 					args[name] = false;
-				} else if (args[name]) {
-					args[name].push(arg);
 				}
 			}
 		});
 	return args;
 };
+
+const cleanOptions = (options) => {
+	options = Object.assign({}, options);
+	Object.keys(options).forEach((key) => {
+		// cast weird ["true"] values to simple boolean true
+		options[key] = !!options[key];
+	});
+	return options;
+};
+
 const supportedArgs = {
 	typescript: true,
 	stylus: true,
 	react: true,
 };
 const args = Object.assign(
-	{},
-	lastSettings.options,
+	cleanOptions(lastSettings.options),
 	parseArgs(process.argv.slice(2), supportedArgs)
 );
 
