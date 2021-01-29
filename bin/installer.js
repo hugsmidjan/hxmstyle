@@ -96,7 +96,7 @@ if (args.typescript == null && projectHasTypeScript()) {
 
 const installDeps = hxmstylePkg.peerDependencies;
 Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
-	if (args[option] != null) {
+	if (args[option]) {
 		Object.entries(deps).forEach(([name, version]) => {
 			installDeps[name] = version;
 		});

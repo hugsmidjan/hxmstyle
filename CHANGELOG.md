@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- fix: Bug in `pkg.hxmstyle.options` checking
 
 ## 4.0.1
 
