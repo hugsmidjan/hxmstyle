@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Reduce CSS indenting to 2 spaces, by popular demand
 - fix: Bug in `pkg.hxmstyle.options` checking
 
 ## 4.0.1
