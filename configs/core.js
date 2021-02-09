@@ -47,7 +47,7 @@ module.exports = {
     // If you really, really NEED `console.log()` without warnings,
     // either do `window.console.log();` or `global.console.log();`,
     // or insert a `/*eslint no-console: false */` marker into your file.
-    'no-console': ['warn', { allow: ['warn', 'error', 'trace', 'info'] }],
+    'no-console': ['warn', { allow: ['warn', 'error', 'info', 'group', 'groupCollapsed', 'groupEnd'] }],
     'no-div-regex': 'error',
     'no-label-var': 'error',
     'no-use-before-define': 'warn',
