@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 4.1.0
+
+_2021-02-11_
+
 - feat: Reduce CSS indenting to 2 spaces, by popular demand
 - feat: Allow `console.group*` methods, but warn on `.trace()`
 - feat: Update all dependencies to latest versions
