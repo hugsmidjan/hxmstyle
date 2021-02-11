@@ -5,6 +5,7 @@
 - ... <!-- Add new lines here. -->
 - feat: Reduce CSS indenting to 2 spaces, by popular demand
 - feat: Allow `console.group*` methods, but warn on `.trace()`
+- feat: Update all dependencies to latest versions
 - fix: Bug in `pkg.hxmstyle.options` checking
 
 ## 4.0.1
