@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Relax TS `no-this-alias` to allow `_this` and destructuring
 
 ## 4.1.0
 

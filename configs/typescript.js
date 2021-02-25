@@ -73,6 +73,14 @@ module.exports = {
 				// '@typescript-eslint/explicit-module-boundary-types': ['warn', { allowArgumentsExplicitlyTypedAsAny: true }],
 
 				'@typescript-eslint/ban-ts-comment': ['warn', { minimumDescriptionLength: 12 }],
+
+				'@typescript-eslint/no-this-alias': [
+					'error',
+					{
+						allowDestructuring: true, // Allow `const { props, state } = this`; false by default
+						allowedNames: ['_this'], // Allow `const self = this`; `[]` by default
+					},
+				],
 			},
 		},
 	],
