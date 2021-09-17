@@ -84,7 +84,7 @@ module.exports = {
 		}],
 
     // eslint-plugin-destructuring:
-    'destructuring/no-rename': 'error',
+    'destructuring/no-rename': false,
     'destructuring/in-params': ['error', { 'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i}/* ... */</li>)}
     'destructuring/in-methods-params': 'error',
     // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
