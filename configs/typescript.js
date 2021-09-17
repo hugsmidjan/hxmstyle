@@ -24,6 +24,7 @@ module.exports = {
 				'@typescript-eslint/array-type': ['warn', { default: 'generic' }], // 'array' -> `T[]` ;  'generic' -> `Array<T>`
 				'@typescript-eslint/no-extraneous-class': 'warn',
 				'@typescript-eslint/no-useless-constructor': 'warn',
+				'@typescript-eslint/no-unnecessary-condition': 'warn',
 				'@typescript-eslint/ban-types': [
 					'warn',
 					{
