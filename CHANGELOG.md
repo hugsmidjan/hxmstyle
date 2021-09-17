@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 5.0.0
+
+_2021-09-17_
+
 - **BREAKING** feat: Add rule `@typescript-eslint/no-unnecessary-condition` –
   (Auto-fixing this rule may expose bad typings causing runtime errors.)
 - feat: Add rules `no-useless-rename` and `destructure-depth/max-depth`
