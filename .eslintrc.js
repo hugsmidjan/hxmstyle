@@ -4,4 +4,7 @@ module.exports = require('@hugsmidjan/hxmstyle')({
 	env: {
 		node: true,
 	},
+	parserOptions: {
+		ecmaVersion: 2018, // fantasy
+	},
 });
