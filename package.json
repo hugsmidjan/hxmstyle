@@ -17,6 +17,7 @@
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-destructuring": "^2.2.1",
+		"eslint-plugin-destructure-depth": "^1.0.1",
 		"eslint-plugin-prettier": "^4.0.0",
 		"prettier": "^2.4.1"
 	},

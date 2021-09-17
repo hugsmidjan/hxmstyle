@@ -7,7 +7,7 @@ module.exports = {
 			jsx: true,
 		},
 	},
-	plugins: ['destructuring'],
+	plugins: ['destructuring', 'destructure-depth'],
 	/* prettier-ignore */
 	rules: {
 		'dot-notation': 'warn',
@@ -83,9 +83,13 @@ module.exports = {
 			"skipTemplates": true
 		}],
 
+
+		'no-useless-rename': 'warn',
+		'destructure-depth/max-depth': 'error',
+
     // eslint-plugin-destructuring:
     'destructuring/no-rename': false,
-    'destructuring/in-params': ['error', { 'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i}/* ... */</li>)}
+    'destructuring/in-params': ['error', {'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i}/* ... */</li>)}
     'destructuring/in-methods-params': 'error',
     // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
   },
