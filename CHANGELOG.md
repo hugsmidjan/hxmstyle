@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Revert indentation back to spaces, by popular demand
 
 ## 5.0.0
 
