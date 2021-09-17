@@ -3,9 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
-- feat: Revert indentation back to spaces, by popular demand
 
-## 5.0.0
+## 5.0.0 – 5.1.0
 
 _2021-09-17_
 
@@ -13,6 +12,7 @@ _2021-09-17_
   (Auto-fixing this rule may expose bad typings causing runtime errors.)
 - feat: Add rules `no-useless-rename` and `destructure-depth/max-depth`
 - feat: Relax TS `no-this-alias` to allow `_this` and destructuring
+- feat: Revert indentation back to spaces, by popular demand
 - feat: Allow renames in destructuring
 - feat: Update all dependencies to latest versions
 
