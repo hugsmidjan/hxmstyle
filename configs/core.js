@@ -85,10 +85,12 @@ module.exports = {
 
 
 		'no-useless-rename': 'warn',
+
+		// Rules for "eslint-plugin-destructure-depth":
 		'destructure-depth/max-depth': 'error',
 
-    // eslint-plugin-destructuring:
-    'destructuring/no-rename': false,
+    // Rules for "eslint-plugin-destructuring":
+    // 'destructuring/no-rename': 'error',
     'destructuring/in-params': ['error', {'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i}/* ... */</li>)}
     'destructuring/in-methods-params': 'error',
     // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
