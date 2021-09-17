@@ -3,8 +3,12 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Add rule `@typescript-eslint/no-unnecessary-condition` –
+  (Auto-fixing this rule may expose bad typings causing runtime errors.)
 - feat: Add rules `no-useless-rename` and `destructure-depth/max-depth`
 - feat: Relax TS `no-this-alias` to allow `_this` and destructuring
+- feat: Allow renames in destructuring
+- feat: Update all dependencies to latest versions
 
 ## 4.1.0
 
