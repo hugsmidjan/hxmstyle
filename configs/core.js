@@ -1,15 +1,15 @@
 module.exports = {
-	extends: ['eslint:recommended'],
-	// parser: 'babel-eslint', <-- TODO: figure out if this is something we'd like to do
-	parserOptions: {
-		sourceType: 'module',
-		ecmaFeatures: {
-			jsx: true,
-		},
-	},
-	plugins: ['destructuring', 'destructure-depth'],
-	/* prettier-ignore */
-	rules: {
+  extends: ['eslint:recommended'],
+  // parser: 'babel-eslint', <-- TODO: figure out if this is something we'd like to do
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ['destructuring', 'destructure-depth'],
+  /* prettier-ignore */
+  rules: {
 		'dot-notation': 'warn',
     'linebreak-style': ['error', 'unix'],
     'quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],

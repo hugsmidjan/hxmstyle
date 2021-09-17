@@ -1,9 +1,9 @@
 module.exports = {
-	overrides: [
-		{
-			files: ['*.ts', '*.tsx'],
-			extends: [],
-			rules: {},
-		},
-	],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      extends: [],
+      rules: {},
+    },
+  ],
 };

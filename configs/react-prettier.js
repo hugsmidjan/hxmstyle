@@ -1,4 +1,4 @@
 module.exports = {
-	extends: [],
-	rules: {},
+  extends: [],
+  rules: {},
 };
