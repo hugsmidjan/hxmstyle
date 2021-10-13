@@ -28,7 +28,15 @@ module.exports = {
     'keyword-spacing': 'warn',
     'no-whitespace-before-property': 'error',
     'unicode-bom': 'error',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': [
+      'warn',
+      {
+        ignoreRestSiblings: true,
+        // allow vars called `_`, `__`, `___`, etc. to facilitate
+        // array destructuring (not captureed by `ignoreRestSiblings`)
+        varsIgnorePattern: '^_+$',
+      },
+    ],
     'no-unused-expressions': ['error', {
       allowShortCircuit: true,
       allowTernary: true,
