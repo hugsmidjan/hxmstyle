@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 5.0.1
+
+_2021-10-13_
+
 - feat: Improve `no-unused-vars` options for common destructuring use cases
 
 ## 5.0.0 – 5.1.0
