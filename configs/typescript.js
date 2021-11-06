@@ -81,6 +81,9 @@ module.exports = {
 
         '@typescript-eslint/ban-ts-comment': ['warn', { minimumDescriptionLength: 12 }],
 
+        '@typescript-eslint/consistent-type-assertions': 'warn',
+        '@typescript-eslint/consistent-type-exports': 'error',
+
         '@typescript-eslint/no-this-alias': [
           'error',
           {

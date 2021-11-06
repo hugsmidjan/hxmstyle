@@ -3,6 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Add rule `@typescript-eslint/consistent-type-assertions`
+- feat: Add rule `@typescript-eslint/consistent-type-exports`
 
 ## 5.0.1
 
