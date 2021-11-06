@@ -10,6 +10,7 @@ _2021-10-13_
 
 - feat: Add rule `@typescript-eslint/consistent-type-assertions`
 - feat: Add rule `@typescript-eslint/consistent-type-exports`
+- feat: Update all dependencies to latest versions
 
 ## 5.1.1
 
