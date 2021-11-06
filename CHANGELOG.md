@@ -3,10 +3,15 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 5.2.0
+
+_2021-10-13_
+
 - feat: Add rule `@typescript-eslint/consistent-type-assertions`
 - feat: Add rule `@typescript-eslint/consistent-type-exports`
 
-## 5.0.1
+## 5.1.1
 
 _2021-10-13_
 
