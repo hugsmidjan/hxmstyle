@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Add rule `react/self-closing-comp` (autofix)
 
 ## 5.2.0 – 5.2.1
 
