@@ -7,7 +7,13 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['destructuring', 'destructure-depth'],
+  plugins: [
+    'destructuring',
+    'destructure-depth',
+    'unused-imports',
+    'simple-import-sort',
+    'import',
+  ],
   /* prettier-ignore */
   rules: {
 		'dot-notation': 'warn',
@@ -102,5 +108,33 @@ module.exports = {
     'destructuring/in-params': ['error', {'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i}/* ... */</li>)}
     'destructuring/in-methods-params': 'error',
     // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
+
+    // Rules for "eslint-plugin-unused-imports":
+    "sort-imports": "off",
+    "import/first": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+    "unused-imports/no-unused-imports-ts": "warn",
+    "simple-import-sort/exports": "warn",
+    'simple-import-sort/imports': [
+      'warn',
+      {
+        groups: [
+          // Side effect imports.
+          ['^\\u0000'],
+          // Packages. `react` related packages come first.
+          ['^react', '^@?\\w'],
+          // Internal packages.
+          ['^(components|containers)(/.*|$)'],
+          ['^(utils|apis|hocs|hooks|pages|store|theme|types)(/.*|$)'],
+          // Parent imports. Put `..` last.
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+          // Style imports.
+          ['^.+\\.s?css$'],
+        ],
+      },
+    ],
   },
 };
