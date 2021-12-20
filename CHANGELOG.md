@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Add rules for linting imports (sorting, merging, removing unused)
 
 ## 5.2.0 – 5.2.1
 
