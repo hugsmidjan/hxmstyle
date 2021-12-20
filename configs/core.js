@@ -111,13 +111,13 @@ module.exports = {
 
     // Rules for "eslint-plugin-unused-imports":
     "sort-imports": "off",
-    "import/first": "error",
-    "import/newline-after-import": "error",
-    "import/no-duplicates": "error",
-    "unused-imports/no-unused-imports-ts": "error",
-    "simple-import-sort/exports": "error",
+    "import/first": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+    "unused-imports/no-unused-imports-ts": "warn",
+    "simple-import-sort/exports": "warn",
     'simple-import-sort/imports': [
-      'error',
+      'warn',
       {
         groups: [
           // Packages. `react` related packages come first.
