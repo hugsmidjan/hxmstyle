@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 5.3.0
+
+_2021-12-20_
+
 - feat: Add rules for linting imports (sorting, merging, removing unused)
 - feat: Add rule `react/self-closing-comp` (autofix)
 
