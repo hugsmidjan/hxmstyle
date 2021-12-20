@@ -15,6 +15,7 @@ module.exports = {
     'react/no-unescaped-entities': ['warn', { forbid: ['>', '}'] }],
     'react/no-deprecated': ['warn'],
     'react/jsx-no-useless-fragment': ['warn'],
+    'react/self-closing-comp': ['warn'],
     'react/display-name': ['off' /*, { ignoreTranspilerName: true }*/],
     // https://www.npmjs.com/package/eslint-plugin-react-hooks
     'react-hooks/rules-of-hooks': 'error',
