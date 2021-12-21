@@ -84,6 +84,8 @@ module.exports = {
         '@typescript-eslint/consistent-type-assertions': 'warn',
         '@typescript-eslint/consistent-type-exports': 'error',
 
+        '@typescript-eslint/no-unsafe-member-access': 'error',
+
         '@typescript-eslint/no-this-alias': [
           'error',
           {

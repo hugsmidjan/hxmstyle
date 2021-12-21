@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Error on `@typescript-eslint/no-unsafe-member-access`
 
 ## 5.3.0
 
