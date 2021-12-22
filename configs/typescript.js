@@ -8,6 +8,7 @@ module.exports = {
       extends: [
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
+        'plugin:total-functions/recommended',
       ],
       parserOptions: {
         project: './tsconfig.json',
@@ -93,8 +94,6 @@ module.exports = {
             allowedNames: ['_this'], // Allow `const self = this`; `[]` by default
           },
         ],
-
-        'total-functions/require-strict-mode': 'error',
       },
     },
   ],
