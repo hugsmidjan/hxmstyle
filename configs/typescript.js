@@ -18,7 +18,7 @@ module.exports = {
           // sourceType: 'module', // Allows for the use of imports
         },
       },
-      plugins: ['deprecation'],
+      plugins: ['deprecation', 'total-functions'],
       rules: {
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/camelcase': 'off',
@@ -93,6 +93,8 @@ module.exports = {
             allowedNames: ['_this'], // Allow `const self = this`; `[]` by default
           },
         ],
+
+        'total-functions/require-strict-mode': 'error',
       },
     },
   ],
