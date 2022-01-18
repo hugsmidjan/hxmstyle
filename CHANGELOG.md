@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 5.4.0
+
+_2022-01-18_
+
 - feat: Error on `@typescript-eslint/no-unsafe-member-access`
 - feat: Suggest `noUncheckedIndexedAccess` in the default `tsconfig.json`
 - feat: Update all dependencies to latest versions
