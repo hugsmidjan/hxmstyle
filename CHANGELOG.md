@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 6.0.0
+
+_2022-01-18_
+
 - **BREAKING** feat: TypesScript linting now requires `typescript@>=4.5.4`
 - feat: Add `total-functions/require-strict-mode` from
   [`eslint-plugin-total-functions`](https://github.com/danielnixon/eslint-plugin-total-functions)
