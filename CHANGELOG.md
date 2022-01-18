@@ -5,6 +5,7 @@
 - ... <!-- Add new lines here. -->
 - feat: Error on `@typescript-eslint/no-unsafe-member-access`
 - feat: Suggest `noUncheckedIndexedAccess` in the default `tsconfig.json`
+- feat: Update all dependencies to latest versions
 
 ## 5.3.0
 
