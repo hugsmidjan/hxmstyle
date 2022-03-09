@@ -93,8 +93,6 @@ module.exports = {
             allowedNames: ['_this'], // Allow `const self = this`; `[]` by default
           },
         ],
-
-        'total-functions/require-strict-mode': 'error',
       },
     },
   ],

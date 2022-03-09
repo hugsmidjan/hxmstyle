@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Make `total-functions/require-strict-mode` optional
 
 ## 6.0.0
 
