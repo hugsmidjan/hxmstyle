@@ -31,13 +31,15 @@ If the installer detects that your project is using stylus, it will install
 Similarily if `react` (or `preact` or `inferno`) is detected, a react plugin
 is installed. (As if you'd run `hxmstyle --react`)
 
+And if `scss` is detected, stylelint plugin is installed. (As if you'd run `hxmstyle --scss`)
+
 ### Install options
 
 Both the `npx` installer and the local CLI command take one or more optional
 flags.
 
 ```
-hxmstyle --react --stylus --typescript
+hxmstyle --react --stylus --scss --typescript
 ```
 
 is the same as
@@ -45,13 +47,14 @@ is the same as
 ```
 hxmstyle --react
 hxmstyle --stylus
+hxmstyle --scss
 hxmstyle --typescript
 ```
 
 To turn off one or more options pass `false` as a value, like so:
 
 ```
-hxmstyle --react=false --stylus=false --typescript=false
+hxmstyle --react=false --stylus=false --scss=false --typescript=false
 ```
 
 ...or edit your `package.json`'s `hxmstyle.options` field and set the
@@ -123,6 +126,9 @@ Add these plugins:
   – for files other than JavaScript/TypeScript (Markdown, JSON, HTML, etc.)
 - [Stylint](https://marketplace.visualstudio.com/items?itemName=HaaLeo.vscode-stylint)
   – if you're writing Stylus code
+- [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+  – if you're writing scss code
+  
 
 ...and these settings:
 
@@ -138,9 +144,24 @@ Add these plugins:
     // NOTE: This one might be best set on a per-workspace basis:
     "editor.formatOnSave": true,
 
-    // ....
-    "stylint.packageManager": "yarn", // or "npm"
-    "eslint.packageManager": "yarn", // or "npm"
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // stylelint scss config
+    "css.validate": false,
+    "scss.validate": false,
+    "stylelint.validate": ["css", "postcss", "scss"],
+    "stylelint.snippet": ["css", "postcss", "scss"],
+    "[scss]": {
+      "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    }
 ```
 
 ...and make sure that the project root (where `.eslintrc.js` and

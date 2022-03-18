@@ -1,4 +1,9 @@
 {
+  "__hxmstyle__": [
+    "--------------------------------------------------------------------------------------------",
+    " BEWARE: This file is manged by \"hxmstyle\" and will be rewritten on next install/update.    ",
+    "--------------------------------------------------------------------------------------------"
+  ],
   "extends": "stylelint-config-recommended-scss",
   "files": ["**/*.scss"],
   "plugins": ["stylelint-order"],
