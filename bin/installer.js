@@ -53,6 +53,7 @@ const cleanOptions = (options) => {
 const supportedArgs = {
   typescript: true,
   stylus: true,
+  scss: true,
   react: true,
 };
 const args = Object.assign(
@@ -60,7 +61,7 @@ const args = Object.assign(
   parseArgs(process.argv.slice(2), supportedArgs)
 );
 
-// Auto-detect if stylus or react are installed in the project
+// Auto-detect if scss, stylus or react are installed in the project
 const projectHasStylus = () => {
   return (
     projectDeps.stylus ||
@@ -71,6 +72,11 @@ const projectHasStylus = () => {
 if (args.stylus == null && projectHasStylus()) {
   console.info('Stylus detected.');
   args.stylus = true;
+}
+
+if (args.scss == null && projectDeps.scss) {
+  console.info('scss detected.');
+  args.scss = true;
 }
 
 const projectHasReact = () => {
@@ -206,6 +212,18 @@ if (args.stylus) {
   }
   console.info(hasStylintrc ? 'Updating .stylintrc' : 'Adding .stylintrc');
   fs.writeFileSync(stylintrcPath, JSON.stringify(stylintRules, null, '\t') + '\n');
+  console.info('- Done.');
+}
+
+// Update .stylelintrc.json
+if (args.scss) {
+  const stylelintrcPath = projectPath + '.stylelintrc.json';
+  const stylelintRules = require(hxmstylePath + 'starters/stylelintrc.json');
+  const hasStylelintrc = fs.existsSync(stylelintrcPath);
+  console.info(
+    hasStylelintrc ? 'Updating .stylelintrc.json' : 'Adding .stylelintrc.json'
+  );
+  fs.writeFileSync(stylelintrcPath, JSON.stringify(stylelintRules, null, '\t') + '\n');
   console.info('- Done.');
 }
 
