@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 6.2.0
+
+_2022-03-21_
+
 - feat: Add `scss` formatting support
 - fix: Loosen up on `@typescript-eslint/no-unsafe-member-access`
 
