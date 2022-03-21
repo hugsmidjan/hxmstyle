@@ -4,6 +4,7 @@
 
 - ... <!-- Add new lines here. -->
 - feat: Add `scss` formatting support
+- fix: Loosen up on `@typescript-eslint/no-unsafe-member-access`
 
 ## 6.1.0
 
