@@ -154,8 +154,8 @@
             "overflow-wrap",
             "overflow-x",
             "overflow-y",
-            "overscroll-behaviour",
-            "scroll-behaviour",
+            "overscroll-behavior",
+            "scroll-behavior",
             "scroll-margin",
             "scroll-margin-top",
             "scroll-margin-right",
@@ -324,7 +324,6 @@
             "isolation"
           ]
         },
-
         {
           "order": "flexible",
           "emptyLineBefore": "always",
@@ -335,7 +334,6 @@
             "transform-style"
           ]
         },
-
         {
           "order": "flexible",
           "emptyLineBefore": "always",
@@ -365,7 +363,9 @@
           ]
         }
       ],
-      { "unspecified": "bottom" }
+      {
+        "unspecified": "bottom"
+      }
     ]
   }
 }
