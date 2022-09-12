@@ -7,42 +7,42 @@
     "hxmstyle": "bin/installer.js"
   },
   "engines": {
-    "node": ">=10.12.0"
+    "node": ">=16.13.0"
   },
   "scripts": {
     "dogfood": "yarn upgrade @hugsmidjan/hxmstyle && hxmstyle && yarn run format",
     "format": "eslint --fix  \"*.js\" \"**/*.js\"  &&  prettier --write --loglevel=error  \"*.md\" \"*.json\""
   },
   "peerDependencies": {
-    "eslint": "^8.11.0",
+    "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-destructure-depth": "^1.0.3",
     "eslint-plugin-destructuring": "^2.2.1",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-total-functions": "^5.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-total-functions": "^6.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "^2.6.0"
+    "prettier": "^2.7.1"
   },
   "optionals": {
     "typescript": {
-      "@typescript-eslint/parser": "^5.15.0",
-      "@typescript-eslint/eslint-plugin": "^5.15.0",
+      "@typescript-eslint/parser": "^5.36.2",
+      "@typescript-eslint/eslint-plugin": "^5.36.2",
       "eslint-plugin-deprecation": "^1.3.2"
     },
     "react": {
-      "eslint-plugin-react": "^7.29.4",
-      "eslint-plugin-react-hooks": "^4.3.0"
+      "eslint-plugin-react": "^7.31.8",
+      "eslint-plugin-react-hooks": "^4.6.0"
     },
     "stylus": {
       "stylint": "^2.0.0"
     },
     "scss": {
-      "stylelint": "^14.6.0",
-      "stylelint-config-recommended-scss": "^5.0.2",
+      "stylelint": "^14.11.0",
+      "stylelint-config-recommended-scss": "^7.0.0",
       "stylelint-order": "^5.0.0",
-      "stylelint-scss": "^4.2.0"
+      "stylelint-scss": "^4.3.0"
     }
   },
   "repository": "git@github.com:hugsmidjan/hxmstyle.git",
@@ -53,15 +53,16 @@
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#canary",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-destructure-depth": "^1.0.2",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-destructure-depth": "^1.0.3",
     "eslint-plugin-destructuring": "^2.2.1",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-total-functions": "^6.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "^2.4.1"
+    "prettier": "^2.7.1"
   },
   "hxmstyle": {
     "options": {},
@@ -73,6 +74,7 @@
       "eslint-plugin-import",
       "eslint-plugin-prettier",
       "eslint-plugin-simple-import-sort",
+      "eslint-plugin-total-functions",
       "eslint-plugin-unused-imports",
       "prettier"
     ]
