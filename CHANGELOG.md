@@ -3,6 +3,12 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+## 6.3.0
+
+_2022-03-21_
+
+- feat: Update stylelint
+- feat: Update all dependencies to latest versions
 
 ## 6.2.0
 
