@@ -45,6 +45,8 @@
           "order": "flexible",
           "emptyLineBefore": "always",
           "properties": [
+            "all",
+            "appearance",
             "aspect-ratio",
             "box-sizing",
             "contain",
@@ -67,6 +69,8 @@
             "justify-self",
             "order",
             "place-content",
+            "place-items",
+            "place-self",
             "grid",
             "grid-area",
             "grid-auto-columns",
@@ -119,6 +123,9 @@
             "margin-bottom",
             "margin-left",
             "padding",
+            "padding-inline",
+            "padding-inline-end",
+            "padding-inline-start",
             "padding-top",
             "padding-right",
             "padding-bottom",
@@ -129,21 +136,37 @@
           "order": "flexible",
           "emptyLineBefore": "always",
           "properties": [
+            "block-size",
+            "inline-size",
             "width",
             "max-width",
             "min-width",
             "height",
             "max-height",
-            "min-height"
+            "min-height",
+            "writing-mode"
           ]
         },
         {
           "order": "flexible",
           "properties": [
             "overflow",
+            "overflow-wrap",
             "overflow-x",
             "overflow-y",
-            "scroll-snap-type",
+            "overscroll-behaviour",
+            "scroll-behaviour",
+            "scroll-margin",
+            "scroll-margin-top",
+            "scroll-margin-right",
+            "scroll-margin-bottom",
+            "scroll-margin-left",
+            "scroll-margin-inline",
+            "scroll-margin-inline-start",
+            "scroll-margin-inline-end",
+            "scroll-margin-block",
+            "scroll-margin-block-start",
+            "scroll-margin-block-end",
             "scroll-padding",
             "scroll-padding-top",
             "scroll-padding-right",
@@ -156,24 +179,24 @@
             "scroll-padding-block-start",
             "scroll-padding-block-end",
             "scroll-snap-align",
-            "scroll-margin",
-            "scroll-margin-top",
-            "scroll-margin-right",
-            "scroll-margin-bottom",
-            "scroll-margin-left",
-            "scroll-margin-inline",
-            "scroll-margin-inline-start",
-            "scroll-margin-inline-end",
-            "scroll-margin-block",
-            "scroll-margin-block-start",
-            "scroll-margin-block-end",
-            "scroll-snap-stop"
+            "scroll-snap-stop",
+            "scroll-snap-type",
+            "scrollbar-color",
+            "scrollbar-gutter",
+            "scrollbar-width"
           ]
         },
         {
           "order": "flexible",
           "emptyLineBefore": "always",
-          "properties": ["float", "clear", "shape-outside"]
+          "properties": [
+            "float",
+            "clear",
+            "shape-image-threshold",
+            "shape-inside",
+            "shape-margin",
+            "shape-outside"
+          ]
         },
         {
           "order": "flexible",
@@ -197,13 +220,20 @@
             "outline",
             "box-decoration-break",
             "object-fit",
-            "object-position"
+            "object-position",
+            "mask-image",
+            "mask-mode",
+            "mask-origin",
+            "mask-position",
+            "mask-repeat",
+            "mask-size",
+            "mask-type"
           ]
         },
         {
           "order": "flexible",
           "emptyLineBefore": "always",
-          "properties": ["cursor", "user-select", "pointer-events"]
+          "properties": ["cursor", "user-select", "pointer-events", "touch-action"]
         },
         {
           "order": "flexible",
@@ -221,6 +251,7 @@
             "font-size",
             "font-stretch",
             "font-style",
+            "font-synthesis",
             "font-variant",
             "font-variant-caps",
             "font-variant-east-asian",
@@ -232,6 +263,7 @@
             "-webkit-font-smoothing",
             "line-break",
             "line-height",
+            "orphans",
             "text-align",
             "text-align-last",
             "text-combine-upright",
@@ -240,6 +272,7 @@
             "text-decoration-line",
             "text-decoration-skip-ink",
             "text-decoration-style",
+            "text-decoration-thickness",
             "text-indent",
             "text-orientation",
             "text-overflow",
@@ -260,6 +293,8 @@
           "order": "flexible",
           "emptyLineBefore": "always",
           "properties": [
+            "accent-color",
+            "backdrop-filter",
             "background",
             "background-attachment",
             "background-blend-mode",
@@ -276,6 +311,7 @@
             "background-size",
             "box-shadow",
             "color",
+            "forced-color-adjust",
             "fill",
             "stroke",
             "stroke-width",
