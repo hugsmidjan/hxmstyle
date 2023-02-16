@@ -44,10 +44,14 @@
         {
           "order": "flexible",
           "emptyLineBefore": "always",
+          "properties": ["container-type", "container-name", "container"]
+        },
+        {
+          "order": "flexible",
+          "emptyLineBefore": "always",
           "properties": [
             "all",
             "appearance",
-            "aspect-ratio",
             "box-sizing",
             "contain",
             "contain-intrinsic-size",
@@ -136,6 +140,7 @@
           "order": "flexible",
           "emptyLineBefore": "always",
           "properties": [
+            "aspect-ratio",
             "block-size",
             "inline-size",
             "width",
