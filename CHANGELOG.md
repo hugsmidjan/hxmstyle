@@ -4,6 +4,11 @@
 
 - ... <!-- Add new lines here. -->
 
+## 6.4.1
+
+_2023-02-27_
+- fix: Update stylelint
+
 ## 6.4.0
 
 _2023-02-16_
