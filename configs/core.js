@@ -94,7 +94,8 @@ module.exports = {
 		'no-irregular-whitespace': ['error', {
 			"skipStrings": true, // Default
 			"skipComments": true,
-			"skipTemplates": true
+			"skipTemplates": true,
+			"skipRegExps": true
 		}],
 
 

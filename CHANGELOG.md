@@ -4,6 +4,7 @@
 
 - ... <!-- Add new lines here. -->
 - **BREAKING** feat: Drop support for Stylus
+- feat: Relax `no-irregular-whitespace` to `skipRegExps:true`
 
 ## 6.4.1
 
