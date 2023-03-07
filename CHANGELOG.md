@@ -7,6 +7,7 @@
 ## 6.4.1
 
 _2023-02-27_
+
 - fix: Update stylelint
 
 ## 6.4.0
@@ -16,12 +17,7 @@ _2023-02-16_
 - feat: Update all dependencies to latest versions
 - fix: Update stylelint prop order
 
-## 6.3.1
-_2022-09-12_
-
-- fix: Typo
-
-## 6.3.0
+## 6.3.0 – 6.3.1
 
 _2022-09-12_
 
