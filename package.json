@@ -54,7 +54,9 @@
   "repository": "git@github.com:hugsmidjan/hxmstyle.git",
   "author": "Hugsmiðjan ehf (https://www.hugsmidjan.is)",
   "contributors": [
-    "Már Örlygsson <mar.nospam@anomy.net> (http://mar.anomy.net)"
+    "Már Örlygsson <mar.nospam@anomy.net>",
+    "Valur Sverrison <value@hugsmidjan.is>",
+    "Mikael Elí Stefánsson <mikaeleli221@gmail.com>"
   ],
   "license": "GPL-2.0-or-later",
   "devDependencies": {
