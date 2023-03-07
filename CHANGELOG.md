@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 7.0.0
+
+_2023-03-07_
+
 - **BREAKING** feat: Drop support for Stylus
 - feat: Support a `extendsFirst` array in `.eslintrc.js` — to better control
   the addition of custom presets
