@@ -4,6 +4,10 @@
 
 - ... <!-- Add new lines here. -->
 - **BREAKING** feat: Drop support for Stylus
+- feat: Use
+  [@rushstack/eslint-patch](https://www.npmjs.com/package/@rushstack/eslint-patch)
+  to hide plugins from a consuming project's `pkg.dependencies`
+- feat: Update all dependencies to latest versions
 - feat: Relax `no-irregular-whitespace` to `skipRegExps:true`
 
 ## 6.4.1
