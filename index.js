@@ -4,12 +4,7 @@ let _pkg;
 const getProjectPkg = () => _pkg || require(process.cwd() + '/package.json');
 
 const rulesetPath = path.parse(require.resolve('@hugsmidjan/hxmstyle')).dir + '/configs/';
-const extendModules = [
-  'core',
-  'typescript',
-  'react',
-  'fantasy', // deprecated as of v0.3.0
-];
+const extendModules = ['core', 'typescript', 'react'];
 
 const getBaseExtends = (opts) => {
   const _extends = [rulesetPath + 'core.js'];
