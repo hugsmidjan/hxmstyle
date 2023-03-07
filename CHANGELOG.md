@@ -3,10 +3,20 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Drop support for Stylus
+- feat: Support a `extendsFirst` array in `.eslintrc.js` — to better control
+  the addition of custom presets
+- feat: Use
+  [@rushstack/eslint-patch](https://www.npmjs.com/package/@rushstack/eslint-patch)
+  to hide plugins from a consuming project's `pkg.dependencies`
+- feat: Update all dependencies to latest versions
+- feat: Relax `no-irregular-whitespace` to `skipRegExps:true`
+- fix: Broken auto-detection of `sass` as dependency in project
 
 ## 6.4.1
 
 _2023-02-27_
+
 - fix: Update stylelint
 
 ## 6.4.0
@@ -16,12 +26,7 @@ _2023-02-16_
 - feat: Update all dependencies to latest versions
 - fix: Update stylelint prop order
 
-## 6.3.1
-_2022-09-12_
-
-- fix: Typo
-
-## 6.3.0
+## 6.3.0 – 6.3.1
 
 _2022-09-12_
 

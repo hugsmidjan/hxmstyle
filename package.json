@@ -1,7 +1,7 @@
 {
   "name": "@hugsmidjan/hxmstyle",
   "description": "One annoying style to rule them all...",
-  "version": "6.4.1",
+  "version": "7.0.0-canary",
   "main": "index.js",
   "bin": {
     "hxmstyle": "bin/installer.js"
@@ -13,31 +13,37 @@
     "dogfood": "yarn upgrade @hugsmidjan/hxmstyle && hxmstyle && yarn run format",
     "format": "eslint --fix  \"*.js\" \"**/*.js\"  &&  prettier --write --loglevel=error  \"*.md\" \"*.json\""
   },
-  "peerDependencies": {
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
+  "dependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-deprecation": "^1.3.3",
     "eslint-plugin-destructure-depth": "^1.0.3",
     "eslint-plugin-destructuring": "^2.2.1",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-total-functions": "^6.0.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "^2.8.4"
+    "eslint-plugin-total-functions": "^6.2.0",
+    "eslint-plugin-unused-imports": "^2.0.0"
   },
-  "optionals": {
+  "peerDependencies": {
+    "eslint": "^8.35.0",
+    "prettier": "^2.8.2",
+    "react": ">=16.8",
+    "typescript": "^4.5.4"
+  },
+  "peerDependenciesMeta": {
     "typescript": {
-      "@typescript-eslint/parser": "^5.52.0",
-      "@typescript-eslint/eslint-plugin": "^5.52.0",
-      "eslint-plugin-deprecation": "^1.3.3"
+      "optional": true
     },
     "react": {
-      "eslint-plugin-react": "^7.32.2",
-      "eslint-plugin-react-hooks": "^4.6.0"
-    },
-    "stylus": {
-      "stylint": "^2.0.0"
-    },
+      "optional": true
+    }
+  },
+  "optionals": {
     "scss": {
       "stylelint": "^15.1.0",
       "stylelint-config-recommended-scss": "^9.0.1",
@@ -48,35 +54,14 @@
   "repository": "git@github.com:hugsmidjan/hxmstyle.git",
   "author": "Hugsmiðjan ehf (https://www.hugsmidjan.is)",
   "contributors": [
-    "Már Örlygsson <mar.nospam@anomy.net> (http://mar.anomy.net)"
+    "Már Örlygsson <mar.nospam@anomy.net>",
+    "Valur Sverrison <valur@hugsmidjan.is>",
+    "Mikael Elí Stefánsson <mikaeleli221@gmail.com>"
   ],
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#canary",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-destructure-depth": "^1.0.3",
-    "eslint-plugin-destructuring": "^2.2.1",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-total-functions": "^6.0.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "^2.8.4"
-  },
-  "hxmstyle": {
-    "options": {},
-    "dependenciesAdded": [
-      "eslint",
-      "eslint-config-prettier",
-      "eslint-plugin-destructure-depth",
-      "eslint-plugin-destructuring",
-      "eslint-plugin-import",
-      "eslint-plugin-prettier",
-      "eslint-plugin-simple-import-sort",
-      "eslint-plugin-total-functions",
-      "eslint-plugin-unused-imports",
-      "prettier"
-    ]
+    "eslint": "^8.35.0",
+    "prettier": "^2.8.2"
   }
 }

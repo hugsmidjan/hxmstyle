@@ -1,15 +1,16 @@
+/**
+ * @see https://github.com/eslint/eslint/issues/3458
+ * @see https://www.npmjs.com/package/@rushstack/eslint-patch
+ */
+require('@rushstack/eslint-patch/modern-module-resolution');
+
 const path = require('path');
 
 let _pkg;
 const getProjectPkg = () => _pkg || require(process.cwd() + '/package.json');
 
 const rulesetPath = path.parse(require.resolve('@hugsmidjan/hxmstyle')).dir + '/configs/';
-const extendModules = [
-  'core',
-  'typescript',
-  'react',
-  'fantasy', // deprecated as of v0.3.0
-];
+const extendModules = ['core', 'typescript', 'react'];
 
 const getBaseExtends = (opts) => {
   const _extends = [rulesetPath + 'core.js'];
@@ -53,6 +54,15 @@ module.exports = (userCfg = {}, options) => {
     userCfg.extends.forEach((rulePackageName) => {
       config.extends.push(rulePackageName);
     });
+  }
+  // Merge in the user's "extendsFirst" BEFORE other extends
+  // to put them at a lower priority than the hxmstyle rules.
+  if (userCfg.extendsFirst) {
+    userCfg.extendsFirst.forEach((rulePackageName) => {
+      config.extends.unshift(rulePackageName);
+    });
+    // cleanup
+    delete userCfg.extendsFirst;
   }
 
   return config;
