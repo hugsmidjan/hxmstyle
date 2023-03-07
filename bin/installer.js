@@ -64,7 +64,7 @@ const args = Object.assign(
 
 // auto-detect options based on already installed deps
 {
-  if (args.scss == null && projectDeps.scss) {
+  if (args.scss == null && projectDeps.sass) {
     console.info('scss detected.');
     args.scss = true;
   }
