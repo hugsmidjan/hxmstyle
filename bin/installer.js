@@ -52,7 +52,6 @@ const cleanOptions = (options) => {
 
 const supportedArgs = {
   typescript: true,
-  stylus: true,
   scss: true,
   react: true,
 };
@@ -188,31 +187,6 @@ if (args.typescript) {
     fs.writeFileSync(editorcfgPath, configRules);
     console.info('- Done.');
   }
-}
-
-// Update .stylintrc
-if (args.stylus) {
-  const stylintrcPath = projectPath + '.stylintrc';
-  const stylintRules = require(hxmstylePath + 'starters/stylintrc.js');
-  const hasStylintrc = fs.existsSync(stylintrcPath);
-  if (hasStylintrc) {
-    const hxmStyleMarker = '__hxmstyle__';
-    const projectSpecificMarker = '__project_specific_rules__';
-    const projectRules = JSON.parse(fs.readFileSync(stylintrcPath));
-    // Maintain anything below the projectSpecificMarker in projectRules
-    let searchingForMarker = hxmStyleMarker in projectRules; // If no hxmStyleMarker is found - assume every rule is project-specific
-    Object.entries(projectRules).forEach(([key, rule]) => {
-      if (searchingForMarker) {
-        searchingForMarker = key !== projectSpecificMarker;
-      } else if (rule !== stylintRules[key]) {
-        delete stylintRules[key]; // delete from Object.keys() array
-        stylintRules[key] = rule; // Re-insert at end of Object.keys()
-      }
-    });
-  }
-  console.info(hasStylintrc ? 'Updating .stylintrc' : 'Adding .stylintrc');
-  fs.writeFileSync(stylintrcPath, JSON.stringify(stylintRules, null, '\t') + '\n');
-  console.info('- Done.');
 }
 
 // Update .stylelintrc.json

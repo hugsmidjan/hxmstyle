@@ -35,9 +35,6 @@
       "eslint-plugin-react": "^7.32.2",
       "eslint-plugin-react-hooks": "^4.6.0"
     },
-    "stylus": {
-      "stylint": "^2.0.0"
-    },
     "scss": {
       "stylelint": "^15.1.0",
       "stylelint-config-recommended-scss": "^9.0.1",

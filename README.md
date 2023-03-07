@@ -22,11 +22,7 @@ plugins and add/remove optional preset bundles.
 
 If the installer detects that your project is using TypeScript, it installs
 the relevant TS plugins and a minimal `tsconfig.json` file with
-`compilerOptions.strict: true`. (As if you'd run `hxmstyle --typescript`)
-
-If the installer detects that your project is using stylus, it will install
-`stylint` and a very opinionated [`.stylintrc`](starters/stylintrc.js) file.
-(Just like if you'd run `hxmstyle --stylus`)
+`compilerOptions.strict: true`. (As if you'd run `hxmus --typescript`)
 
 Similarily if `react` (or `preact` or `inferno`) is detected, a react plugin
 is installed. (As if you'd run `hxmstyle --react`)
@@ -39,22 +35,21 @@ Both the `npx` installer and the local CLI command take one or more optional
 flags.
 
 ```
-hxmstyle --react --stylus --scss --typescript
+hxmstyle --typescript --react --scss
 ```
 
 is the same as
 
 ```
-hxmstyle --react
-hxmstyle --stylus
-hxmstyle --scss
 hxmstyle --typescript
+hxmstyle --react
+hxmstyle --scss
 ```
 
 To turn off one or more options pass `false` as a value, like so:
 
 ```
-hxmstyle --react=false --stylus=false --scss=false --typescript=false
+hxmstyle --react=false --scss=false --typescript=false
 ```
 
 ...or edit your `package.json`'s `hxmstyle.options` field and set the
@@ -124,8 +119,6 @@ Add these plugins:
 - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=editorconfig.editorconfig)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   – for files other than JavaScript/TypeScript (Markdown, JSON, HTML, etc.)
-- [Stylint](https://marketplace.visualstudio.com/items?itemName=HaaLeo.vscode-stylint)
-  – if you're writing Stylus code
 - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
   – if you're writing scss code
   
