@@ -55,6 +55,15 @@ module.exports = (userCfg = {}, options) => {
       config.extends.push(rulePackageName);
     });
   }
+  // Merge in the user's "extendsFirst" BEFORE other extends
+  // to put them at a lower priority than the hxmstyle rules.
+  if (userCfg.extendsFirst) {
+    userCfg.extendsFirst.forEach((rulePackageName) => {
+      config.extends.unshift(rulePackageName);
+    });
+    // cleanup
+    delete userCfg.extendsFirst;
+  }
 
   return config;
 };

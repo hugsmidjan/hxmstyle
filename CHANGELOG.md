@@ -4,6 +4,8 @@
 
 - ... <!-- Add new lines here. -->
 - **BREAKING** feat: Drop support for Stylus
+- feat: Support a `extendsFirst` array in `.eslintrc.js` — to better control
+  the addition of custom presets
 - feat: Use
   [@rushstack/eslint-patch](https://www.npmjs.com/package/@rushstack/eslint-patch)
   to hide plugins from a consuming project's `pkg.dependencies`

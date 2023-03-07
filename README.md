@@ -27,7 +27,8 @@ the relevant TS plugins and a minimal `tsconfig.json` file with
 Similarily if `react` (or `preact` or `inferno`) is detected, a react plugin
 is installed. (As if you'd run `hxmstyle --react`)
 
-And if `scss` is detected, stylelint plugin is installed. (As if you'd run `hxmstyle --scss`)
+And if `scss` is detected, stylelint plugin is installed. (As if you'd run
+`hxmstyle --scss`)
 
 ### Install options
 
@@ -73,6 +74,13 @@ neccessary changes to `.eslintrc.js`, `.prettierrc.js` and/or `.stylintrc`.
 
 If one of your `.*rc` files goes missing or gets corrupted, you can find fresh
 ones [in the "starters" directory](starters/).
+
+Framework/library-specific config presets can be added to your project's
+`.eslintrc.js` file via the `extends` property. These values are loaded
+_after_ the `hxmstyle` rules.
+
+However, in some cases you may want to set them to a lower priority by adding
+them in via the `extendsFirst` array.
 
 ## Removing plugins
 
@@ -121,7 +129,6 @@ Add these plugins:
   – for files other than JavaScript/TypeScript (Markdown, JSON, HTML, etc.)
 - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
   – if you're writing scss code
-  
 
 ...and these settings:
 
