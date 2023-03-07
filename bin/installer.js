@@ -52,22 +52,20 @@ const cleanOptions = (options) => {
   return options;
 };
 
-const supportedArgs = {
+const args = parseArgs(process.argv.slice(2), {
   typescript: true,
-  scss: true,
   react: true,
-};
-const args = Object.assign(
-  cleanOptions(lastSettings.options),
-  parseArgs(process.argv.slice(2), supportedArgs)
-);
+  scss: true,
+});
 
 // auto-detect options based on already installed deps
 {
-  if (args.scss == null && projectDeps.sass) {
+  const projectHasSCSS = () => projectDeps.sass;
+  if (args.scss == null && projectHasSCSS()) {
     console.info('scss detected.');
     args.scss = true;
   }
+
   const projectHasReact = () =>
     projectDeps.react || projectDeps.preact || projectDeps.inferno;
   if (args.react == null && projectHasReact()) {
