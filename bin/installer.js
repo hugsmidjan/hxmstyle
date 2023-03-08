@@ -11,7 +11,6 @@ const projectDeps = Object.assign(
   projectPkg.dependencies,
   projectPkg.devDependencies
 );
-const lastSettings = projectPkg.hxmstyle || {};
 
 const hxmstylePath = path.parse(require.resolve('@hugsmidjan/hxmstyle')).dir + '/';
 const hxmstylePkg = require(hxmstylePath + 'package.json');
@@ -41,15 +40,6 @@ const parseArgs = (argv, supportedArgs) => {
       }
     });
   return args;
-};
-
-const cleanOptions = (options) => {
-  options = Object.assign({}, options);
-  Object.keys(options).forEach((key) => {
-    // cast weird ["true"] values to simple boolean true
-    options[key] = !!options[key];
-  });
-  return options;
 };
 
 const args = parseArgs(process.argv.slice(2), {
