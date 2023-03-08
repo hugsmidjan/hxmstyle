@@ -214,9 +214,23 @@ if (args.scss) {
       hxmstyle.dependenciesAdded = managedDeps.sort();
     }
     // Re-read `package.json` since its contents may have changed due to installs.
-    projectPkg = JSON.parse(fs.readFileSync(projectPkgPath));
+    const projectPkgStr = fs.readFileSync(projectPkgPath).toString();
+    projectPkg = JSON.parse(projectPkgStr);
     projectPkg.hxmstyle = hxmstyle;
-    fs.writeFileSync(projectPkgPath, JSON.stringify(projectPkg, null, '\t') + '\n');
+    // Imperfect, KISS-style indentation detection.
+    // Assume the file was formatted and in an orderly state before opening.
+    // Find the first example of a line starting with spaces (or a single tab)
+    // before a quotation mark, and treat it as representative single-level
+    // indentation.
+    // Failure mode: An already malformatted package.json file gets reformatted
+    // with different, and possibly a slightly surprising indentation
+    // and the author needs to fix the formatting manually (open + save).
+    const indent = (projectPkgStr.match(/\n(\t| +?)"/) || [])[1] || '  ';
+    const trailingChar = /\n$/.test('\n' + projectPkgStr) ? '\n' : '';
+    fs.writeFileSync(
+      projectPkgPath,
+      JSON.stringify(projectPkg, null, indent) + trailingChar
+    );
   }
 }
 
