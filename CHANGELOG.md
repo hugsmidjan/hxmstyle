@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Respect existing indentation when updating project `package.json`
 
 ## 7.0.0
 
