@@ -4,6 +4,7 @@
 
 - ... <!-- Add new lines here. -->
 - feat: Respect existing indentation when updating project `package.json`
+- fix: Handle typescript 5 in peerDependencies
 
 ## 7.0.0
 
