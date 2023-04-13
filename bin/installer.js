@@ -42,12 +42,23 @@ const parseArgs = (argv, supportedArgs) => {
   return args;
 };
 
-const args = parseArgs(process.argv.slice(2), {
-  typescript: true,
-  react: true,
-  scss: true,
-});
+const cleanOptions = (options) => {
+  options = Object.assign({}, options);
+  Object.keys(options).forEach((key) => {
+    // cast weird ["true"] values to simple boolean true
+    options[key] = !!options[key];
+  });
+  return options;
+};
 
+const args = Object.assign(
+  cleanOptions((projectPkg.hxmstyle || {}).options),
+  parseArgs(process.argv.slice(2), {
+    typescript: true,
+    react: true,
+    scss: true,
+  })
+);
 // auto-detect options based on already installed deps
 {
   const projectHasSCSS = () => projectDeps.sass;
