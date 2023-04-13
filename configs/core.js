@@ -18,7 +18,7 @@ module.exports = {
   rules: {
 		'dot-notation': 'warn',
     'linebreak-style': ['error', 'unix'],
-    'quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
+    'quotes': ['warn', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
 		'comma-dangle': ['warn', {
 			arrays: 'always-multiline',
 			objects: 'always-multiline',
@@ -28,7 +28,7 @@ module.exports = {
 		}],
     'semi': ['warn', 'always'],
     'brace-style': ['warn', '1tbs', { allowSingleLine: true }],
-    'curly': ['error', 'all'],
+    'curly': ['warn', 'all'],
     //'no-trailing-spaces': 'warn',
     'space-before-blocks': 'warn',
     'keyword-spacing': 'warn',
