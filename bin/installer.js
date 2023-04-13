@@ -91,16 +91,6 @@ const args = Object.assign(
 const installDeps = {
   ...hxmstylePkg.peerDependencies,
 };
-Object.entries(hxmstylePkg.peerDependenciesMeta).forEach(([key, meta]) => {
-  // Skip installing "optional" peerDependences, unless they're
-  // explicitly flagged in `args` AND missing from projectPkg
-  if (
-    meta.optional &&
-    (!args[key] || projectDeps[key] || projectPkg.peerDependencies[key])
-  ) {
-    delete installDeps[key];
-  }
-});
 // Keeping track of the names of dependences that are installed by hxmstyle
 // (Currently these are only deps related to `args.scss`.)
 const managedDeps = [];

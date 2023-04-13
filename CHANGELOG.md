@@ -3,13 +3,13 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- fix: Stop being clever about auto-installing `typescript` and `react`
 
 ## 7.1.0
 
 _2023-04-13_
 
 - feat: Respect existing indentation when updating project `package.json`
-- feat: Handle typescript 5 in peerDependencies
 - feat: Relax auto-fixable `quotes` and `curly` rules to "warn"
 - fix: `pkg.hxmstyle.options` should not be auto-removed — as auto-detction
   often sees false-negatives in monorepos
