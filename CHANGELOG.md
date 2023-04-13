@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 7.1.0
+
+_2023-04-13_
+
 - feat: Respect existing indentation when updating project `package.json`
 - feat: Handle typescript 5 in peerDependencies
 - feat: Relax auto-fixable `quotes` and `curly` rules to "warn"
