@@ -42,12 +42,23 @@ const parseArgs = (argv, supportedArgs) => {
   return args;
 };
 
-const args = parseArgs(process.argv.slice(2), {
-  typescript: true,
-  react: true,
-  scss: true,
-});
+const cleanOptions = (options) => {
+  options = Object.assign({}, options);
+  Object.keys(options).forEach((key) => {
+    // cast weird ["true"] values to simple boolean true
+    options[key] = !!options[key];
+  });
+  return options;
+};
 
+const args = Object.assign(
+  cleanOptions((projectPkg.hxmstyle || {}).options),
+  parseArgs(process.argv.slice(2), {
+    typescript: true,
+    react: true,
+    scss: true,
+  })
+);
 // auto-detect options based on already installed deps
 {
   const projectHasSCSS = () => projectDeps.sass;
@@ -80,16 +91,6 @@ const args = parseArgs(process.argv.slice(2), {
 const installDeps = {
   ...hxmstylePkg.peerDependencies,
 };
-Object.entries(hxmstylePkg.peerDependenciesMeta).forEach(([key, meta]) => {
-  // Skip installing "optional" peerDependences, unless they're
-  // explicitly flagged in `args` AND missing from projectPkg
-  if (
-    meta.optional &&
-    (!args[key] || projectDeps[key] || projectPkg.peerDependencies[key])
-  ) {
-    delete installDeps[key];
-  }
-});
 // Keeping track of the names of dependences that are installed by hxmstyle
 // (Currently these are only deps related to `args.scss`.)
 const managedDeps = [];

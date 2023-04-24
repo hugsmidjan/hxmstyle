@@ -1,7 +1,7 @@
 {
   "name": "@hugsmidjan/hxmstyle",
   "description": "One annoying style to rule them all...",
-  "version": "7.0.0",
+  "version": "7.1.1",
   "main": "index.js",
   "bin": {
     "hxmstyle": "bin/installer.js"
@@ -31,17 +31,7 @@
   },
   "peerDependencies": {
     "eslint": "^8.35.0",
-    "prettier": "^2.8.2",
-    "react": ">=16.8",
-    "typescript": "^4.5.4"
-  },
-  "peerDependenciesMeta": {
-    "typescript": {
-      "optional": true
-    },
-    "react": {
-      "optional": true
-    }
+    "prettier": "^2.8.2"
   },
   "optionals": {
     "scss": {
