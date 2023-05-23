@@ -3,6 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Upgrade to stylelint-prettier and remove deprecated rules
+- fix: upgrade packages
 
 ## 7.1.0 – 7.1.1
 

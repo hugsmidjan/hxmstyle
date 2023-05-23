@@ -76,6 +76,7 @@ module.exports = {
     // https://eslint.org/docs/rules/indent#options
     'indent': ['warn', 2],
     'no-tabs': ['error', { allowIndentationTabs: true }],
+    'no-multiple-empty-lines': ['error', { 'max': 1 }],
     'max-len': ['warn', {
       code: 120,
       ignoreUrls: true,
