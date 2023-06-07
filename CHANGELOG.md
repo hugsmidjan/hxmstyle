@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 8.0.0
+
+_2023-06-07_
+
 - **BREAKING** feat: Add `prefer-template` warnings (auto-fix may
 - **BREAKING** feat: Upgrade to `stylelint-prettier` and remove deprecated rules
 - feat: Update all dependencies to latest versions
