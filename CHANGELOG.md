@@ -3,8 +3,9 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
-- **BREAKING** feat: Upgrade to stylelint-prettier and remove deprecated rules
-- fix: upgrade packages
+- **BREAKING** feat: Add `prefer-template` warnings (auto-fix may
+- **BREAKING** feat: Upgrade to `stylelint-prettier` and remove deprecated rules
+- feat: Update all dependencies to latest versions
 
 ## 7.1.0 – 7.1.1
 
