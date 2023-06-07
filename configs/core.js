@@ -85,6 +85,7 @@ module.exports = {
     }],
     'no-var': 'warn',
     'prefer-const': 'warn', // Wish there was a way to prevent autofixing this one.
+    'prefer-template': 'warn',
     'require-await': 'warn',
     'no-async-promise-executor': 'error',
     'no-await-in-loop': 'warn',

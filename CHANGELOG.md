@@ -3,6 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Add `prefer-template` warnings (auto-fix may
+  https://github.com/hugsmidjan/hxmstyle/issues/11)
 
 ## 7.1.0 – 7.1.1
 
