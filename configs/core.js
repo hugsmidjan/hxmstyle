@@ -76,6 +76,7 @@ module.exports = {
     // https://eslint.org/docs/rules/indent#options
     'indent': ['warn', 2],
     'no-tabs': ['error', { allowIndentationTabs: true }],
+    'no-multiple-empty-lines': ['error', { 'max': 1 }],
     'max-len': ['warn', {
       code: 120,
       ignoreUrls: true,
@@ -85,6 +86,7 @@ module.exports = {
     }],
     'no-var': 'warn',
     'prefer-const': 'warn', // Wish there was a way to prevent autofixing this one.
+    'prefer-template': 'warn',
     'require-await': 'warn',
     'no-async-promise-executor': 'error',
     'no-await-in-loop': 'warn',

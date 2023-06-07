@@ -4,13 +4,11 @@
     " BEWARE: This file is manged by \"hxmstyle\" and will be rewritten on next install/update.    ",
     "--------------------------------------------------------------------------------------------"
   ],
-  "extends": "stylelint-config-recommended-scss",
+  "extends": ["stylelint-prettier/recommended", "stylelint-config-prettier"],
   "files": ["**/*.scss"],
-  "plugins": ["stylelint-order"],
+  "plugins": ["stylelint-scss", "stylelint-order"],
+  "customSyntax": "postcss-scss",
   "rules": {
-    "indentation": 2,
-    "string-quotes": "single",
-    "max-empty-lines": 1,
     "selector-class-pattern": null,
     "scss/no-global-function-names": null,
     "order/order": [
