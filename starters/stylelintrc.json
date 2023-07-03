@@ -4,7 +4,7 @@
     " BEWARE: This file is manged by \"hxmstyle\" and will be rewritten on next install/update.    ",
     "--------------------------------------------------------------------------------------------"
   ],
-  "extends": ["stylelint-prettier/recommended", "stylelint-config-prettier"],
+  "extends": ["stylelint-prettier/recommended"],
   "files": ["**/*.scss"],
   "plugins": ["stylelint-scss", "stylelint-order"],
   "customSyntax": "postcss-scss",

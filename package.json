@@ -1,7 +1,7 @@
 {
   "name": "@hugsmidjan/hxmstyle",
   "description": "One annoying style to rule them all...",
-  "version": "8.0.0",
+  "version": "8.0.1",
   "main": "index.js",
   "bin": {
     "hxmstyle": "bin/installer.js"
@@ -36,7 +36,6 @@
   "optionals": {
     "scss": {
       "stylelint": "^15.6.2",
-      "stylelint-config-prettier": "^9.0.5",
       "stylelint-order": "^6.0.3",
       "stylelint-prettier": "^3.0.0",
       "stylelint-scss": "^5.0.0",
