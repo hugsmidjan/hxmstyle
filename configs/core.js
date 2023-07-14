@@ -132,6 +132,8 @@ module.exports = {
           ['^~/'],
           ['^(?:components|containers)(?:/.*|$)'],
           ['^(?:utils|apis?|hocs|hooks|pages|views|libs?|store|theme|types)(?:/.*|$)'],
+          // Anything not matched in another group.
+          ["^"],
           // Parent imports. Put `..` last.
           ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
           // Other relative imports. Put same-folder imports and `.` last.

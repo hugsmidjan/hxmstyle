@@ -4,10 +4,11 @@
 
 - ... <!-- Add new lines here. -->
 - Tweak import sorting:
-  - feat: define `^~/` and `^@/` as separate import groups
-  - feat: group `*.styles` imports together with `*.s?css`
+  - feat: Define `^~/` and `^@/` as separate import groups
+  - feat: Group `*.styles` imports together with `*.s?css`
   - feat: Add `^views/`, ``libs?/` and `^api/` to locally aliased folder list
   - fix: Support optional file extensions on css/styles import paths
+  - feat: Place css/styles imports at the bottom
 
 ## 8.0.0 - 8.0.1
 
