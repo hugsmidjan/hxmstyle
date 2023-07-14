@@ -7,6 +7,7 @@
   - feat: define `^~/` and `^@/` as separate import groups
   - feat: group `*.styles` imports together with `*.s?css`
   - feat: Add `^views/`, ``libs?/` and `^api/` to locally aliased folder list
+  - fix: Support optional file extensions on css/styles import paths
 
 ## 8.0.0 - 8.0.1
 

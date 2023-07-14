@@ -136,8 +136,8 @@ module.exports = {
           ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
           // Other relative imports. Put same-folder imports and `.` last.
           ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-          // Style imports.
-          ['^.+\\.(?:s?css|styles)$'],
+          // Style imports. (with optional .js/.mjs/.cjs file-extension)
+          ['^.+\\.(?:s?css|styles)(?:\\.[mc]?js)?$'],
         ],
       },
     ],
