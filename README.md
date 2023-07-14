@@ -82,7 +82,7 @@ _after_ the `hxmstyle` rules.
 However, in some cases you may want to set them to a lower priority by adding
 them in via the `extendsFirst` array.
 
-## Removing plugins
+## Removing (stylelint) plugins
 
 The hxmstyle core plugins **can not be changed** without breaking hxmstyle. If
 your project can't use the core plugins, then don't use hxmstyle.
@@ -97,7 +97,7 @@ might have installed yourself for some reason.)
 
 However, `packgage.json` always contains an updated list of
 `hxmstyle.dependencies` that you can consult when tidying up your
-devDependencies.
+`stylelint-*` devDependencies.
 
 ## Example npm scripts
 
