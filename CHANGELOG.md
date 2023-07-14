@@ -3,6 +3,10 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- Tweak import sorting:
+  - feat: define `^~/` and `^@/` as separate import groups
+  - feat: group `*.styles` imports together with `*.s?css`
+  - feat: Add `^views/`, ``libs?/` and `^api/` to locally aliased folder list
 
 ## 8.0.0 - 8.0.1
 
