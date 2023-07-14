@@ -106,7 +106,7 @@ Consider adding an npm script similar to this one to your project's
 
 ```json
     "scripts": {
-        "format": "eslint --fix  \"*.{js,ts,tsx}\" \"_src/**/*.{js,ts,tsx}\"  &&  prettier --write \"*.md\" \"*.json\"",
+        "format": "eslint --fix  \"*.{js,ts,tsx}\" \"_src/**/*.{js,ts,tsx}\"  &&  prettier --write \"*.{md,json,yml}\" \"src/**/*.{md,json,yml}\"",
     }
 ```
 
