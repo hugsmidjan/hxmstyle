@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 8.1.0
+
+_2023-07-17_
+
 - Tweak import sorting:
   - feat: Define `^~/` and `^@/` as separate import groups
   - feat: Group `*.styles` imports together with `*.s?css`
