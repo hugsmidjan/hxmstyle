@@ -248,7 +248,7 @@ if (!projectPkg.scripts || !projectPkg.scripts.format) {
         jsExts +
         '\\" \\"_src/**/*.' +
         jsExts +
-        '\\"  &&  prettier --write  \\"*.md\\" \\"*.json\\""',
+        '\\"  &&  prettier --write  \\"*.{md,json,yml}\\" \\"src/**/*.{md,json,yml}\\""',
       '    },',
       '',
       'More info: https://github.com/hugsmidjan/hxmstyle/blob/master/README.md#example-npm-scripts',

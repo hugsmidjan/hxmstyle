@@ -128,14 +128,18 @@ module.exports = {
           // Packages. `react` related packages come first.
           ['^react', '^@?\\w'],
           // Internal packages.
-          ['^(components|containers)(/.*|$)'],
-          ['^(utils|apis|hocs|hooks|pages|store|theme|types)(/.*|$)'],
+          ['^@/'],
+          ['^~/'],
+          ['^(?:components|containers)(?:/.*|$)'],
+          ['^(?:utils|apis?|hocs|hooks|pages|views|libs?|store|theme|types)(?:/.*|$)'],
+          // Anything not matched in another group.
+          ["^"],
           // Parent imports. Put `..` last.
           ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
           // Other relative imports. Put same-folder imports and `.` last.
           ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-          // Style imports.
-          ['^.+\\.s?css$'],
+          // Style imports. (with optional .js/.mjs/.cjs file-extension)
+          ['^.+\\.(?:s?css|styles)(?:\\.[mc]?js)?$'],
         ],
       },
     ],
