@@ -3,6 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Disable `@typescript-eslint/no-non-null-assertion` — but warn about
+  confusing uses.
 
 ## 8.1.0
 
