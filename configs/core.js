@@ -130,8 +130,9 @@ module.exports = {
           // Internal packages.
           ['^@/'],
           ['^~/'],
+          ['^(?:prismic|payload)(?:/.*|$)'],
           ['^(?:components|containers)(?:/.*|$)'],
-          ['^(?:utils|apis?|hocs|hooks|pages|views|libs?|store|theme|types)(?:/.*|$)'],
+          ['^(?:utils|apis?|hocs|hooks|i18n|pages|views|libs?|store|theme|types)(?:/.*|$)'],
           // Anything not matched in another group.
           ["^"],
           // Parent imports. Put `..` last.
