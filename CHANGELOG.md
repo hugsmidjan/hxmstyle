@@ -3,10 +3,16 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 8.2.0
+
+_2023-08-02_
+
 - feat: Warn on `@typescript-eslint/no-unnecessary-type-assertion`
 - feat: Disable `@typescript-eslint/no-non-null-assertion` — but warn about
   confusing uses.
-
+- feat: Add `^prismic/`, `^payload/` and `^i18n/` to locally aliased folder list
+  
 ## 8.1.0
 
 _2023-07-17_
@@ -14,7 +20,7 @@ _2023-07-17_
 - Tweak import sorting:
   - feat: Define `^~/` and `^@/` as separate import groups
   - feat: Group `*.styles` imports together with `*.s?css`
-  - feat: Add `^views/`, ``libs?/` and `^api/` to locally aliased folder list
+  - feat: Add `^views/`, `^libs?/` and `^api/` to locally aliased folder list
   - fix: Support optional file extensions on css/styles import paths
   - feat: Place css/styles imports at the bottom
 
