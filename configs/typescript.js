@@ -22,6 +22,7 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
+        '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
 
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/camelcase': 'off',

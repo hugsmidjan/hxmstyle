@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Warn on `@typescript-eslint/no-unnecessary-type-assertion`
 - feat: Disable `@typescript-eslint/no-non-null-assertion` — but warn about
   confusing uses.
 
