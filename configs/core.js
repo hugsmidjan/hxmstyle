@@ -85,7 +85,7 @@ module.exports = {
       ignoreTemplateLiterals: true,
     }],
     'no-var': 'warn',
-    'prefer-const': 'warn', // Wish there was a way to prevent autofixing this one.
+    'prefer-const': ['warn', { destructuring: 'all' }], // Wish there was a way to prevent autofixing this one.
     'prefer-template': 'warn',
     'require-await': 'warn',
     'no-async-promise-executor': 'error',

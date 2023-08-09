@@ -55,6 +55,7 @@ module.exports = {
           },
         ],
 
+        'prefer-const': coreRules['prefer-const'], // the typescript-eslint plugin somehow switch this rule to "error"
         'no-unused-vars': 'off', // note you must disable the base rule as it can report incorrect errors
         '@typescript-eslint/no-unused-vars': coreRules['no-unused-vars'],
 

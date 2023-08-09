@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- fix: `prefer-const` switches to "error" in TS files (+ allow destructuring)
 
 ## 8.2.0
 
@@ -11,8 +12,9 @@ _2023-08-02_
 - feat: Warn on `@typescript-eslint/no-unnecessary-type-assertion`
 - feat: Disable `@typescript-eslint/no-non-null-assertion` — but warn about
   confusing uses.
-- feat: Add `^prismic/`, `^payload/` and `^i18n/` to locally aliased folder list
-  
+- feat: Add `^prismic/`, `^payload/` and `^i18n/` to locally aliased folder
+  list
+
 ## 8.1.0
 
 _2023-07-17_
