@@ -4,6 +4,7 @@
 
 - ... <!-- Add new lines here. -->
 - fix: `prefer-const` switches to "error" in TS files (+ allow destructuring)
+- fix: Sort "magic" import folders above `@/*` and `~/*` to minimize conflicts
 
 ## 8.2.0
 
