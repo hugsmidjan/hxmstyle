@@ -126,7 +126,7 @@ module.exports = {
           // Side effect imports.
           ['^\\u0000'],
           // Packages. `react` related packages come first.
-          ['^react', '^@?\\w'],
+          ['^p?react', '^@?\\w'],
           // Magic (unprefixed) folder aliases
           ['^(?:prismic|payload)(?:/.*|$)'],
           ['^(?:components|containers)(?:/.*|$)'],
