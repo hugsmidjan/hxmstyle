@@ -72,7 +72,7 @@ module.exports = {
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': 'warn',
         '@typescript-eslint/no-explicit-any': [
-          'warn',
+          'error',
           { fixToUnknown: false, ignoreRestArgs: true },
         ],
         '@typescript-eslint/indent': ['error', 2],

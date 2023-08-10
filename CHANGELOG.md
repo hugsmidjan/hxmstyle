@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Raise `@typescript-eslint/no-explicit-any` back to `error` level
 - fix: `prefer-const` switches to "error" in TS files (+ allow destructuring)
 
 ## 8.2.0
