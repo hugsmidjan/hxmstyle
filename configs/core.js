@@ -126,13 +126,14 @@ module.exports = {
           // Side effect imports.
           ['^\\u0000'],
           // Packages. `react` related packages come first.
-          ['^react', '^@?\\w'],
-          // Internal packages.
-          ['^@/'],
-          ['^~/'],
+          ['^p?react', '^@?\\w'],
+          // Magic (unprefixed) folder aliases
           ['^(?:prismic|payload)(?:/.*|$)'],
           ['^(?:components|containers)(?:/.*|$)'],
           ['^(?:utils|apis?|hocs|hooks|i18n|pages|views|libs?|store|theme|types)(?:/.*|$)'],
+          // Commonly used (idiomatic) local path aliases/prefixes
+          ['^@/'],
+          ['^~/'],
           // Anything not matched in another group.
           ["^"],
           // Parent imports. Put `..` last.

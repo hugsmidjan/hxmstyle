@@ -14,7 +14,7 @@ module.exports = {
     'react/no-unknown-property': ['warn'], // warns about class="" and lowercase event-attrs (e.g. onclick="") etc...
     'react/no-unescaped-entities': ['warn', { forbid: ['>', '}'] }],
     'react/no-deprecated': ['warn'],
-    'react/jsx-no-useless-fragment': ['warn'],
+    'react/jsx-no-useless-fragment': ['warn', { allowExpressions: true }],
     'react/self-closing-comp': ['warn'],
     'react/display-name': ['off' /*, { ignoreTranspilerName: true }*/],
     // https://www.npmjs.com/package/eslint-plugin-react-hooks

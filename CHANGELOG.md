@@ -5,6 +5,8 @@
 - ... <!-- Add new lines here. -->
 - feat: Raise `@typescript-eslint/no-explicit-any` back to `error` level
 - fix: `prefer-const` switches to "error" in TS files (+ allow destructuring)
+- fix: Relax `react/jsx-no-useless-fragment` with `allowExpressions` option
+- fix: Sort "magic" import folders above `@/*` and `~/*` to minimize conflicts
 
 ## 8.2.0
 
