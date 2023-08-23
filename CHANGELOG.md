@@ -3,6 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- fix: Relax `react/jsx-no-useless-fragment` with `allowExpressions` option
+
 - fix: `prefer-const` switches to "error" in TS files (+ allow destructuring)
 - fix: Sort "magic" import folders above `@/*` and `~/*` to minimize conflicts
 
