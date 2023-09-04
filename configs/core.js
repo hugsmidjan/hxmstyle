@@ -14,6 +14,12 @@ module.exports = {
     'simple-import-sort',
     'import',
   ],
+
+  // This adds soft warning on unused `eslint-disable` directives,
+  // and instructs auto-fix to remove them.
+  // Problem: It doesn't flag/remove unused `eslint-enable` directives.
+  reportUnusedDisableDirectives: true,
+
   /* prettier-ignore */
   rules: {
 		'dot-notation': 'warn',
