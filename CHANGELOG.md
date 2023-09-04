@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 8.3.0
+
+_2023-09-04_
+
 - feat: Turn on `reportUnusedDisableDirectives` option (auto-fixable)
 - feat: Raise `@typescript-eslint/no-explicit-any` back to `error` level
 - fix: `prefer-const` switches to "error" in TS files (+ allow destructuring)
