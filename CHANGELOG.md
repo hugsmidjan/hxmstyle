@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Enable `react/jsx-curly-brace-presence` with `'never'`
 
 ## 8.3.0
 
