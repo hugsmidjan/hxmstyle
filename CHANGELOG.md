@@ -4,6 +4,7 @@
 
 - ... <!-- Add new lines here. -->
 - feat: Enable `react/jsx-curly-brace-presence` with `'never'`
+- fix: Relax `@typescript-eslint/no-empty-interface` to `warn` level
 
 ## 8.3.0
 

@@ -27,6 +27,7 @@ module.exports = {
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/camelcase': 'off',
         '@typescript-eslint/interface-name-prefix': 'off', // 'never' | 'always // 'never' seems like a weird default
+        '@typescript-eslint/no-empty-interface': 'warn',
         '@typescript-eslint/array-type': ['warn', { default: 'generic' }], // 'array' -> `T[]` ;  'generic' -> `Array<T>`
         '@typescript-eslint/no-extraneous-class': 'warn',
         '@typescript-eslint/no-useless-constructor': 'warn',
