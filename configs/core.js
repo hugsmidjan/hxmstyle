@@ -67,6 +67,7 @@ module.exports = {
     // If you really, really NEED `console.log()` without warnings,
     // either do `window.console.log();` or `global.console.log();`,
     // or insert a `/*eslint no-console: false */` marker into your file.
+    // (Intentionally omitting: 'debug' as it aliases 'log')
     'no-console': ['warn', { allow: ['warn', 'error', 'info', 'group', 'groupCollapsed', 'groupEnd'] }],
     'no-div-regex': 'error',
     'no-label-var': 'error',
@@ -114,8 +115,8 @@ module.exports = {
 
     // Rules for "eslint-plugin-destructuring":
     // 'destructuring/no-rename': 'error',
-    'destructuring/in-params': ['error', {'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i}/* ... */</li>)}
-    'destructuring/in-methods-params': 'error',
+    'destructuring/in-params': ['warn', {'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i}/* ... */</li>)}
+    'destructuring/in-methods-params': 'warn',
     // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
 
     // Rules for "eslint-plugin-unused-imports":

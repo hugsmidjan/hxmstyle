@@ -20,5 +20,9 @@ module.exports = {
     // https://www.npmjs.com/package/eslint-plugin-react-hooks
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/jsx-curly-brace-presence': [
+      'warn',
+      { props: 'never', children: 'never', propElementValues: 'always' },
+    ],
   },
 };
