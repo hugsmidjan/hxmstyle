@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 8.4.0
+
+_2023-10-13_
+
 - feat: Enable `react/jsx-curly-brace-presence` with `'never'`
 - fix: Relax `@typescript-eslint/no-empty-interface` to `warn` level
 - fix: Relax `destructuring/in-params` to `warn` level
