@@ -99,6 +99,24 @@ module.exports = {
             allowedNames: ['_this'], // Allow `const self = this`; `[]` by default
           },
         ],
+
+        '@typescript-eslint/naming-convention': [
+          'warn',
+          { selector: 'variable', filter: '__typename', format: null },
+          {
+            selector: 'variable',
+            types: ['function'],
+            format: ['camelCase', 'PascalCase'],
+            leadingUnderscore: 'allow',
+          },
+          {
+            selector: 'variable',
+            types: ['boolean', 'number', 'string', 'array'],
+            format: ['camelCase', 'UPPER_CASE'],
+            leadingUnderscore: 'allow',
+          },
+          { selector: 'typeLike', format: ['PascalCase'] },
+        ],
       },
     },
   ],

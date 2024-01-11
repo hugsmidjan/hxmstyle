@@ -5,6 +5,7 @@
 - ... <!-- Add new lines here. -->
 - feat: Relax `react/react-in-jsx-scope` with `'off'`
 - feat: Enable `react/button-has-type` with `'warn'`
+- feat: Enable `@typescript-eslint/naming-convention` with `'warn'`
 
 ## 8.4.0
 
