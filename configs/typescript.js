@@ -112,10 +112,22 @@ module.exports = {
           {
             selector: 'variable',
             types: ['boolean', 'number', 'string', 'array'],
-            format: ['camelCase', 'UPPER_CASE'],
+            // JSX variables need to have 'PascalCase'
+            format: ['PascalCase', 'camelCase', 'UPPER_CASE'],
             leadingUnderscore: 'allow',
           },
-          { selector: 'typeLike', format: ['PascalCase'] },
+          {
+            selector: 'parameter',
+            format: ['camelCase'],
+            leadingUnderscore: 'allow',
+          },
+          {
+            selector: 'memberLike',
+            modifiers: ['private'],
+            format: ['camelCase'],
+            leadingUnderscore: 'allow',
+          },
+          { selector: 'typeLike', format: ['PascalCase'], leadingUnderscore: 'allow' },
         ],
       },
     },
