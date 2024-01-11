@@ -10,6 +10,7 @@ module.exports = {
   plugins: ['react', 'react-hooks'],
   rules: {
     // https://www.npmjs.com/package/eslint-plugin-react
+    'react/react-in-jsx-scope': 'off',
     'react/prop-types': ['off'],
     'react/no-unknown-property': ['warn'], // warns about class="" and lowercase event-attrs (e.g. onclick="") etc...
     'react/no-unescaped-entities': ['warn', { forbid: ['>', '}'] }],

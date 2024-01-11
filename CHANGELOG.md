@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Relax `react/react-in-jsx-scope` with `'off'`
 
 ## 8.4.0
 
