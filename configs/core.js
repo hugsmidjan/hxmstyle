@@ -134,13 +134,13 @@ module.exports = {
           ['^\\u0000'],
           // Packages. `react` related packages come first.
           ['^p?react', '^@?\\w'],
-          // Commonly used (idiomatic) local path aliases/prefixes
-          ['^@/'],
-          ['^~/'],
           // Magic (unprefixed) folder aliases
           ['^(?:prismic|payload)(?:/.*|$)'],
           ['^(?:components|containers)(?:/.*|$)'],
           ['^(?:utils|apis?|hocs|hooks|i18n|pages|views|libs?|store|theme|types)(?:/.*|$)'],
+          // Commonly used (idiomatic) local path aliases/prefixes
+          ['^@/'],
+          ['^~/'],
           // Anything not matched in another group.
           ['^'],
           // Parent imports. Put `..` last.
