@@ -10,6 +10,7 @@ module.exports = {
   plugins: ['react', 'react-hooks'],
   rules: {
     // https://www.npmjs.com/package/eslint-plugin-react
+    'react/react-in-jsx-scope': 'off',
     'react/prop-types': ['off'],
     'react/no-unknown-property': ['warn'], // warns about class="" and lowercase event-attrs (e.g. onclick="") etc...
     'react/no-unescaped-entities': ['warn', { forbid: ['>', '}'] }],
@@ -20,6 +21,7 @@ module.exports = {
     // https://www.npmjs.com/package/eslint-plugin-react-hooks
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/button-has-type': 'warn',
     'react/jsx-curly-brace-presence': [
       'warn',
       { props: 'never', children: 'never', propElementValues: 'always' },
