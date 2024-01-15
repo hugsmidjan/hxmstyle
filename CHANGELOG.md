@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 8.5.0
+
+_2024-01-15_
+
 - feat: Relax `react/react-in-jsx-scope` with `'off'`
 - feat: Enable `react/button-has-type` with `'warn'`
 - feat: Enable `@typescript-eslint/naming-convention` with `'warn'`
