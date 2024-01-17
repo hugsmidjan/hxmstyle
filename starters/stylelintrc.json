@@ -6,7 +6,7 @@
   ],
   "extends": ["stylelint-prettier/recommended"],
   "files": ["**/*.scss"],
-  "plugins": ["stylelint-scss", "stylelint-order"],
+  "plugins": ["stylelint-order"],
   "customSyntax": "postcss-scss",
   "rules": {
     "selector-class-pattern": null,
