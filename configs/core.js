@@ -124,7 +124,8 @@ module.exports = {
     "import/first": "warn",
     "import/newline-after-import": "warn",
     "import/no-duplicates": "warn",
-    "unused-imports/no-unused-imports-ts": "warn",
+    "unused-imports/no-unused-imports": "warn",
+    "node-import/prefer-node-protocol": "warn",
     "simple-import-sort/exports": "warn",
     'simple-import-sort/imports': [
       'warn',

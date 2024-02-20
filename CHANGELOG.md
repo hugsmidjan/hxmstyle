@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Add `node-import/prefer-node-protocol` rule, requiring `node:` prefix
 
 ## 8.5.0 - 8.5.1
 
