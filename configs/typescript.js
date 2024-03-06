@@ -99,36 +99,6 @@ module.exports = {
             allowedNames: ['_this'], // Allow `const self = this`; `[]` by default
           },
         ],
-
-        '@typescript-eslint/naming-convention': [
-          'warn',
-          { selector: 'variable', filter: '__typename', format: null },
-          {
-            selector: 'variable',
-            types: ['function'],
-            format: ['camelCase', 'PascalCase'],
-            leadingUnderscore: 'allow',
-          },
-          {
-            selector: 'variable',
-            types: ['boolean', 'number', 'string', 'array'],
-            // JSX variables need to have 'PascalCase'
-            format: ['PascalCase', 'camelCase', 'UPPER_CASE'],
-            leadingUnderscore: 'allow',
-          },
-          {
-            selector: 'parameter',
-            format: ['camelCase'],
-            leadingUnderscore: 'allow',
-          },
-          {
-            selector: 'memberLike',
-            modifiers: ['private'],
-            format: ['camelCase'],
-            leadingUnderscore: 'allow',
-          },
-          { selector: 'typeLike', format: ['PascalCase'], leadingUnderscore: 'allow' },
-        ],
       },
     },
   ],
