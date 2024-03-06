@@ -13,6 +13,7 @@ module.exports = {
     'unused-imports',
     'simple-import-sort',
     'import',
+    'node-import',
   ],
 
   // This adds soft warning on unused `eslint-disable` directives,
