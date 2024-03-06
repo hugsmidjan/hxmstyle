@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 8.6.0
+
+_2024-03-06_
+
 - feat: Add `node-import/prefer-node-protocol` rule, requiring `node:` prefix
 - feat: Drop `@typescript-eslint/naming-convention`
 
