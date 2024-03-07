@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Add package.json "subpath imports" as sorting group
 
 ## 8.6.0 - 8.6.1
 

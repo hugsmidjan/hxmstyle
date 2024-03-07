@@ -140,6 +140,8 @@ module.exports = {
           ['^(?:prismic|payload)(?:/.*|$)'],
           ['^(?:components|containers)(?:/.*|$)'],
           ['^(?:utils|apis?|hocs|hooks|i18n|pages|views|libs?|store|theme|types)(?:/.*|$)'],
+          // Internal "subpath imports" (https://nodejs.org/api/packages.html#subpath-imports)
+          ['^#'],
           // Commonly used (idiomatic) local path aliases/prefixes
           ['^@/'],
           ['^~/'],
