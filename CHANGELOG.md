@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- 
+## 8.7.0
+
+_2024-03-18_
+
 - feat: Add package.json "subpath imports" as sorting group
 - feat: Update eslint to support typescript 5.4
 
