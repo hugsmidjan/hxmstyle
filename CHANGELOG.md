@@ -4,6 +4,7 @@
 
 - ... <!-- Add new lines here. -->
 - feat: Add package.json "subpath imports" as sorting group
+- feat: Update eslint to support typescript 5.4
 
 ## 8.6.0 - 8.6.1
 

@@ -14,9 +14,9 @@
     "format": "eslint --fix  \"*.js\" \"**/*.js\"  &&  prettier --write --loglevel=error  \"*.md\" \"*.json\""
   },
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.6.1",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
+    "@rushstack/eslint-patch": "^1.7.2",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-deprecation": "^2.0.0",
     "eslint-plugin-destructure-depth": "^1.0.3",
@@ -25,22 +25,22 @@
     "eslint-plugin-node-import": "^1.0.4",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
     "eslint-plugin-total-functions": "^7.1.0",
-    "eslint-plugin-unused-imports": "^3.0.0"
+    "eslint-plugin-unused-imports": "^3.1.0"
   },
   "peerDependencies": {
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "prettier": "^2.8.8"
   },
   "optionals": {
     "scss": {
-      "stylelint": "^15.6.2",
-      "stylelint-order": "^6.0.3",
+      "stylelint": "^15.11.0",
+      "stylelint-order": "^6.0.4",
       "stylelint-prettier": "^3.0.0",
-      "stylelint-scss": "^5.0.0",
-      "postcss-scss": "^4.0.6"
+      "stylelint-scss": "^5.3.2",
+      "postcss-scss": "^4.0.9"
     }
   },
   "repository": "git@github.com:hugsmidjan/hxmstyle.git",
@@ -53,7 +53,7 @@
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#canary",
-    "eslint": "^8.41.0",
+    "eslint": "^8.57.0",
     "prettier": "^2.8.8"
   }
 }
