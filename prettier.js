@@ -8,7 +8,6 @@ const baseRules = {
   // singleQuote: true,
   semi: true,
   jsxSingleQuote: false,
-  trailingComma: 'es5',
   bracketSpacing: true,
   bracketSameLine: false,
   arrowParens: 'always',

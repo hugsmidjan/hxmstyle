@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Change prettier's `trailingComma` setting to `'all'`
 
 ## 8.10.0
 
