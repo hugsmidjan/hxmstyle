@@ -158,6 +158,7 @@ if (args.typescript) {
             "...like SERIOUSLY!  Don't be daft. Always be strict.",
             '{',
             '  "compilerOptions": {',
+            `    "noUncheckedIndexedAccess": true, // also important!`,
             '    "strict": true',
             '  }',
             '}',
