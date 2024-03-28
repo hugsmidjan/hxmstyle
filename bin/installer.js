@@ -114,7 +114,13 @@ Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
   if (installs.length) {
     console.info('Adding/upgrading dependencies:\n', installs);
     const useYarn = !!exec('which yarn') && fs.existsSync(projectPath + 'yarn.lock');
-    const installCmd = useYarn ? 'yarn add --dev ' : 'npm install --save-dev ';
+    const useBun =
+      !useYarn && !!exec('which bun') && fs.existsSync(projectPath + 'bun.lockb');
+    const installCmd = useBun
+      ? 'bun add --dev '
+      : useYarn
+      ? 'yarn add --dev '
+      : 'npm install --save-dev ';
     exec(installCmd + installs.join(' '));
     console.info('- Done.');
   }

@@ -3,7 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
-- 
+- feat: Support bun as a package manager
+
 ## 8.7.0
 
 _2024-03-18_
