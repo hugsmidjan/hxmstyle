@@ -7,7 +7,7 @@
     "hxmstyle": "bin/installer.js"
   },
   "engines": {
-    "node": ">=16.13.0"
+    "node": ">=20.11.1"
   },
   "scripts": {
     "dogfood": "yarn upgrade @hugsmidjan/hxmstyle && hxmstyle && yarn run format",

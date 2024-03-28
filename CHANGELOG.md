@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Raise `pkg.engines.node` to `^20.11.1`
 - feat: Support bun as a package manager
 - fix: Use `.cjs` extension in `pkg.type === 'module'` projects
 
