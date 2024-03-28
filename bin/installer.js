@@ -128,16 +128,18 @@ Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
 
 // ---------------------------------------------------------------------------
 
+const rcExt = projectPkg.type === 'module' ? '.cjs' : '.js';
+
 // Create default .eslintrc.js file
-if (!fs.existsSync(projectPath + '.eslintrc.js')) {
-  console.info('Creating .eslintrc.js');
-  exec('cp ' + hxmstylePath + 'starters/eslintrc.js .eslintrc.js');
+if (!fs.existsSync(projectPath + '.eslintrc' + rcExt)) {
+  console.info('Creating .eslintrc' + rcExt);
+  exec('cp ' + hxmstylePath + 'starters/eslintrc.js .eslintrc' + rcExt);
   console.info('- Done.');
 }
 // Create default .prettierrc.js file
-if (!fs.existsSync(projectPath + '.prettierrc.js')) {
-  console.info('Creating .prettierrc.js');
-  exec('cp ' + hxmstylePath + 'starters/prettierrc.js .prettierrc.js');
+if (!fs.existsSync(projectPath + '.prettierrc' + rcExt)) {
+  console.info('Creating .prettierrc' + rcExt);
+  exec('cp ' + hxmstylePath + 'starters/prettierrc.js .prettierrc' + rcExt);
   console.info('- Done.');
 }
 
