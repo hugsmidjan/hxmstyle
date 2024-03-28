@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Raise `pkg.engines.node` to `^20.11.1`
 - feat: Change prettier's `trailingComma` setting to `'all'`
 
 ## 8.10.0
