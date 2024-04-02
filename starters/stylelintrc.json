@@ -4,13 +4,25 @@
     " BEWARE: This file is manged by \"hxmstyle\" and will be rewritten on next install/update.    ",
     "--------------------------------------------------------------------------------------------"
   ],
-  "extends": ["stylelint-prettier/recommended"],
+  "extends": ["stylelint-prettier/recommended", "stylelint-config-standard-scss"],
   "files": ["**/*.scss"],
-  "plugins": ["stylelint-scss", "stylelint-order"],
-  "customSyntax": "postcss-scss",
+  "plugins": ["stylelint-order"],
   "rules": {
     "selector-class-pattern": null,
+    "custom-property-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "at-rule-empty-line-before": null,
+    "scss/double-slash-comment-empty-line-before": null,
+    "scss/dollar-variable-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested", "after-comment"],
+        "ignore": ["after-dollar-variable"]
+      }
+    ],
     "scss/no-global-function-names": null,
+    "scss/at-rule-conditional-no-parentheses": null,
+    "declaration-block-no-redundant-longhand-properties": null,
     "order/order": [
       "dollar-variables",
       {
