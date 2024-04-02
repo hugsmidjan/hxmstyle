@@ -4,6 +4,7 @@
 
 - ... <!-- Add new lines here. -->
 - feat: Support bun as a package manager
+- feat: Support pnpm as a package manager
 - fix: Use `.cjs` extension in `pkg.type === 'module'` projects
 
 ## 8.7.0

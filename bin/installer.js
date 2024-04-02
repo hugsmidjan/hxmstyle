@@ -116,8 +116,12 @@ Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
     const useYarn = !!exec('which yarn') && fs.existsSync(projectPath + 'yarn.lock');
     const useBun =
       !useYarn && !!exec('which bun') && fs.existsSync(projectPath + 'bun.lockb');
+    const usePnpm =
+      !useYarn && !!exec('which pnpm') && fs.existsSync(projectPath + 'pnpm-lock.yaml');
     const installCmd = useBun
       ? 'bun add --dev '
+      : usePnpm
+      ? 'pnpm i -D '
       : useYarn
       ? 'yarn add --dev '
       : 'npm install --save-dev ';
