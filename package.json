@@ -7,7 +7,7 @@
     "hxmstyle": "bin/installer.js"
   },
   "engines": {
-    "node": ">=16.13.0"
+    "node": ">=18.12.0"
   },
   "scripts": {
     "dogfood": "yarn upgrade @hugsmidjan/hxmstyle && hxmstyle && yarn run format",
@@ -39,7 +39,7 @@
       "stylelint": "^16.3.1",
       "stylelint-order": "^6.0.4",
       "stylelint-prettier": "^5.0.0",
-      "stylelint-config-standard-scss": "^13.0.0"
+      "stylelint-config-standard-scss": "^13.1.0"
     }
   },
   "repository": "git@github.com:hugsmidjan/hxmstyle.git",

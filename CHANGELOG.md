@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Raise `pkg.engines.node` to `^18.12.0`
 - feat: Change prettier's `trailingComma` setting to `'all'`
 - feat: Support bun as a package manager
 - feat: Support pnpm as a package manager
