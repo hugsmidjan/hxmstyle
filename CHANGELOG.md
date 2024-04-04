@@ -3,11 +3,18 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Use ESLint "flat config" format
+  - drop `pkg` option in favor of exported `setPkgJsonPath` function
+- **BREAKING** feat: Remove `eslint-plugin-prettier`
+  - treat linting and formatting as separate concerns
+  - this obviates the `_guiltily_disable_prettier` option
 - **BREAKING** feat: Raise `pkg.engines.node` to `^20.11.1`
-- feat: Change prettier's `trailingComma` setting to `'all'`
-- feat: Support bun as a package manager
-- feat: Support pnpm as a package manager
-- fix: Use `.cjs` extension in `pkg.type === 'module'` projects
+- feat: Remove special handling of unprefixed "magic" import folders
+- feat: Support `bun` and `pnpm` as a package managers
+- feat: Change prettier's `trailingComma` setting to `'all'` (default)
+- feat: Change starters/examples to ESM syntax — with `.mjs` extension
+  projects where `pkg.type !== 'module'`
+- feat: Add `skipLibCheck` to default `tsconfig.json`
 
 ## 8.7.0
 
