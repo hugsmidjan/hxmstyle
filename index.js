@@ -1,71 +1,53 @@
-/**
- * @see https://github.com/eslint/eslint/issues/3458
- * @see https://www.npmjs.com/package/@rushstack/eslint-patch
- */
-require('@rushstack/eslint-patch/modern-module-resolution');
+// @ts-check
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import globals from 'globals';
 
-const path = require('path');
+export { globals };
+
+/** @typedef {import('eslint').Linter.FlatConfig} FlatConfig */
+
+const supportedOptions = new Set(['typescript', 'react'])
 
 let _pkg;
-const getProjectPkg = () => _pkg || require(process.cwd() + '/package.json');
-
-const rulesetPath = path.parse(require.resolve('@hugsmidjan/hxmstyle')).dir + '/configs/';
-const extendModules = ['core', 'typescript', 'react'];
-
-const getBaseExtends = (opts) => {
-  const _extends = [rulesetPath + 'core.js'];
-  const options = (getProjectPkg().hxmstyle || {}).options || {};
-  Object.keys(options).forEach((name) => {
-    if (options[name] && extendModules.indexOf(name) > -1) {
-      _extends.push(rulesetPath + name + '.js');
-    }
-  });
-  // Add prettier-specific rules afterwards to ensure prettier rule-overrides
-  // come after the basic eslint configs for each module
-  if (!opts || opts._guiltily_disable_prettier !== true) {
-    _extends.forEach((path) => {
-      const prettierCfgPath = path.replace(/\.js$/, '-prettier.js');
-      _extends.push(prettierCfgPath);
-    });
-  }
-  return _extends;
+let pkgJsonPath = 'package.json';
+/**
+ * Set the path to the package.json file for the project, in case
+ * hxmstyle has trouble finding it.
+ *
+ * Normally, you should not need to call this function.
+ *
+ * @param {string} path
+ * @returns {void}
+ */
+export const setPkgJsonPath = (path) => {
+  pkgJsonPath = pkgJsonPath || path;
 };
 
-module.exports = (userCfg = {}, options) => {
-  _pkg = options && options.pkg;
-  const config = Object.assign(
-    {
-      root: true,
-      env: {
-        browser: true,
-        node: true,
-        es6: true,
-      },
-    },
-    userCfg,
-    { extends: getBaseExtends(options) }
-  );
-
-  // Merge in the user's "extends"
-  if (userCfg.extends) {
-    if (typeof userCfg.extends === 'string') {
-      userCfg.extends = [userCfg.extends];
-    }
-    userCfg.extends.forEach((rulePackageName) => {
-      config.extends.push(rulePackageName);
-    });
+const getProjectOptions = async () => {
+  if (!_pkg) {
+    _pkg = await readFile(resolve(process.cwd(), pkgJsonPath))
+      .then((buffer) => JSON.parse(buffer.toString()))
   }
-  // Merge in the user's "extendsFirst" BEFORE other extends
-  // to put them at a lower priority than the hxmstyle rules.
-  if (userCfg.extendsFirst) {
-    userCfg.extendsFirst.forEach((rulePackageName) => {
-      config.extends.unshift(rulePackageName);
-    });
-    // cleanup
-    delete userCfg.extendsFirst;
-  }
+  const options = (_pkg.hxmstyle || {}).optionas || {};
+  return Object.keys(options)
+    .filter((name) => supportedOptions.has(name));
+}
 
-  return config;
+const getConfigs = async () => {
+  const importedConfigs = ['core', ...(await getProjectOptions())]
+      .map((name) =>
+        import(`./configs/${name}.js`).then((mod) => {
+          const cfgs = mod.default;
+          if (!Array.isArray(cfgs)) {
+            throw new Error(`Module ${name} did not export an array of ESLint configs`);
+          }
+          return /** @type {FlatConfig} */ (cfgs);
+        })
+      )
+  return Promise.all(importedConfigs).then((configs) => configs.flat());
 };
 
-module.exports.getProjectPkg = getProjectPkg;
+export const hxmstyleESLint = async () =>  [
+  ...await getConfigs(),
+];

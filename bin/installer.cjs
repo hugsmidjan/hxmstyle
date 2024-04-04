@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const exec = require('child_process').execSync;
+const fs = require('node:fs');
+const path = require('node:path');
+const exec = require('node:child_process').execSync;
 
 const projectPath = process.cwd() + '/';
 const projectPkgPath = projectPath + 'package.json';
@@ -132,19 +132,29 @@ Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
 
 // ---------------------------------------------------------------------------
 
-const rcExt = projectPkg.type === 'module' ? '.cjs' : '.js';
+const cfgExt = projectPkg.type === 'module' ? '.js' : '.mjs';
+const cjsExt = projectPkg.type === 'module' ? '.cjs' : '.js';
 
 // Create default .eslintrc.js file
-if (!fs.existsSync(projectPath + '.eslintrc' + rcExt)) {
-  console.info('Creating .eslintrc' + rcExt);
-  exec('cp ' + hxmstylePath + 'starters/eslintrc.js .eslintrc' + rcExt);
+if (!fs.existsSync(projectPath + 'eslint.config' + cfgExt)) {
+  console.info('Creating eslint.config.' + cfgExt);
+  exec('cp ' + hxmstylePath + 'starters/eslint.config.js eslint.config' + cfgExt);
   console.info('- Done.');
+
+  if (fs.existsSync(projectPath + '.eslintrc' + cjsExt)) {
+    console.warn('NOTE: You must remove your old .eslintrc' + cjsExt + ' file!');
+  }
 }
+
 // Create default .prettierrc.js file
-if (!fs.existsSync(projectPath + '.prettierrc' + rcExt)) {
-  console.info('Creating .prettierrc' + rcExt);
-  exec('cp ' + hxmstylePath + 'starters/prettierrc.js .prettierrc' + rcExt);
+if (!fs.existsSync(projectPath + '.prettierrc' + cfgExt)) {
+  console.info('Creating .prettierrc' + cfgExt);
+  exec('cp ' + hxmstylePath + 'starters/prettierrc.js .prettierrc' + cfgExt);
   console.info('- Done.');
+
+  if (fs.existsSync(projectPath + '.prettierrc' + cjsExt)) {
+    console.warn('NOTE: You must remove your old .prettierrc' + cjsExt + ' file!');
+  }
 }
 
 if (args.typescript) {
