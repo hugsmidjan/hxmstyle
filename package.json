@@ -4,32 +4,32 @@
   "version": "9.0.0",
   "main": "index.js",
   "bin": {
-    "hxmstyle": "bin/installer.js"
+    "hxmstyle": "bin/installer.cjs"
   },
   "engines": {
-    "node": ">=20.15.0"
+    "node": ">=20.11.1"
   },
+  "type": "module",
   "scripts": {
     "dogfood": "yarn upgrade @hugsmidjan/hxmstyle && hxmstyle && yarn run format",
     "format": "eslint --fix  \"*.js\" \"**/*.js\"  &&  prettier --write --loglevel=error  \"*.md\" \"*.json\""
   },
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.12.0",
-    "@typescript-eslint/eslint-plugin": "^8.36.0",
-    "@typescript-eslint/parser": "^8.36.0",
-    "eslint-config-prettier": "^10.1.5",
+    "@eslint/js": "^9.30.1",
     "eslint-plugin-destructure-depth": "^1.0.3",
     "eslint-plugin-destructuring": "^2.2.1",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-node-import": "^1.0.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-total-functions": "^7.1.0",
-    "eslint-plugin-unused-imports": "^4.1.4"
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^16.3.0",
+    "typescript-eslint": "^8.36.0"
   },
   "peerDependencies": {
-    "eslint": "^8.57.1",
+    "eslint": "^9.30.1",
     "prettier": "^3.6.2"
   },
   "optionals": {
@@ -50,8 +50,8 @@
   ],
   "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#canary",
-    "eslint": "^8.57.1",
+    "@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#v10",
+    "eslint": "^9.30.1",
     "prettier": "^3.6.2"
   }
 }

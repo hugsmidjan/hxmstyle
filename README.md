@@ -13,7 +13,7 @@ npx @hugsmidjan/hxmstyle [--optionflags]
 
 this installs the `hxmstyle` linting/formatting ruleset, adds the neccessary
 basic, no-frills `eslint` and `prettier` dependencies to your project, and
-creates a starter [`.eslintrc`](starters/eslintrc.js),
+creates a starter [`eslint.config.js`](starters/eslintrc.js),
 [`.prettierrc`](starters/prettierrc.js) and
 [`.editorconfig`](starters/editorconfig.cfg) files, if needed.
 
@@ -69,18 +69,11 @@ hxmstyle
 
 Changing the default rules should generally be avoided.
 
-If neccessary simply add those plugins using `yarn`/`npm` and make the
-neccessary changes to `.eslintrc.js`, `.prettierrc.js` and/or `.stylintrc`.
+If neccessary simply add those plugins using `bun`/`yarn`/`npm` and make the
+neccessary changes to `eslint.config.js`, `.prettierrc.js` and/or `stylelint.json`.
 
-If one of your `.*rc` files goes missing or gets corrupted, you can find fresh
+If one of your config files goes missing or gets corrupted, you can find fresh
 ones [in the "starters" directory](starters/).
-
-Framework/library-specific config presets can be added to your project's
-`.eslintrc.js` file via the `extends` property. These values are loaded
-_after_ the `hxmstyle` rules.
-
-However, in some cases you may want to set them to a lower priority by adding
-them in via the `extendsFirst` array.
 
 ## Removing (stylelint) plugins
 
@@ -154,7 +147,7 @@ Add these plugins:
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
-    // stylelint scss config
+    // stylelint config for projects using SCSS
     "css.validate": false,
     "scss.validate": false,
     "stylelint.validate": ["css", "postcss", "scss"],
@@ -164,7 +157,7 @@ Add these plugins:
     }
 ```
 
-...and make sure that the project root (where `.eslintrc.js` and
+...and make sure that the project root (where `eslint.config.js` and
 `package.json` are) is set up as a "workspace folder". Otherwise add its path
 to your workspace settings:
 
@@ -172,7 +165,7 @@ to your workspace settings:
 "eslint.workingDirectories": [
     "path/to/project/root"
 ],
-"stylint.workingDirectories": [
+"stylelint.workingDirectories": [
     "path/to/project/root"
 ],
 ```
