@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- feat: Remove rules `no-await-in-loop` and `require-await`
 - feat: Support bun as a package manager
 - feat: Support pnpm as a package manager
 - fix: Use `.cjs` extension in `pkg.type === 'module'` projects
