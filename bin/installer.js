@@ -114,7 +114,17 @@ Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
   if (installs.length) {
     console.info('Adding/upgrading dependencies:\n', installs);
     const useYarn = !!exec('which yarn') && fs.existsSync(projectPath + 'yarn.lock');
-    const installCmd = useYarn ? 'yarn add --dev ' : 'npm install --save-dev ';
+    const useBun =
+      !useYarn && !!exec('which bun') && fs.existsSync(projectPath + 'bun.lockb');
+    const usePnpm =
+      !useYarn && !!exec('which pnpm') && fs.existsSync(projectPath + 'pnpm-lock.yaml');
+    const installCmd = useBun
+      ? 'bun add --dev '
+      : usePnpm
+      ? 'pnpm i -D '
+      : useYarn
+      ? 'yarn add --dev '
+      : 'npm install --save-dev ';
     exec(installCmd + installs.join(' '));
     console.info('- Done.');
   }
@@ -122,16 +132,18 @@ Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
 
 // ---------------------------------------------------------------------------
 
+const rcExt = projectPkg.type === 'module' ? '.cjs' : '.js';
+
 // Create default .eslintrc.js file
-if (!fs.existsSync(projectPath + '.eslintrc.js')) {
-  console.info('Creating .eslintrc.js');
-  exec('cp ' + hxmstylePath + 'starters/eslintrc.js .eslintrc.js');
+if (!fs.existsSync(projectPath + '.eslintrc' + rcExt)) {
+  console.info('Creating .eslintrc' + rcExt);
+  exec('cp ' + hxmstylePath + 'starters/eslintrc.js .eslintrc' + rcExt);
   console.info('- Done.');
 }
 // Create default .prettierrc.js file
-if (!fs.existsSync(projectPath + '.prettierrc.js')) {
-  console.info('Creating .prettierrc.js');
-  exec('cp ' + hxmstylePath + 'starters/prettierrc.js .prettierrc.js');
+if (!fs.existsSync(projectPath + '.prettierrc' + rcExt)) {
+  console.info('Creating .prettierrc' + rcExt);
+  exec('cp ' + hxmstylePath + 'starters/prettierrc.js .prettierrc' + rcExt);
   console.info('- Done.');
 }
 
@@ -152,6 +164,7 @@ if (args.typescript) {
             "...like SERIOUSLY!  Don't be daft. Always be strict.",
             '{',
             '  "compilerOptions": {',
+            `    "noUncheckedIndexedAccess": true, // also important!`,
             '    "strict": true',
             '  }',
             '}',

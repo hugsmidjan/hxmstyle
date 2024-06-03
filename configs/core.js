@@ -95,9 +95,7 @@ module.exports = {
     'no-var': 'warn',
     'prefer-const': ['warn', { destructuring: 'all' }], // Wish there was a way to prevent autofixing this one.
     'prefer-template': 'warn',
-    'require-await': 'warn',
     'no-async-promise-executor': 'error',
-    'no-await-in-loop': 'warn',
 		'no-throw-literal': 'error',
 
 		'template-tag-spacing': ['error', 'never'],
