@@ -2,6 +2,10 @@
 
 ## Upcoming...
 
+## 8.8.0
+
+_2024-06-03_
+
 - ... <!-- Add new lines here. -->
 - feat: Remove rules `no-await-in-loop` and `require-await`
 - feat: Support bun as a package manager
