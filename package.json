@@ -1,7 +1,7 @@
 {
   "name": "@hugsmidjan/hxmstyle",
   "description": "One annoying style to rule them all...",
-  "version": "8.8.0",
+  "version": "8.9.0",
   "main": "index.js",
   "bin": {
     "hxmstyle": "bin/installer.js"
@@ -14,24 +14,24 @@
     "format": "eslint --fix  \"*.js\" \"**/*.js\"  &&  prettier --write --loglevel=error  \"*.md\" \"*.json\""
   },
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.7.2",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
+    "@rushstack/eslint-patch": "^1.10.4",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "@typescript-eslint/parser": "^8.6.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-deprecation": "^2.0.0",
+    "eslint-plugin-deprecation": "^3.0.0",
     "eslint-plugin-destructure-depth": "^1.0.3",
     "eslint-plugin-destructuring": "^2.2.1",
-    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-node-import": "^1.0.4",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-total-functions": "^7.1.0",
-    "eslint-plugin-unused-imports": "^3.1.0"
+    "eslint-plugin-unused-imports": "^4.1.4"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "prettier": "^2.8.8"
   },
   "optionals": {
@@ -53,7 +53,7 @@
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#canary",
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "prettier": "^2.8.8"
   }
 }
