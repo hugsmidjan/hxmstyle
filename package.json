@@ -1,7 +1,7 @@
 {
   "name": "@hugsmidjan/hxmstyle",
   "description": "One annoying style to rule them all...",
-  "version": "8.9.0",
+  "version": "8.9.1",
   "main": "index.js",
   "bin": {
     "hxmstyle": "bin/installer.js"
@@ -23,7 +23,7 @@
     "eslint-plugin-destructuring": "^2.2.1",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-node-import": "^1.0.4",
-    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react": "^7.36.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
