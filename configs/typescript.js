@@ -32,7 +32,8 @@ module.exports = {
         '@typescript-eslint/no-extraneous-class': 'warn',
         '@typescript-eslint/no-useless-constructor': 'warn',
         '@typescript-eslint/no-unnecessary-condition': 'warn',
-        '@typescript-eslint/ban-types': [
+        '@typescript-eslint/no-unused-expressions': ["error", { "allowShortCircuit": true }],
+        '@typescript-eslint/no-restricted-types': [
           'warn',
           {
             types: {
