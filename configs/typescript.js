@@ -32,7 +32,8 @@ module.exports = {
         '@typescript-eslint/no-extraneous-class': 'warn',
         '@typescript-eslint/no-useless-constructor': 'warn',
         '@typescript-eslint/no-unnecessary-condition': 'warn',
-        '@typescript-eslint/no-unused-expressions': ["error", { "allowShortCircuit": true }],
+        'no-unused-expressions': 'off', // Note: you must disable the base rule as it can report incorrect errors
+        '@typescript-eslint/no-unused-expressions': coreRules['no-unused-expressions'],
         '@typescript-eslint/no-restricted-types': [
           'warn',
           {
