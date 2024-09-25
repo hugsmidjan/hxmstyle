@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 8.9.3
+
+_2024-09-25_
+
 - fix: Finish setting options for `@typescript-eslint/no-unused-expressions`
 
 ## 8.9.0 - 8.9.2
