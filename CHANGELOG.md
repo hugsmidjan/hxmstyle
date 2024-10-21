@@ -4,6 +4,12 @@
 
 - ... <!-- Add new lines here. -->
 
+## 8.10.0
+
+_2024-10-21_
+
+- feat: Update dependencies to support typescript 5.6
+
 ## 8.9.3
 
 _2024-09-25_
