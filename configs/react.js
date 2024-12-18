@@ -1,16 +1,17 @@
-// @ts-check
-// import reactPlugin from 'eslint-plugin-react'; // autoimported by the recommended config
-// import reactHooksPlugin from 'eslint-plugin-react-hooks';
-// import reactRecommended from 'eslint-plugin-react/configs/recommended'; // <-- Will work with v8 of the plugin
-import reactRecommended from 'eslint-plugin-react/configs/recommended.js';
+// These plugins don't have typescript support yet, so we can't use them in the typescript config.
+// // @ts-check
 
-/** @type {Array<import('eslint').Linter.FlatConfig>} */
+// Based on: https://github.com/facebook/react/issues/28313#issuecomment-2530821315
+
+import reactPlugin from 'eslint-plugin-react'; // autoimported by the recommended config
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+
+/** @type {Array<import('eslint').Linter.Config>} */
 export default [
-  reactRecommended,
+  reactPlugin.configs.flat.recommended,
   {
     plugins: {
-      /* Issue: https://github.com/facebook/react/issues/28313 */
-      // 'react-hooks': reactHooksPlugin,
+      'react-hooks': reactHooksPlugin,
     },
 
     rules: {
@@ -29,11 +30,8 @@ export default [
         { props: 'never', children: 'never', propElementValues: 'always' },
       ],
 
-      /*
       // https://www.npmjs.com/package/eslint-plugin-react-hooks
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      */
+      ...reactHooksPlugin.configs.recommended.rules,
     },
   },
 ];

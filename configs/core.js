@@ -1,50 +1,48 @@
 // @ts-check
-import eslintjs from '@eslint/js'
-// import destructuring from 'eslint-plugin-destructuring';
-// import destructureDepth from 'eslint-plugin-destructure-depth';
+import eslintjs from '@eslint/js';
+import destructuring from 'eslint-plugin-destructuring';
+import destructureDepth from 'eslint-plugin-destructure-depth';
 import unusedImports from 'eslint-plugin-unused-imports';
-// import simpleImportSort from 'eslint-plugin-simple-import-sort';
-// import * as importPlugin from 'eslint-plugin-import';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import * as importPlugin from 'eslint-plugin-import';
 import nodeImport from 'eslint-plugin-node-import';
+import { fixupPluginRules } from '@eslint/compat';
 
-/** @type {Array<import('eslint').Linter.FlatConfig>} */
+/** @type {Array<import('eslint').Linter.Config>} */
 export default [
   eslintjs.configs.recommended,
+  importPlugin.flatConfigs?.recommended,
   {
     languageOptions: {
-    parserOptions: {
-      sourceType: 'module',
-      ecmaFeatures: {
-        jsx: true,
+      parserOptions: {
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
-  },
-  linterOptions: {
+    linterOptions: {
     // This adds soft warning on unused `eslint-disable` directives,
     // and instructs auto-fix to remove them.
     // Problem: It doesn't flag/remove unused `eslint-enable` directives.
-    reportUnusedDisableDirectives: true
-  },
+      reportUnusedDisableDirectives: true,
+    },
     plugins: {
       /* Issue: https://github.com/lukeapage/eslint-plugin-destructuring/issues/48 */
-      // destructuring,
+      // @ts-ignore
+      'destructuring': fixupPluginRules(destructuring),
 
       /* Issue: https://github.com/isaquediasm/eslint-plugin-destructure-depth/issues/10 */
-      // 'destructure-depth': destructureDepth,
+      // @ts-ignore
+      'destructure-depth': fixupPluginRules(destructureDepth),
 
       'unused-imports': unusedImports,
 
-      /* Issue: https://github.com/lydell/eslint-plugin-simple-import-sort/issues/163 */
-      // 'simple-import-sort': simpleImportSort,
+      'simple-import-sort': simpleImportSort,
 
-      /*
-        Issues:
-        - https://github.com/import-js/eslint-plugin-import/issues/2948
-        - https://github.com/import-js/eslint-plugin-import/pull/2873
-      */
-      // import: importPlugin,
+      'import': importPlugin,
 
-      'node-import': nodeImport
+      'node-import': nodeImport,
     },
 
     /* prettier-ignore */
@@ -128,68 +126,61 @@ export default [
 
       'template-tag-spacing': ['error', 'never'],
       'no-irregular-whitespace': ['error', {
-        "skipStrings": true, // Default
-        "skipComments": true,
-        "skipTemplates": true,
-        "skipRegExps": true
+        'skipStrings': true, // Default
+        'skipComments': true,
+        'skipTemplates': true,
+        'skipRegExps': true,
       }],
-
 
       'no-useless-rename': 'warn',
 
-      /*
       // Rules for "eslint-plugin-destructure-depth":
       'destructure-depth/max-depth': 'error',
-      */
 
-      /*
       // Rules for "eslint-plugin-destructuring":
       // 'destructuring/no-rename': 'error',
       'destructuring/in-params': ['warn', {'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i} ...></li>)}
       'destructuring/in-methods-params': 'warn',
       // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
-      */
 
       // Rules for "eslint-plugin-unused-imports":
-      "unused-imports/no-unused-imports": "warn",
+      'unused-imports/no-unused-imports': 'warn',
 
-      /*
       // Rules for "eslint-plugin-import":
-      "sort-imports": "off", // hard-disable the built-in rule
-      "import/first": "warn",
-      "import/newline-after-import": "warn",
-      "import/no-duplicates": "warn",
-      */
+      'sort-imports': 'off', // hard-disable the built-in rule
+      'import/first': 'warn',
+      'import/newline-after-import': 'warn',
+      'import/no-duplicates': 'warn',
 
       // Rules for "eslint-plugin-node-import":
-      "node-import/prefer-node-protocol": "warn",
+      'node-import/prefer-node-protocol': 'warn',
 
-      // // Rules for "eslint-plugin-simple-import-sort":
-      // "simple-import-sort/exports": "warn",
-      // 'simple-import-sort/imports': [
-      //   'warn',
-      //   {
-      //     groups: [
-      //       // Side effect imports.
-      //       ['^\\u0000'],
-      //       // Installed and built-in packages (`react` related packages come first).
-      //       ['^p?react', '^@?\\w'],
-      //       // Internal "subpath imports" (https://nodejs.org/api/packages.html#subpath-imports)
-      //       ['^#'],
-      //       // Commonly used (idiomatic) local path aliases/prefixes
-      //       ['^@/'],
-      //       ['^~/'],
-      //       // Anything not matched in another group.
-      //       ['^'],
-      //       // Parent imports. Put `..` last.
-      //       ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
-      //       // Other relative imports. Put same-folder imports and `.` last.
-      //       ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-      //       // Style imports. (with optional .js/.mjs/.cjs file-extension)
-      //       ['^.+\\.(?:s?css|styles)(?:\\.[mc]?js)?$'],
-      //     ],
-      //   },
-      // ],
+      // Rules for "eslint-plugin-simple-import-sort":
+      'simple-import-sort/exports': 'warn',
+      'simple-import-sort/imports': [
+        'warn',
+        {
+          groups: [
+            // Side effect imports.
+            ['^\\u0000'],
+            // Installed and built-in packages (`react` related packages come first).
+            ['^p?react', '^@?\\w'],
+            // Internal "subpath imports" (https://nodejs.org/api/packages.html#subpath-imports)
+            ['^#'],
+            // Commonly used (idiomatic) local path aliases/prefixes
+            ['^@/'],
+            ['^~/'],
+            // Anything not matched in another group.
+            ['^'],
+            // Parent imports. Put `..` last.
+            ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+            // Other relative imports. Put same-folder imports and `.` last.
+            ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+            // Style imports. (with optional .js/.mjs/.cjs file-extension)
+            ['^.+\\.(?:s?css|styles)(?:\\.[mc]?js)?$'],
+          ],
+        },
+      ],
     },
   },
 ];

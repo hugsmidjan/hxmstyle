@@ -115,9 +115,9 @@ Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
     console.info('Adding/upgrading dependencies:\n', installs);
     const useYarn = !!exec('which yarn') && fs.existsSync(projectPath + 'yarn.lock');
     const useBun =
-      !useYarn && !!exec('which bun') && (fs.existsSync(projectPath + 'bun.lockb') || fs.existsSync(projectPath + 'bun.lock'));
+      !useYarn && !!exec('which bun') && fs.existsSync(projectPath + 'bun.lockb');
     const usePnpm =
-      !useBun && !!exec('which pnpm') && fs.existsSync(projectPath + 'pnpm-lock.yaml');
+      !useYarn && !!exec('which pnpm') && fs.existsSync(projectPath + 'pnpm-lock.yaml');
     const installCmd = useBun
       ? 'bun add --dev '
       : usePnpm
@@ -158,8 +158,8 @@ if (!fs.existsSync(projectPath + '.prettierrc' + cfgExt)) {
 }
 
 if (args.typescript) {
-  // Create default tsconfig.json file (only for non pnpm workspace projects)
-  if (!fs.existsSync(projectPath + 'tsconfig.json') && !fs.existsSync(projectPath + 'pnpm-workspace.yaml')) {
+  // Create default tsconfig.json file (only for non pnpm projects)
+  if (!fs.existsSync(projectPath + 'tsconfig.json') && !fs.existsSync(projectPath + 'pnpm-lock.yaml')) {
     console.info('Creating minimal tsconfig.json');
     exec('cp ' + hxmstylePath + 'starters/tsconfig.json tsconfig.json');
     console.info('- Done.');
@@ -219,7 +219,7 @@ if (args.scss) {
   console.info(
     hasStylelintrc ? 'Updating .stylelintrc.json' : 'Adding .stylelintrc.json'
   );
-  fs.writeFileSync(stylelintrcPath, JSON.stringify(stylelintRules, null, '  ') + '\n');
+  fs.writeFileSync(stylelintrcPath, JSON.stringify(stylelintRules, null, '\t') + '\n');
   console.info('- Done.');
 }
 

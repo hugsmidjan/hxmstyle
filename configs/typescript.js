@@ -1,13 +1,13 @@
 // @ts-check
 import coreRules from './core';
-import tseslint from 'typescript-eslint'
+import tseslint from 'typescript-eslint';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import totalFunctions from 'eslint-plugin-total-functions';
 
-/** @type {Array<import('eslint').Linter.FlatConfig>} */
+/** @type {Array<import('eslint').Linter.Config>} */
 export default [
-  ...(/** @type {Array<import('eslint').Linter.FlatConfig>} */ (tseslint.configs.recommendedTypeChecked)),
+  ...(/** @type {Array<import('eslint').Linter.Config>} */ (tseslint.configs.recommendedTypeChecked)),
   {
     languageOptions: {
       parserOptions: {
@@ -17,7 +17,7 @@ export default [
       },
     },
     plugins: {
-      'total-functions': totalFunctions
+      'total-functions': totalFunctions,
     },
     rules: {
       '@typescript-eslint/no-non-null-assertion': 'off',
@@ -63,7 +63,7 @@ export default [
       '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
       '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
 
-      "@typescript-eslint/no-deprecated": "warn",
+      '@typescript-eslint/no-deprecated': 'warn',
 
 
       // Part of recommended:
