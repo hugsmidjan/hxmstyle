@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@eslint/js": "^9.17.0",
-    "eslint-plugin-deprecation": "^3.0.0",
     "eslint-plugin-destructure-depth": "^1.0.3",
     "eslint-plugin-destructuring": "^2.2.1",
     "eslint-plugin-import": "^2.31.0",

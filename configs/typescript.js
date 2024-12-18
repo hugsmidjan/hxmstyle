@@ -4,7 +4,6 @@ import tseslint from 'typescript-eslint'
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import totalFunctions from 'eslint-plugin-total-functions';
-// import deprecation from 'eslint-plugin-deprecation';
 
 /** @type {Array<import('eslint').Linter.FlatConfig>} */
 export default [
@@ -18,8 +17,6 @@ export default [
       },
     },
     plugins: {
-      // Lacks flat-config compatibility: https://github.com/gund/eslint-plugin-deprecation/issues/78
-      // deprecation,
       'total-functions': totalFunctions
     },
     rules: {
@@ -66,8 +63,7 @@ export default [
       '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
       '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
 
-      // Lacks flat-config compatibility: https://github.com/gund/eslint-plugin-deprecation/issues/78
-      // 'deprecation/deprecation': 'warn',
+      "@typescript-eslint/no-deprecated": "warn",
 
       // Part of recommended:
       // ------------------------------------------------------
