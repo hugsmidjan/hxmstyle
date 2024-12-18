@@ -40,8 +40,6 @@ export default [
 
       'simple-import-sort': simpleImportSort,
 
-      'import': importPlugin,
-
       'node-import': nodeImport,
     },
 
