@@ -18,7 +18,7 @@ module.exports = {
           // sourceType: 'module', // Allows for the use of imports
         },
       },
-      plugins: ['deprecation', 'total-functions'],
+      plugins: ['total-functions'],
       rules: {
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
@@ -65,7 +65,7 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
         '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
 
-        'deprecation/deprecation': 'warn',
+        '@typescript-eslint/no-deprecated': 'warn',
 
         // Part of recommended:
         // ------------------------------------------------------
