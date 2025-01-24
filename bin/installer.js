@@ -121,7 +121,7 @@ Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
     const installCmd = useBun
       ? 'bun add --dev '
       : usePnpm
-      ? 'pnpm i -D '
+      ? 'pnpm i -D -w '
       : useYarn
       ? 'yarn add --dev '
       : 'npm install --save-dev ';
@@ -148,8 +148,8 @@ if (!fs.existsSync(projectPath + '.prettierrc' + rcExt)) {
 }
 
 if (args.typescript) {
-  // Create default tsconfig.json file
-  if (!fs.existsSync(projectPath + 'tsconfig.json')) {
+  // Create default tsconfig.json file (only for non pnpm projects)
+  if (!fs.existsSync(projectPath + 'tsconfig.json') && !fs.existsSync(projectPath + 'pnpm-lock.yaml')) {
     console.info('Creating minimal tsconfig.json');
     exec('cp ' + hxmstylePath + 'starters/tsconfig.json tsconfig.json');
     console.info('- Done.');
