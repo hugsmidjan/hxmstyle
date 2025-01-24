@@ -4,6 +4,14 @@
 
 - ... <!-- Add new lines here. -->
 
+## 8.11.0
+
+_2025-01-24_
+
+- feat: Update dependencies to support typescript 5.7
+- fix: `eslint-plugin-deprecation` has been moved to @typescript-eslint
+- fix: pnpm install error
+
 ## 8.10.0
 
 _2024-10-21_
