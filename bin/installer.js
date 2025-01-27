@@ -115,9 +115,9 @@ Object.entries(hxmstylePkg.optionals).forEach(([option, deps]) => {
     console.info('Adding/upgrading dependencies:\n', installs);
     const useYarn = !!exec('which yarn') && fs.existsSync(projectPath + 'yarn.lock');
     const useBun =
-      !useYarn && !!exec('which bun') && fs.existsSync(projectPath + 'bun.lockb');
+      !useYarn && !!exec('which bun') && (fs.existsSync(projectPath + 'bun.lockb') || fs.existsSync(projectPath + 'bun.lock'));
     const usePnpm =
-      !useYarn && !!exec('which pnpm') && fs.existsSync(projectPath + 'pnpm-lock.yaml');
+      !useBun && !!exec('which pnpm') && fs.existsSync(projectPath + 'pnpm-lock.yaml');
     const installCmd = useBun
       ? 'bun add --dev '
       : usePnpm
