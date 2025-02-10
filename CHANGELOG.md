@@ -4,6 +4,8 @@
 
 - ... <!-- Add new lines here. -->
 - feat: Add support for `bun@1.2`'s plaintext `bun.lock` file
+- fix: only skip tsconfig on pnpm workspace project
+- fix: update stylelint order and use spaces instead of tabs
 
 ## 8.11.0
 

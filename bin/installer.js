@@ -209,7 +209,7 @@ if (args.scss) {
   console.info(
     hasStylelintrc ? 'Updating .stylelintrc.json' : 'Adding .stylelintrc.json'
   );
-  fs.writeFileSync(stylelintrcPath, JSON.stringify(stylelintRules, null, '\t') + '\n');
+  fs.writeFileSync(stylelintrcPath, JSON.stringify(stylelintRules, null, '  ') + '\n');
   console.info('- Done.');
 }
 
