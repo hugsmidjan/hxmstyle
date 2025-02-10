@@ -1,4 +1,8 @@
+// @ts-check
+
 // Prettier options: https://prettier.io/docs/en/options.html
+
+/** @type {import('prettier').Config} baseRules */
 const baseRules = {
   // // The following should be set in .editorconfig
   // endOfLine: 'lf',
@@ -8,7 +12,6 @@ const baseRules = {
   // singleQuote: true,
   semi: true,
   jsxSingleQuote: false,
-  trailingComma: 'es5',
   bracketSpacing: true,
   bracketSameLine: false,
   arrowParens: 'always',
@@ -35,6 +38,6 @@ const baseRules = {
 };
 
 module.exports = (userCfg = {}) => {
-  const overrides = baseRules.overrides.concat(userCfg.overrides || []);
+  const overrides = baseRules.overrides?.concat(userCfg.overrides || []);
   return Object.assign({}, baseRules, userCfg, { overrides });
 };

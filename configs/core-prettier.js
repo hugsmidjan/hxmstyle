@@ -10,15 +10,8 @@ const reInserts = {};
 
 module.exports = {
   extends: [
-    'plugin:prettier/recommended',
     // https://github.com/prettier/eslint-config-prettier/blob/master/index.js
     'prettier',
   ],
-  plugins: ['prettier'],
-  rules: Object.assign(
-    {
-      'prettier/prettier': 'warn',
-    },
-    reInserts
-  ),
+  rules: reInserts,
 };
