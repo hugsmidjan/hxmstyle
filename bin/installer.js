@@ -148,8 +148,8 @@ if (!fs.existsSync(projectPath + '.prettierrc' + rcExt)) {
 }
 
 if (args.typescript) {
-  // Create default tsconfig.json file (only for non pnpm projects)
-  if (!fs.existsSync(projectPath + 'tsconfig.json') && !fs.existsSync(projectPath + 'pnpm-lock.yaml')) {
+  // Create default tsconfig.json file (only for non pnpm workspace projects)
+  if (!fs.existsSync(projectPath + 'tsconfig.json') && !fs.existsSync(projectPath + 'pnpm-workspace.yaml')) {
     console.info('Creating minimal tsconfig.json');
     exec('cp ' + hxmstylePath + 'starters/tsconfig.json tsconfig.json');
     console.info('- Done.');
