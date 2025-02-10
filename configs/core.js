@@ -48,6 +48,7 @@ module.exports = {
         // allow vars called `_`, `__`, `___`, etc. to facilitate
         // array destructuring (not captureed by `ignoreRestSiblings`)
         varsIgnorePattern: '^_+$',
+        argsIgnorePattern: "^_"
       },
     ],
     'no-unused-expressions': ['error', {
