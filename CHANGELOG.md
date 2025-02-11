@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 8.12.0
+
+_2025-02-11_
+
 - feat: Add support for `bun@1.2`'s plaintext `bun.lock` file
 - fix: only skip tsconfig on pnpm workspace project
 - fix: update stylelint order and use spaces instead of tabs
