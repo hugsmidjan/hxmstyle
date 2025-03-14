@@ -14,9 +14,9 @@
     "format": "eslint --fix  \"*.js\" \"**/*.js\"  &&  prettier --write --loglevel=error  \"*.md\" \"*.json\""
   },
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.10.5",
-    "@typescript-eslint/eslint-plugin": "^8.21.0",
-    "@typescript-eslint/parser": "^8.21.0",
+    "@rushstack/eslint-patch": "^1.11.0",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-destructure-depth": "^1.0.3",
     "eslint-plugin-destructuring": "^2.2.1",
