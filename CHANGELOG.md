@@ -4,6 +4,13 @@
 
 - ... <!-- Add new lines here. -->
 
+## 8.13.0
+
+_2025-03-14_
+
+- feat: Update dependencies to support typescript 5.8
+- fix: add `caughtErrorsIgnorePattern` and `destructuredArrayIgnorePattern`
+
 ## 8.12.0
 
 _2025-02-11_
