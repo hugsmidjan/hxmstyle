@@ -3,7 +3,6 @@ import coreRules from './core';
 import tseslint from 'typescript-eslint';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import totalFunctions from 'eslint-plugin-total-functions';
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
@@ -17,7 +16,6 @@ export default [
       },
     },
     plugins: {
-      'total-functions': totalFunctions,
     },
     rules: {
       '@typescript-eslint/no-non-null-assertion': 'off',
