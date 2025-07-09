@@ -3,13 +3,17 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 9.0.0
+
+_2025-07-09_
+
 - **BREAKING** feat: Raise `pkg.engines.node` to `^20.15.0`
 - **BREAKING** feat: Remove `eslint-plugin-prettier`
   - treat linting and formatting as separate concerns
   - this obviates the `_guiltily_disable_prettier` option
 - feat: Change prettier's `trailingComma` setting to `'all'` (default)
 - feat: Add `skipLibCheck` to default `tsconfig.json`
-
 
 ## 8.13.0
 
