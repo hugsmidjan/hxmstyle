@@ -7,6 +7,15 @@ export default hxmstyleESLint().then((hxmstyleConfig) => [
   // Place your project-specific additions or overrides here
   // using standard ESLint config syntax...
   {
+    ignores: [
+      // Add any files or directories to ignore here
+      'node_modules',
+      'dist',
+      'build',
+      '.next/**',
+    ],
+  },
+  {
     languageOptions: {
       ecmaVersion: 2022,
       globals: {

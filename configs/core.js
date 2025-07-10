@@ -4,20 +4,35 @@ import destructuring from 'eslint-plugin-destructuring';
 import destructureDepth from 'eslint-plugin-destructure-depth';
 import unusedImports from 'eslint-plugin-unused-imports';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import * as importPlugin from 'eslint-plugin-import';
+// import * as importPlugin from 'eslint-plugin-import';
 import nodeImport from 'eslint-plugin-node-import';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import { fixupPluginRules } from '@eslint/compat';
+import globals from 'globals';
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
   eslintjs.configs.recommended,
-  importPlugin.flatConfigs?.recommended,
+  eslintConfigPrettier,
+  // This import plugins causes all sorts of errors with imports
+  // importPlugin.flatConfigs.recommended,
   {
     languageOptions: {
+      ecmaVersion: 2022,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2022,
+      },
       parserOptions: {
+        project: true,
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
+        },
+        tsconfigRootDir: process.cwd(),
+        projectService: {
+          allowDefaultProject: ['*.js', '*.mjs'],
         },
       },
     },
@@ -69,7 +84,10 @@ export default [
           ignoreRestSiblings: true,
           // allow vars called `_`, `__`, `___`, etc. to facilitate
           // array destructuring (not captureed by `ignoreRestSiblings`)
-          varsIgnorePattern: '^_+$',
+          varsIgnorePattern: '^_',
+          argsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_"
         },
       ],
       'no-unused-expressions': ['error', {
@@ -117,9 +135,7 @@ export default [
       'no-var': 'warn',
       'prefer-const': ['warn', { destructuring: 'all' }], // Wish there was a way to prevent autofixing this one.
       'prefer-template': 'warn',
-      'require-await': 'warn',
       'no-async-promise-executor': 'error',
-      'no-await-in-loop': 'warn',
       'no-throw-literal': 'error',
 
       'template-tag-spacing': ['error', 'never'],
@@ -146,9 +162,9 @@ export default [
 
       // Rules for "eslint-plugin-import":
       'sort-imports': 'off', // hard-disable the built-in rule
-      'import/first': 'warn',
-      'import/newline-after-import': 'warn',
-      'import/no-duplicates': 'warn',
+      // "import/first": "warn",
+      // "import/newline-after-import": "warn",
+      // "import/no-duplicates": "warn",
 
       // Rules for "eslint-plugin-node-import":
       'node-import/prefer-node-protocol': 'warn',

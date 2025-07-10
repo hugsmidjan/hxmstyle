@@ -5,10 +5,20 @@
 
 import reactPlugin from 'eslint-plugin-react'; // autoimported by the recommended config
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import globals from 'globals';
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
   reactPlugin.configs.flat.recommended,
+  {
+    ...reactPlugin.configs.flat.recommended,
+    languageOptions: {
+      ...reactPlugin.configs.flat.recommended.languageOptions,
+      globals: {
+        ...globals.serviceworker,
+      },
+    },
+  },
   {
     plugins: {
       'react-hooks': reactHooksPlugin,

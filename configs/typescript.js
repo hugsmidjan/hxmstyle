@@ -1,22 +1,12 @@
 // @ts-check
 import coreRules from './core';
 import tseslint from 'typescript-eslint';
-import { dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
   ...(/** @type {Array<import('eslint').Linter.Config>} */ (tseslint.configs.recommendedTypeChecked)),
   {
-    languageOptions: {
-      parserOptions: {
-        project: true,
-        tsconfigRootDir: dirname(fileURLToPath(import.meta.url)),
-        // ecmaFeatures: { jsx: true },
-      },
-    },
-    plugins: {
-    },
+    files: ['**/*.ts', '**/*.tsx'],
     rules: {
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
@@ -30,13 +20,15 @@ export default [
       '@typescript-eslint/no-extraneous-class': 'warn',
       '@typescript-eslint/no-useless-constructor': 'warn',
       '@typescript-eslint/no-unnecessary-condition': 'warn',
-      '@typescript-eslint/ban-types': [
+      'no-unused-expressions': 'off', // Note: you must disable the base rule as it can report incorrect errors
+      '@typescript-eslint/no-unused-expressions': coreRules['no-unused-expressions'],
+      '@typescript-eslint/no-restricted-types': [
         'warn',
         {
           types: {
             Object: {
-              message: 'Use object instead',
-              fixWith: 'object',
+              message: 'Use {} instead',
+              fixWith: '{}',
             },
             String: {
               message: 'Use string instead',
@@ -63,10 +55,12 @@ export default [
 
       '@typescript-eslint/no-deprecated': 'warn',
 
-
       // Part of recommended:
       // ------------------------------------------------------
       '@typescript-eslint/ban-ts-ignore': 'off',
+      // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md#how-to-use
+      // note you must disable the base rule as it can report incorrect errors
+      'no-use-before-define': 'off',
       '@typescript-eslint/no-use-before-define': 'warn',
       '@typescript-eslint/no-explicit-any': [
         'error',
