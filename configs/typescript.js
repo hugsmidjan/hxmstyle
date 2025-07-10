@@ -1,5 +1,5 @@
 // @ts-check
-import coreRules from './core';
+import { coreRules } from './core.js';
 import tseslint from 'typescript-eslint';
 
 /** @type {Array<import('eslint').Linter.Config>} */
@@ -66,7 +66,6 @@ export default [
         'error',
         { fixToUnknown: false, ignoreRestArgs: true },
       ],
-      '@typescript-eslint/indent': ['error', 2],
       // "error" just feels too aggressive
       '@typescript-eslint/no-inferrable-types': 'warn',
       // Needs discussion. TypeScript is pretty good at inferring return types

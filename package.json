@@ -7,7 +7,7 @@
     "hxmstyle": "bin/installer.cjs"
   },
   "engines": {
-    "node": ">=20.11.1"
+    "node": ">=20.15.0"
   },
   "type": "module",
   "scripts": {

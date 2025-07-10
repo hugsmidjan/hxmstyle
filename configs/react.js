@@ -11,15 +11,20 @@ import globals from 'globals';
 export default [
   reactPlugin.configs.flat.recommended,
   {
+    files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
     ...reactPlugin.configs.flat.recommended,
     languageOptions: {
       ...reactPlugin.configs.flat.recommended.languageOptions,
       globals: {
         ...globals.serviceworker,
+        ...globals.browser,
       },
     },
-  },
-  {
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
     plugins: {
       'react-hooks': reactHooksPlugin,
     },

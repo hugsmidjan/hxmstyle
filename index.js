@@ -29,7 +29,7 @@ const getProjectOptions = async () => {
     _pkg = await readFile(resolve(process.cwd(), pkgJsonPath))
       .then((buffer) => JSON.parse(buffer.toString()));
   }
-  const options = (_pkg.hxmstyle || {}).optionas || {};
+  const options = (_pkg.hxmstyle || {}).options || {};
   return Object.keys(options)
     .filter((name) => supportedOptions.has(name));
 };
