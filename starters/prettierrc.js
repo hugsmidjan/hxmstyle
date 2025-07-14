@@ -1,4 +1,7 @@
-module.exports = require('@hugsmidjan/hxmstyle/prettier')({
+// @ts-check
+import { hxmstylePrettier } from '@hugsmidjan/hxmstyle/prettier';
+
+export default hxmstylePrettier({
   // Place your project-specific additions or overrides here
-  // using standard Prettierrc syntax...
+  // using standard `.prettierrc` syntax...
 });

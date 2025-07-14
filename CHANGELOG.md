@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+- **BREAKING** feat: Use ESLint "flat config" format
+  - drop `pkg` option in favor of exported `setPkgJsonPath` function
+- feat: Remove special handling of unprefixed "magic" import folders
+- feat: Change starters/examples to ESM syntax — with `.mjs` extension
+  projects where `pkg.type !== 'module'`
 
 ## 9.0.0
 
