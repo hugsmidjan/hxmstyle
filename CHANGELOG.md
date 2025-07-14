@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. -->
+
+## 10.0.0
+
+_2025-07-14_
+
 - **BREAKING** feat: Use ESLint "flat config" format
   - drop `pkg` option in favor of exported `setPkgJsonPath` function
 - feat: Remove special handling of unprefixed "magic" import folders
