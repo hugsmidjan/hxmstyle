@@ -4,6 +4,12 @@
 
 - ... <!-- Add new lines here. -->
 
+## 10.0.1
+
+_2025-07-23_
+
+- fix: Installer crashes if yarn/bun/pnpm is not installed
+
 ## 10.0.0
 
 _2025-07-14_
