@@ -4,6 +4,13 @@
 
 - ... <!-- Add new lines here. -->
 
+## 10.0.2
+
+_2025-11-11_
+
+- fix: Update plugin-react-hooks
+- fix: disable `project: true`, causes error with `projectService`
+
 ## 10.0.1
 
 _2025-07-23_

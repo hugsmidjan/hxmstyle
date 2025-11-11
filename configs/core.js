@@ -147,7 +147,7 @@ export default [
         ...globals.es2022,
       },
       parserOptions: {
-        project: true,
+        // project: true, // Causes error: Enabling "project" does nothing when "projectService" is enabled.
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
