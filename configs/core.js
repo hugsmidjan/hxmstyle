@@ -86,7 +86,14 @@ export const coreRules = {
   'no-useless-rename': 'warn',
 
   // Rules for "eslint-plugin-destructure-depth":
-  'destructure-depth/max-depth': 'error',
+  'destructure-depth/max-depth': [
+    'error',
+    {
+      object: {
+        max: 1,
+      },
+    },
+  ],
 
   // Rules for "eslint-plugin-destructuring":
   // 'destructuring/no-rename': 'error',
