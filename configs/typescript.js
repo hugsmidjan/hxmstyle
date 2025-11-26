@@ -88,6 +88,11 @@ export default [
           allowedNames: ['_this'], // Allow `const self = this`; `[]` by default
         },
       ],
+
+      '@typescript-eslint/consistent-type-imports': [
+        'warn',
+        { fixStyle: 'inline-type-imports' },
+      ],
     },
   },
 ];
