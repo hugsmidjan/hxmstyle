@@ -1,7 +1,7 @@
 {
   "name": "@hugsmidjan/hxmstyle",
   "description": "One annoying style to rule them all...",
-  "version": "10.0.2",
+  "version": "10.1.0",
   "main": "index.js",
   "bin": {
     "hxmstyle": "bin/installer.cjs"
@@ -55,7 +55,7 @@
   ],
   "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#v10",
+    "@hugsmidjan/hxmstyle": "github:hugsmidjan/hxmstyle#canary",
     "eslint": "^9.30.1",
     "prettier": "^3.6.2"
   }

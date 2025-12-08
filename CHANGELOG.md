@@ -4,6 +4,13 @@
 
 - ... <!-- Add new lines here. -->
 
+## 10.1.0
+
+_2025-12-08_
+
+- feat: add `consistent-type-imports`
+- fix: allow 1 level of object `destructure-depth`
+
 ## 10.0.2
 
 _2025-11-11_
