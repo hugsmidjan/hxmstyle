@@ -4,7 +4,7 @@ import tseslint from 'typescript-eslint';
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
-  ...(/** @type {Array<import('eslint').Linter.Config>} */ (tseslint.configs.recommendedTypeChecked)),
+  ...(tseslint.configs.recommendedTypeChecked),
   {
     files: ['**/*.ts', '**/*.tsx'],
     rules: {

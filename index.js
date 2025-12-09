@@ -5,10 +5,11 @@ import globals from 'globals';
 
 export { globals };
 
-/** @typedef {import('eslint').Linter.Config} FlatConfig */
-
 const supportedOptions = new Set(['typescript', 'react']);
 
+/**
+ * @type {{ hxmstyle: any; }}
+ */
 let _pkg;
 let pkgJsonPath = 'package.json';
 /**
@@ -24,6 +25,10 @@ export const setPkgJsonPath = (path) => {
   pkgJsonPath = pkgJsonPath || path;
 };
 
+/**
+ *
+ * @returns {Promise<string[]>}
+ */
 const getProjectOptions = async () => {
   if (!_pkg) {
     _pkg = await readFile(resolve(process.cwd(), pkgJsonPath))
@@ -34,6 +39,10 @@ const getProjectOptions = async () => {
     .filter((name) => supportedOptions.has(name));
 };
 
+/**
+ *
+ * @returns {Promise<import('eslint').Linter.Config[]>}
+ */
 const getConfigs = async () => {
   const importedConfigs = ['core', ...(await getProjectOptions())]
     .map((name) =>
@@ -42,7 +51,7 @@ const getConfigs = async () => {
         if (!Array.isArray(cfgs)) {
           throw new Error(`Module ${name} did not export an array of ESLint configs`);
         }
-        return /** @type {FlatConfig} */ (cfgs);
+        return cfgs;
       })
     );
   return Promise.all(importedConfigs).then((configs) => configs.flat());

@@ -1,10 +1,13 @@
 // @ts-check
 import eslintjs from '@eslint/js';
+// @ts-ignore
 import destructuring from 'eslint-plugin-destructuring';
+// @ts-ignore
 import destructureDepth from 'eslint-plugin-destructure-depth';
 import unusedImports from 'eslint-plugin-unused-imports';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import importPlugin from 'eslint-plugin-import';
+// @ts-ignore
 import nodeImport from 'eslint-plugin-node-import';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import { fixupPluginRules } from '@eslint/compat';
