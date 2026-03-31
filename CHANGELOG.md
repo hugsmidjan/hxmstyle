@@ -4,6 +4,19 @@
 
 - ... <!-- Add new lines here. -->
 
+## 11.0.0
+
+_2026-03-31_
+
+eslint 10 with several breaking changes
+
+- feat: update all packages to latest version
+- feat: add various rules for modern code quality
+- fix: wrap react plugin in compat
+- fix: only apply ts lang service to ts files
+- fix: remove unused and duplicate rules
+- fix: add .d.ts files
+
 ## 10.1.0
 
 _2025-12-08_
