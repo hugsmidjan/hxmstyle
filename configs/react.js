@@ -46,7 +46,7 @@ export default [
         { props: 'never', children: 'never', propElementValues: 'always' },
       ],
       'react/jsx-no-leaked-render': 'error',
-      // 'react/no-array-index-key': 'warn', <- we should consider this
+      'react/no-array-index-key': 'warn',
       'react/jsx-pascal-case': 'warn',
 
       // https://www.npmjs.com/package/eslint-plugin-react-hooks
