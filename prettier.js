@@ -18,10 +18,6 @@ export const hxmstylePrettier = (userCfg = {}) => ({
   bracketSpacing: true,
   bracketSameLine: false,
   arrowParens: 'always',
-  requirePragma: false,
-  insertPragma: false,
-  proseWrap: 'preserve',
-  htmlWhitespaceSensitivity: 'css',
   ...userCfg,
 
   overrides: [
@@ -31,6 +27,6 @@ export const hxmstylePrettier = (userCfg = {}) => ({
         proseWrap: 'always',
       },
     },
-    ...(userCfg.overrides || []),
+    ...(userCfg.overrides ?? []),
   ],
 });
