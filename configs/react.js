@@ -22,11 +22,11 @@ export default [
     },
     settings: {
       react: {
-        version: "detect",
+        version: 'detect',
       },
     },
     plugins: {
-      'react': fixupPluginRules(reactPlugin),
+      react: fixupPluginRules(reactPlugin),
       'react-hooks': reactHooksPlugin,
     },
 

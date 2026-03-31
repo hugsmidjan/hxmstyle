@@ -1,6 +1,8 @@
 // @ts-check
 import eslintjs from '@eslint/js';
+// @ts-ignore
 import destructuring from 'eslint-plugin-destructuring';
+// @ts-ignore
 import destructureDepth from 'eslint-plugin-destructure-depth';
 import unusedImports from 'eslint-plugin-unused-imports';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
@@ -10,11 +12,10 @@ import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import { fixupPluginRules } from '@eslint/compat';
 import globals from 'globals';
 
-
 /** @type {Partial<import('eslint').Linter.RulesRecord>} */
 export const coreRules = {
   'dot-notation': 'warn',
-  'curly': ['warn', 'all'],
+  curly: ['warn', 'all'],
   'unicode-bom': 'error',
   'no-unused-vars': [
     'warn',
@@ -23,27 +24,33 @@ export const coreRules = {
       // allow vars called `_`, `__`, `___`, etc. to facilitate
       // array destructuring (not captureed by `ignoreRestSiblings`)
       varsIgnorePattern: '^_',
-      argsIgnorePattern: "^_",
-      caughtErrorsIgnorePattern: "^_",
-      destructuredArrayIgnorePattern: "^_"
+      argsIgnorePattern: '^_',
+      caughtErrorsIgnorePattern: '^_',
+      destructuredArrayIgnorePattern: '^_',
     },
   ],
-  'no-unused-expressions': ['error', {
-    allowShortCircuit: true,
-    allowTernary: true,
-  }],
+  'no-unused-expressions': [
+    'error',
+    {
+      allowShortCircuit: true,
+      allowTernary: true,
+    },
+  ],
   'no-eval': 'error',
-  'eqeqeq': ['error', 'always', {'null': 'ignore'}],
+  eqeqeq: ['error', 'always', { null: 'ignore' }],
   'block-scoped-var': 'error',
   'class-methods-use-this': 'warn',
-  'complexity': ['warn', 15],
+  complexity: ['warn', 15],
   'no-caller': 'error',
   // For intentional logging in production, use `console.info()`
   // If you really, really NEED `console.log()` without warnings,
   // either do `window.console.log();` or `global.console.log();`,
   // or insert a `/*eslint no-console: false */` marker into your file.
   // (Intentionally omitting: 'debug' as it aliases 'log')
-  'no-console': ['warn', { allow: ['warn', 'error', 'info', 'group', 'groupCollapsed', 'groupEnd'] }],
+  'no-console': [
+    'warn',
+    { allow: ['warn', 'error', 'info', 'group', 'groupCollapsed', 'groupEnd'] },
+  ],
   'no-use-before-define': 'warn',
   'no-undef-init': 'error',
   'no-empty': ['error', { allowEmptyCatch: true }],
@@ -55,12 +62,15 @@ export const coreRules = {
   'prefer-template': 'warn',
   'no-throw-literal': 'error',
 
-  'no-irregular-whitespace': ['error', {
-    'skipStrings': true, // Default
-    'skipComments': true,
-    'skipTemplates': true,
-    'skipRegExps': true,
-  }],
+  'no-irregular-whitespace': [
+    'error',
+    {
+      skipStrings: true, // Default
+      skipComments: true,
+      skipTemplates: true,
+      skipRegExps: true,
+    },
+  ],
 
   'no-useless-rename': 'warn',
   'no-promise-executor-return': 'error',
@@ -79,7 +89,7 @@ export const coreRules = {
 
   // Rules for "eslint-plugin-destructuring":
   // 'destructuring/no-rename': 'error',
-  'destructuring/in-params': ['warn', {'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i} ...></li>)}
+  'destructuring/in-params': ['warn', { 'max-params': 2 }], // Allow {items.map(({ value, label}, i) => <li key={i} ...></li>)}
   'destructuring/in-methods-params': 'warn',
   // See also: https://mysticatea.github.io/eslint-plugin-es/rules/no-destructuring.html
 
@@ -88,9 +98,9 @@ export const coreRules = {
 
   // Rules for "eslint-plugin-import":
   'sort-imports': 'off', // hard-disable the built-in rule
-  "import/first": "warn",
-  "import/newline-after-import": "warn",
-  "import/no-duplicates": "warn",
+  'import/first': 'warn',
+  'import/newline-after-import': 'warn',
+  'import/no-duplicates': 'warn',
 
   // Rules for "eslint-plugin-node-import":
   'node-import/prefer-node-protocol': 'warn',
@@ -121,7 +131,7 @@ export const coreRules = {
       ],
     },
   ],
-}
+};
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
@@ -143,15 +153,15 @@ export default [
       },
     },
     linterOptions: {
-    // This adds soft warning on unused `eslint-disable` directives,
-    // and instructs auto-fix to remove them.
-    // Problem: It doesn't flag/remove unused `eslint-enable` directives.
+      // This adds soft warning on unused `eslint-disable` directives,
+      // and instructs auto-fix to remove them.
+      // Problem: It doesn't flag/remove unused `eslint-enable` directives.
       reportUnusedDisableDirectives: true,
     },
     plugins: {
       /* Issue: https://github.com/lukeapage/eslint-plugin-destructuring/issues/48 */
       // @ts-ignore
-      'destructuring': fixupPluginRules(destructuring),
+      destructuring: fixupPluginRules(destructuring),
 
       /* Issue: https://github.com/isaquediasm/eslint-plugin-destructure-depth/issues/10 */
       // @ts-ignore
@@ -163,7 +173,7 @@ export default [
 
       'node-import': nodeImport,
 
-      'import': importPlugin,
+      import: importPlugin,
     },
 
     /* prettier-ignore */

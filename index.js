@@ -26,28 +26,25 @@ export const setPkgJsonPath = (path) => {
 
 const getProjectOptions = async () => {
   if (!_pkg) {
-    _pkg = await readFile(resolve(process.cwd(), pkgJsonPath))
-      .then((buffer) => JSON.parse(buffer.toString()));
+    _pkg = await readFile(resolve(process.cwd(), pkgJsonPath)).then((buffer) =>
+      JSON.parse(buffer.toString()),
+    );
   }
   const options = (_pkg.hxmstyle || {}).options || {};
-  return Object.keys(options)
-    .filter((name) => supportedOptions.has(name));
+  return Object.keys(options).filter((name) => supportedOptions.has(name));
 };
 
 const getConfigs = async () => {
-  const importedConfigs = ['core', ...(await getProjectOptions())]
-    .map((name) =>
-      import(`./configs/${name}.js`).then((mod) => {
-        const cfgs = mod.default;
-        if (!Array.isArray(cfgs)) {
-          throw new Error(`Module ${name} did not export an array of ESLint configs`);
-        }
-        return /** @type {FlatConfig} */ (cfgs);
-      })
-    );
+  const importedConfigs = ['core', ...(await getProjectOptions())].map((name) =>
+    import(`./configs/${name}.js`).then((mod) => {
+      const cfgs = mod.default;
+      if (!Array.isArray(cfgs)) {
+        throw new Error(`Module ${name} did not export an array of ESLint configs`);
+      }
+      return /** @type {FlatConfig} */ (cfgs);
+    }),
+  );
   return Promise.all(importedConfigs).then((configs) => configs.flat());
 };
 
-export const hxmstyleESLint = async () =>  [
-  ...await getConfigs(),
-];
+export const hxmstyleESLint = async () => [...(await getConfigs())];

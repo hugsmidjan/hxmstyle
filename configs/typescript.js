@@ -4,12 +4,10 @@ import tseslint from 'typescript-eslint';
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
-  ...(/** @type {Array<import('eslint').Linter.Config>} */ (
-    tseslint.configs.recommendedTypeChecked.map((config) => ({
-      ...config,
-      files: ['**/*.ts', '**/*.tsx'],
-    }))
-  )),
+  ...tseslint.configs.recommendedTypeChecked.map((config) => ({
+    ...config,
+    files: ['**/*.ts', '**/*.tsx'],
+  })),
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
