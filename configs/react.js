@@ -5,6 +5,7 @@
 
 import reactPlugin from 'eslint-plugin-react'; // autoimported by the recommended config
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import { fixupPluginRules } from '@eslint/compat';
 import globals from 'globals';
 
 /** @type {Array<import('eslint').Linter.Config>} */
@@ -25,6 +26,7 @@ export default [
       },
     },
     plugins: {
+      'react': fixupPluginRules(reactPlugin),
       'react-hooks': reactHooksPlugin,
     },
 
