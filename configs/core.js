@@ -158,10 +158,6 @@ export default [
         ecmaFeatures: {
           jsx: true,
         },
-        tsconfigRootDir: process.cwd(),
-        projectService: {
-          allowDefaultProject: ['*.js', '*.mjs'],
-        },
       },
     },
     linterOptions: {

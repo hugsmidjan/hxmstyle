@@ -4,9 +4,20 @@ import tseslint from 'typescript-eslint';
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
-  ...(/** @type {Array<import('eslint').Linter.Config>} */ (tseslint.configs.recommendedTypeChecked)),
+  ...(/** @type {Array<import('eslint').Linter.Config>} */ (
+    tseslint.configs.recommendedTypeChecked.map((config) => ({
+      ...config,
+      files: ['**/*.ts', '**/*.tsx'],
+    }))
+  )),
   {
     files: ['**/*.ts', '**/*.tsx'],
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: process.cwd(),
+        projectService: true,
+      },
+    },
     rules: {
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
