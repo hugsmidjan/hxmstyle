@@ -144,7 +144,6 @@ export const coreRules = {
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
   eslintjs.configs.recommended,
-  eslintConfigPrettier,
   {
     languageOptions: {
       ecmaVersion: 2022,
@@ -192,4 +191,5 @@ export default [
     /* prettier-ignore */
     rules: coreRules,
   },
+  eslintConfigPrettier,
 ];

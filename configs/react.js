@@ -9,7 +9,6 @@ import globals from 'globals';
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
-  reactPlugin.configs.flat.recommended,
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
     ...reactPlugin.configs.flat.recommended,

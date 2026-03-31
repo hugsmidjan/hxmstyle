@@ -13,9 +13,6 @@ export default [
       '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
 
       '@typescript-eslint/explicit-member-accessibility': 'off',
-      '@typescript-eslint/camelcase': 'off',
-      '@typescript-eslint/interface-name-prefix': 'off', // 'never' | 'always // 'never' seems like a weird default
-      '@typescript-eslint/no-empty-interface': 'warn',
       '@typescript-eslint/array-type': ['warn', { default: 'generic' }], // 'array' -> `T[]` ;  'generic' -> `Array<T>`
       '@typescript-eslint/no-extraneous-class': 'warn',
       '@typescript-eslint/no-useless-constructor': 'warn',
@@ -57,7 +54,7 @@ export default [
 
       // Part of recommended:
       // ------------------------------------------------------
-      '@typescript-eslint/ban-ts-ignore': 'off',
+      // '@typescript-eslint/ban-ts-ignore': removed - superseded by ban-ts-comment below
       // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md#how-to-use
       // note you must disable the base rule as it can report incorrect errors
       'no-use-before-define': 'off',
