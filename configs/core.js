@@ -37,45 +37,24 @@ export const coreRules = {
   'block-scoped-var': 'error',
   'class-methods-use-this': 'warn',
   'complexity': ['warn', 15],
-  'no-prototype-builtins': 'error',
   'no-caller': 'error',
-  'no-case-declarations': 'error',
-  'no-fallthrough': 'error',
   // For intentional logging in production, use `console.info()`
   // If you really, really NEED `console.log()` without warnings,
   // either do `window.console.log();` or `global.console.log();`,
   // or insert a `/*eslint no-console: false */` marker into your file.
   // (Intentionally omitting: 'debug' as it aliases 'log')
   'no-console': ['warn', { allow: ['warn', 'error', 'info', 'group', 'groupCollapsed', 'groupEnd'] }],
-  'no-div-regex': 'error',
-  'no-label-var': 'error',
   'no-use-before-define': 'warn',
   'no-undef-init': 'error',
-  'space-before-function-paren': ['warn', {
-    anonymous: 'always',
-    named: 'never',
-    asyncArrow: 'ignore',
-  }],
   'no-empty': ['error', { allowEmptyCatch: true }],
   'no-sequences': 'error',
   // https://eslint.org/docs/rules/indent#options
   // 'indent': ['warn', 2],
-  'no-tabs': ['error', { allowIndentationTabs: true }],
-  'no-multiple-empty-lines': ['error', { 'max': 1 }],
-  /*'max-len': ['warn', {
-    code: 120,
-    ignoreUrls: true,
-    ignoreComments: true,
-    // ignoreTrailingComments: true,
-    ignoreTemplateLiterals: true,
-  }],*/
   'no-var': 'warn',
   'prefer-const': ['warn', { destructuring: 'all' }], // Wish there was a way to prevent autofixing this one.
   'prefer-template': 'warn',
-  'no-async-promise-executor': 'error',
   'no-throw-literal': 'error',
 
-  'template-tag-spacing': ['error', 'never'],
   'no-irregular-whitespace': ['error', {
     'skipStrings': true, // Default
     'skipComments': true,

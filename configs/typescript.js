@@ -23,7 +23,6 @@ export default [
       '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
       '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
 
-      '@typescript-eslint/explicit-member-accessibility': 'off',
       '@typescript-eslint/no-empty-object-type': 'warn',
       '@typescript-eslint/array-type': ['warn', { default: 'generic' }], // 'array' -> `T[]` ;  'generic' -> `Array<T>`
       '@typescript-eslint/no-extraneous-class': 'warn',
