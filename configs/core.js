@@ -84,6 +84,9 @@ export const coreRules = {
   }],
 
   'no-useless-rename': 'warn',
+  'no-promise-executor-return': 'error',
+  'no-loop-func': 'error',
+  'prefer-object-spread': 'warn',
 
   // Rules for "eslint-plugin-destructure-depth":
   'destructure-depth/max-depth': [

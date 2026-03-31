@@ -24,6 +24,7 @@ export default [
       '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
 
       '@typescript-eslint/explicit-member-accessibility': 'off',
+      '@typescript-eslint/no-empty-object-type': 'warn',
       '@typescript-eslint/array-type': ['warn', { default: 'generic' }], // 'array' -> `T[]` ;  'generic' -> `Array<T>`
       '@typescript-eslint/no-extraneous-class': 'warn',
       '@typescript-eslint/no-useless-constructor': 'warn',
@@ -101,6 +102,12 @@ export default [
         'warn',
         { fixStyle: 'inline-type-imports' },
       ],
+
+      '@typescript-eslint/no-floating-promises': 'error',
+      // '@typescript-eslint/prefer-nullish-coalescing': 'warn', < we should consider this
+      '@typescript-eslint/prefer-optional-chain': 'warn',
+      '@typescript-eslint/switch-exhaustiveness-check': 'warn',
+      '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'warn',
     },
   },
 ];
