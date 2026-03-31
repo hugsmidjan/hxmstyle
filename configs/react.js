@@ -5,11 +5,11 @@
 
 import reactPlugin from 'eslint-plugin-react'; // autoimported by the recommended config
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import { fixupPluginRules } from '@eslint/compat';
 import globals from 'globals';
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
-  reactPlugin.configs.flat.recommended,
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
     ...reactPlugin.configs.flat.recommended,
@@ -26,6 +26,7 @@ export default [
       },
     },
     plugins: {
+      'react': fixupPluginRules(reactPlugin),
       'react-hooks': reactHooksPlugin,
     },
 
@@ -44,6 +45,9 @@ export default [
         'warn',
         { props: 'never', children: 'never', propElementValues: 'always' },
       ],
+      'react/jsx-no-leaked-render': 'error',
+      'react/no-array-index-key': 'warn',
+      'react/jsx-pascal-case': 'warn',
 
       // https://www.npmjs.com/package/eslint-plugin-react-hooks
       ...reactHooksPlugin.configs.recommended.rules,
