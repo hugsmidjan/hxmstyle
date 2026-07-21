@@ -7,6 +7,7 @@ import reactPlugin from 'eslint-plugin-react'; // autoimported by the recommende
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import { fixupPluginRules } from '@eslint/compat';
 import globals from 'globals';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
@@ -14,6 +15,7 @@ export default [
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
     ...reactPlugin.configs.flat.recommended,
     languageOptions: {
+      ...jsxA11y.flatConfigs.recommended.languageOptions,
       ...reactPlugin.configs.flat.recommended.languageOptions,
       globals: {
         ...globals.serviceworker,
@@ -28,6 +30,7 @@ export default [
     plugins: {
       react: fixupPluginRules(reactPlugin),
       'react-hooks': reactHooksPlugin,
+      'jsx-a11y': jsxA11y,
     },
 
     rules: {
@@ -51,6 +54,10 @@ export default [
 
       // https://www.npmjs.com/package/eslint-plugin-react-hooks
       ...reactHooksPlugin.configs.recommended.rules,
+
+      // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
+      ...jsxA11y.flatConfigs.recommended.rules,
+      'jsx-a11y/media-has-caption': 0,
     },
   },
 ];
