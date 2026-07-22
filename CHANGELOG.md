@@ -4,6 +4,13 @@
 
 - ... <!-- Add new lines here. -->
 
+## 11.1.0
+
+_2026-07-22_
+
+- feat: update all packages to latest version
+- feat: add `eslint-plugin-jsx-a11y`
+
 ## 11.0.0
 
 _2026-03-31_
