@@ -12,7 +12,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
   {
-    files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
+    files: ['**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'],
     ...reactPlugin.configs.flat.recommended,
     languageOptions: {
       ...jsxA11y.flatConfigs.recommended.languageOptions,

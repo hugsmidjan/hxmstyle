@@ -2,14 +2,16 @@
 import { coreRules } from './core.js';
 import tseslint from 'typescript-eslint';
 
+export const TS_FILES = ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'];
+
 /** @type {Array<import('eslint').Linter.Config>} */
 export default [
   ...tseslint.configs.recommendedTypeChecked.map((config) => ({
     ...config,
-    files: ['**/*.ts', '**/*.tsx'],
+    files: TS_FILES,
   })),
   {
-    files: ['**/*.ts', '**/*.tsx'],
+    files: TS_FILES,
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: process.cwd(),
@@ -101,6 +103,11 @@ export default [
       ],
 
       '@typescript-eslint/no-floating-promises': 'error',
+      // Allow async event handlers in JSX, e.g. `onClick={async () => { ... }}`
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        { checksVoidReturn: { attributes: false } },
+      ],
       // '@typescript-eslint/prefer-nullish-coalescing': 'warn', < we should consider this
       '@typescript-eslint/prefer-optional-chain': 'warn',
       '@typescript-eslint/switch-exhaustiveness-check': 'warn',

@@ -6,7 +6,7 @@ import destructuring from 'eslint-plugin-destructuring';
 import destructureDepth from 'eslint-plugin-destructure-depth';
 import unusedImports from 'eslint-plugin-unused-imports';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import importPlugin from 'eslint-plugin-import';
+import importX from 'eslint-plugin-import-x';
 import nodeImport from 'eslint-plugin-node-import';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import { fixupPluginRules } from '@eslint/compat';
@@ -96,7 +96,7 @@ export const coreRules = {
   // Rules for "eslint-plugin-unused-imports":
   'unused-imports/no-unused-imports': 'warn',
 
-  // Rules for "eslint-plugin-import":
+  // Rules for "eslint-plugin-import-x" (registered under the `import/` prefix):
   'sort-imports': 'off', // hard-disable the built-in rule
   'import/first': 'warn',
   'import/newline-after-import': 'warn',
@@ -138,11 +138,11 @@ export default [
   eslintjs.configs.recommended,
   {
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 'latest',
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.es2022,
+        ...globals.es2025,
       },
       parserOptions: {
         // project: true, // Causes error: Enabling "project" does nothing when "projectService" is enabled.
@@ -156,7 +156,7 @@ export default [
       // This adds soft warning on unused `eslint-disable` directives,
       // and instructs auto-fix to remove them.
       // Problem: It doesn't flag/remove unused `eslint-enable` directives.
-      reportUnusedDisableDirectives: true,
+      reportUnusedDisableDirectives: 'warn',
     },
     plugins: {
       /* Issue: https://github.com/lukeapage/eslint-plugin-destructuring/issues/48 */
@@ -173,7 +173,9 @@ export default [
 
       'node-import': nodeImport,
 
-      import: importPlugin,
+      // Registered as `import` to keep rule names (and existing
+      // `eslint-disable import/...` comments) compatible.
+      import: importX,
     },
 
     /* prettier-ignore */

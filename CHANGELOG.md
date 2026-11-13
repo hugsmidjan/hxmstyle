@@ -2,6 +2,16 @@
 
 ## Upcoming...
 
+- feat: `hxmstyleESLint()` accepts `{ react, typescript, rootDir }` options;
+  `rootDir` is used to find `package.json` and as `tsconfigRootDir`
+- feat: replace `eslint-plugin-import` with `eslint-plugin-import-x` (rules
+  still use the `import/` prefix)
+- feat: `no-misused-promises` allows async functions in JSX attributes
+- feat: lint `.mts` and `.cts` files with the TypeScript config
+- fix: `setPkgJsonPath()` ignored the passed path
+- fix: typo `mtsx` in React file globs
+- fix: `reportUnusedDisableDirectives: 'warn'` instead of `true`
+- fix: `ecmaVersion: 'latest'`
 - ... <!-- Add new lines here. -->
 
 ## 11.1.0

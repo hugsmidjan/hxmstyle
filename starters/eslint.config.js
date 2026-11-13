@@ -2,7 +2,7 @@
 import { globals, hxmstyleESLint } from '@hugsmidjan/hxmstyle';
 
 /** @type {Promise<Array<import('eslint').Linter.Config>>}   */
-export default hxmstyleESLint().then((hxmstyleConfig) => [
+export default hxmstyleESLint({ rootDir: import.meta.dirname }).then((hxmstyleConfig) => [
   ...hxmstyleConfig,
   // Place your project-specific additions or overrides here
   // using standard ESLint config syntax...
@@ -17,11 +17,11 @@ export default hxmstyleESLint().then((hxmstyleConfig) => [
   },
   {
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 'latest',
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.es2022,
+        ...globals.es2025,
       },
     },
     rules: {
