@@ -2,6 +2,13 @@
 
 ## Upcoming...
 
+- ... <!-- Add new lines here. -->
+
+## 11.2.0
+
+_2026-11-13_
+
+- feat: update all packages to latest version
 - feat: `hxmstyleESLint()` accepts `{ react, typescript, rootDir }` options;
   `rootDir` is used to find `package.json` and as `tsconfigRootDir`
 - feat: replace `eslint-plugin-import` with `eslint-plugin-import-x` (rules
@@ -25,7 +32,6 @@
   (`@typescript-eslint/no-unused-vars` now auto-removes them instead)
 - fix: `globals` export was type-only in `index.d.ts` (TS1361)
 - fix: apply `eslint-config-prettier` after the React and TypeScript configs
-- ... <!-- Add new lines here. -->
 
 ## 11.1.0
 
