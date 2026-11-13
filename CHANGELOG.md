@@ -4,7 +4,7 @@
 
 - ... <!-- Add new lines here. -->
 
-## 11.2.0
+## 11.2.0 - 11.2.1
 
 _2026-11-13_
 
@@ -24,7 +24,7 @@ _2026-11-13_
 - feat: `import/no-duplicates` merges type imports inline in TypeScript files
 - feat: add `@typescript-eslint/return-await` (`in-try-catch`)
 - feat: drop the React Compiler-based `react-hooks` rules (about 20% faster linting);
-  only `rules-of-hooks` and `exhaustive-deps` remain
+  only `rules-of-hooks`, `exhaustive-deps` and `set-state-in-effect` remain
 - fix: `curly` was silently disabled by `eslint-config-prettier`
 - fix: `eslint-plugin-react` recommended rules (`jsx-key`, `no-children-prop`,
   `jsx-no-target-blank`, etc.) were never enabled

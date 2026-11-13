@@ -54,11 +54,13 @@ export default [
       'react/jsx-pascal-case': 'warn',
 
       // https://www.npmjs.com/package/eslint-plugin-react-hooks
-      // Only the classic hooks rules. The React Compiler-based rules in
-      // `configs.recommended` (`purity`, `refs`, `static-components`, etc.)
-      // add ~20% to lint time and are skipped.
+      // The React Compiler-based rules in `configs.recommended` (`purity`,
+      // `refs`, `static-components`, etc.) add ~20% to lint time and are
+      // skipped, except for `set-state-in-effect` which is cheap on its own
+      // (~6%) and catches common "You Might Not Need an Effect" mistakes.
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+      'react-hooks/set-state-in-effect': 'warn',
 
       // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
       ...jsxA11y.flatConfigs.recommended.rules,
