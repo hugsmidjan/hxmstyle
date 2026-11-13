@@ -13,7 +13,6 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 export default [
   {
     files: ['**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'],
-    ...reactPlugin.configs.flat.recommended,
     languageOptions: {
       ...jsxA11y.flatConfigs.recommended.languageOptions,
       ...reactPlugin.configs.flat.recommended.languageOptions,
@@ -35,6 +34,8 @@ export default [
 
     rules: {
       // https://www.npmjs.com/package/eslint-plugin-react
+      ...reactPlugin.configs.flat.recommended.rules,
+      ...reactPlugin.configs.flat['jsx-runtime'].rules,
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': ['off'],
       'react/no-unknown-property': ['warn'], // warns about class="" and lowercase event-attrs (e.g. onclick="") etc...
@@ -53,7 +54,11 @@ export default [
       'react/jsx-pascal-case': 'warn',
 
       // https://www.npmjs.com/package/eslint-plugin-react-hooks
-      ...reactHooksPlugin.configs.recommended.rules,
+      // Only the classic hooks rules. The React Compiler-based rules in
+      // `configs.recommended` (`purity`, `refs`, `static-components`, etc.)
+      // add ~20% to lint time and are skipped.
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
 
       // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
       ...jsxA11y.flatConfigs.recommended.rules,

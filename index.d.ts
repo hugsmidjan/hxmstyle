@@ -1,5 +1,5 @@
 import type { Linter } from 'eslint';
-import type globals from 'globals';
+import globals from 'globals';
 
 export { globals };
 

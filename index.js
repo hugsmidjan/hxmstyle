@@ -1,6 +1,7 @@
 // @ts-check
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import globals from 'globals';
 
 export { globals };
@@ -86,5 +87,12 @@ export const hxmstyleESLint = async (opts = {}) => {
       }),
     ),
   );
-  return configs.flat();
+  return [
+    ...configs.flat(),
+    // Must come last, to turn off all formatting rules
+    eslintConfigPrettier,
+    // Re-enable "special rules" that eslint-config-prettier turns off,
+    // but are safe to use with prettier.
+    { rules: { curly: ['warn', 'all'] } },
+  ];
 };

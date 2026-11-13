@@ -12,6 +12,19 @@
 - fix: typo `mtsx` in React file globs
 - fix: `reportUnusedDisableDirectives: 'warn'` instead of `true`
 - fix: `ecmaVersion: 'latest'`
+- feat: use type-aware `@typescript-eslint/dot-notation` and
+  `@typescript-eslint/class-methods-use-this` in TypeScript files
+- feat: `import/no-duplicates` merges type imports inline in TypeScript files
+- feat: add `@typescript-eslint/return-await` (`in-try-catch`)
+- feat: drop the React Compiler-based `react-hooks` rules (about 20% faster linting);
+  only `rules-of-hooks` and `exhaustive-deps` remain
+- fix: `curly` was silently disabled by `eslint-config-prettier`
+- fix: `eslint-plugin-react` recommended rules (`jsx-key`, `no-children-prop`,
+  `jsx-no-target-blank`, etc.) were never enabled
+- fix: unused imports were reported twice in TypeScript files
+  (`@typescript-eslint/no-unused-vars` now auto-removes them instead)
+- fix: `globals` export was type-only in `index.d.ts` (TS1361)
+- fix: apply `eslint-config-prettier` after the React and TypeScript configs
 - ... <!-- Add new lines here. -->
 
 ## 11.1.0

@@ -8,7 +8,6 @@ import unusedImports from 'eslint-plugin-unused-imports';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import importX from 'eslint-plugin-import-x';
 import nodeImport from 'eslint-plugin-node-import';
-import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import { fixupPluginRules } from '@eslint/compat';
 import globals from 'globals';
 
@@ -181,5 +180,4 @@ export default [
     /* prettier-ignore */
     rules: coreRules,
   },
-  eslintConfigPrettier,
 ];

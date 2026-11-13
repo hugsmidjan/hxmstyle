@@ -56,7 +56,29 @@ export default [
 
       'prefer-const': coreRules['prefer-const'], // the typescript-eslint plugin somehow switch this rule to "error"
       'no-unused-vars': 'off', // note you must disable the base rule as it can report incorrect errors
-      '@typescript-eslint/no-unused-vars': coreRules['no-unused-vars'],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          // @ts-expect-error  (coreRules values are loosely typed)
+          ...coreRules['no-unused-vars'][1],
+          enableAutofixRemoval: { imports: true },
+        },
+      ],
+      // Already covered (and auto-fixed) by "@typescript-eslint/no-unused-vars" above
+      'unused-imports/no-unused-imports': 'off',
+
+      // Type-aware versions of core rules
+      'dot-notation': 'off', // respects `noPropertyAccessFromIndexSignature`
+      '@typescript-eslint/dot-notation': coreRules['dot-notation'],
+      'class-methods-use-this': 'off',
+      '@typescript-eslint/class-methods-use-this': [
+        'warn',
+        { ignoreOverrideMethods: true, ignoreClassesThatImplementAnInterface: true },
+      ],
+
+      // Merge `import type { A }` + `import { b }` into `import { type A, b }`
+      // (matches `consistent-type-imports` below)
+      'import/no-duplicates': ['warn', { 'prefer-inline': true }],
 
       '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
       '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
@@ -102,7 +124,7 @@ export default [
         { fixStyle: 'inline-type-imports' },
       ],
 
-      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/return-await': ['warn', 'in-try-catch'],
       // Allow async event handlers in JSX, e.g. `onClick={async () => { ... }}`
       '@typescript-eslint/no-misused-promises': [
         'error',
